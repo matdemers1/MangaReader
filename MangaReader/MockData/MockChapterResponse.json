@@ -1,0 +1,599 @@
+{
+    "result": "ok",
+    "response": "collection",
+    "data": [
+        {
+            "id": "24b6f986-45a8-4edd-baf7-2f61d25f4381",
+            "type": "chapter",
+            "attributes": {
+                "volume": null,
+                "chapter": "1",
+                "title": null,
+                "translatedLanguage": "en",
+                "externalUrl": null,
+                "publishAt": "2022-08-14T00:24:30+00:00",
+                "readableAt": "2022-08-14T00:24:30+00:00",
+                "createdAt": "2022-08-14T00:24:30+00:00",
+                "updatedAt": "2022-08-14T00:26:20+00:00",
+                "pages": 36,
+                "version": 3
+            },
+            "relationships": [
+                {
+                    "id": "fdad9851-164f-43fc-9ab0-25b8054c99ed",
+                    "type": "scanlation_group",
+                    "attributes": {
+                        "name": "Flame Scans",
+                        "altNames": [
+                            {
+                                "en": "FLAME-SCANS"
+                            }
+                        ],
+                        "locked": false,
+                        "website": "https:\/\/flamescans.org",
+                        "ircServer": null,
+                        "ircChannel": null,
+                        "discord": "M6wcq6ZPQg",
+                        "contactEmail": "flamescanlations@gmail.com",
+                        "description": "**Flame Scans is a scanlation group, that dedicates itself to creating comic translations for Mangas, Manhwas, And Manhuas!**   \r\n\r\n\r\n---\r\n\r\n  \r\n**We currently do:**  \r\n-Solo Leveling  \r\n-Omniscient Reader  \r\n-A Returner's Magic Should Be Special  \r\n-The Skeleton Soldier Couldn't Defend the Dungeon  \r\n-Dungeon Reset  \r\n-Trinity Seven  \r\n-Berserk of Gluttony  \r\n-Unnamed Memory  \r\n- Spring's Espresso  \r\n-The Villainess Is a Marionette  \r\n-My Wife is Actually The Empress?  \r\n-The Reincarnated Inferior Magic Swordsman  \r\n\r\n\r\n---\r\n\r\n  \r\n**Links**  \r\nPatreon Link:   \r\n<https:\/\/www.patreon.com\/flamescans>  \r\nPayPal Link:  \r\n<https:\/\/www.paypal.me\/flamescan>  \r\nKo-Fi Link:  \r\n<https:\/\/ko-fi.com\/flamescans>  \r\nWebsite link:  \r\n<https:\/\/flamescans.org>  \r\nDiscord Link:  \r\n<https:\/\/discord.gg\/flamescans>\r\n<https:\/\/discord.gg\/M6wcq6ZPQg>",
+                        "twitter": null,
+                        "mangaUpdates": "https:\/\/www.mangaupdates.com\/group\/btgsdiy\/flame-scans",
+                        "focusedLanguages": [
+                            "en"
+                        ],
+                        "official": false,
+                        "verified": false,
+                        "inactive": true,
+                        "publishDelay": null,
+                        "exLicensed": false,
+                        "createdAt": "2021-04-19T21:45:59+00:00",
+                        "updatedAt": "2023-10-22T20:33:29+00:00",
+                        "version": 12
+                    }
+                },
+                {
+                    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+                    "type": "manga"
+                },
+                {
+                    "id": "c55f8354-ec7c-4543-afaf-71a5e7088124",
+                    "type": "user"
+                }
+            ]
+        },
+        {
+            "id": "ebe6f0d1-4bdc-4dc2-bc69-72814d881678",
+            "type": "chapter",
+            "attributes": {
+                "volume": null,
+                "chapter": "2",
+                "title": null,
+                "translatedLanguage": "en",
+                "externalUrl": null,
+                "publishAt": "2022-08-18T03:10:42+00:00",
+                "readableAt": "2022-08-18T03:10:42+00:00",
+                "createdAt": "2022-08-18T03:10:42+00:00",
+                "updatedAt": "2022-08-18T03:12:03+00:00",
+                "pages": 27,
+                "version": 3
+            },
+            "relationships": [
+                {
+                    "id": "fdad9851-164f-43fc-9ab0-25b8054c99ed",
+                    "type": "scanlation_group",
+                    "attributes": {
+                        "name": "Flame Scans",
+                        "altNames": [
+                            {
+                                "en": "FLAME-SCANS"
+                            }
+                        ],
+                        "locked": false,
+                        "website": "https:\/\/flamescans.org",
+                        "ircServer": null,
+                        "ircChannel": null,
+                        "discord": "M6wcq6ZPQg",
+                        "contactEmail": "flamescanlations@gmail.com",
+                        "description": "**Flame Scans is a scanlation group, that dedicates itself to creating comic translations for Mangas, Manhwas, And Manhuas!**   \r\n\r\n\r\n---\r\n\r\n  \r\n**We currently do:**  \r\n-Solo Leveling  \r\n-Omniscient Reader  \r\n-A Returner's Magic Should Be Special  \r\n-The Skeleton Soldier Couldn't Defend the Dungeon  \r\n-Dungeon Reset  \r\n-Trinity Seven  \r\n-Berserk of Gluttony  \r\n-Unnamed Memory  \r\n- Spring's Espresso  \r\n-The Villainess Is a Marionette  \r\n-My Wife is Actually The Empress?  \r\n-The Reincarnated Inferior Magic Swordsman  \r\n\r\n\r\n---\r\n\r\n  \r\n**Links**  \r\nPatreon Link:   \r\n<https:\/\/www.patreon.com\/flamescans>  \r\nPayPal Link:  \r\n<https:\/\/www.paypal.me\/flamescan>  \r\nKo-Fi Link:  \r\n<https:\/\/ko-fi.com\/flamescans>  \r\nWebsite link:  \r\n<https:\/\/flamescans.org>  \r\nDiscord Link:  \r\n<https:\/\/discord.gg\/flamescans>\r\n<https:\/\/discord.gg\/M6wcq6ZPQg>",
+                        "twitter": null,
+                        "mangaUpdates": "https:\/\/www.mangaupdates.com\/group\/btgsdiy\/flame-scans",
+                        "focusedLanguages": [
+                            "en"
+                        ],
+                        "official": false,
+                        "verified": false,
+                        "inactive": true,
+                        "publishDelay": null,
+                        "exLicensed": false,
+                        "createdAt": "2021-04-19T21:45:59+00:00",
+                        "updatedAt": "2023-10-22T20:33:29+00:00",
+                        "version": 12
+                    }
+                },
+                {
+                    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+                    "type": "manga"
+                },
+                {
+                    "id": "c55f8354-ec7c-4543-afaf-71a5e7088124",
+                    "type": "user"
+                }
+            ]
+        },
+        {
+            "id": "879260c0-68a5-40c8-a91a-4b66aa98da2f",
+            "type": "chapter",
+            "attributes": {
+                "volume": null,
+                "chapter": "3",
+                "title": null,
+                "translatedLanguage": "en",
+                "externalUrl": null,
+                "publishAt": "2022-08-24T02:08:51+00:00",
+                "readableAt": "2022-08-24T02:08:51+00:00",
+                "createdAt": "2022-08-24T02:08:51+00:00",
+                "updatedAt": "2022-08-24T02:09:45+00:00",
+                "pages": 20,
+                "version": 3
+            },
+            "relationships": [
+                {
+                    "id": "fdad9851-164f-43fc-9ab0-25b8054c99ed",
+                    "type": "scanlation_group",
+                    "attributes": {
+                        "name": "Flame Scans",
+                        "altNames": [
+                            {
+                                "en": "FLAME-SCANS"
+                            }
+                        ],
+                        "locked": false,
+                        "website": "https:\/\/flamescans.org",
+                        "ircServer": null,
+                        "ircChannel": null,
+                        "discord": "M6wcq6ZPQg",
+                        "contactEmail": "flamescanlations@gmail.com",
+                        "description": "**Flame Scans is a scanlation group, that dedicates itself to creating comic translations for Mangas, Manhwas, And Manhuas!**   \r\n\r\n\r\n---\r\n\r\n  \r\n**We currently do:**  \r\n-Solo Leveling  \r\n-Omniscient Reader  \r\n-A Returner's Magic Should Be Special  \r\n-The Skeleton Soldier Couldn't Defend the Dungeon  \r\n-Dungeon Reset  \r\n-Trinity Seven  \r\n-Berserk of Gluttony  \r\n-Unnamed Memory  \r\n- Spring's Espresso  \r\n-The Villainess Is a Marionette  \r\n-My Wife is Actually The Empress?  \r\n-The Reincarnated Inferior Magic Swordsman  \r\n\r\n\r\n---\r\n\r\n  \r\n**Links**  \r\nPatreon Link:   \r\n<https:\/\/www.patreon.com\/flamescans>  \r\nPayPal Link:  \r\n<https:\/\/www.paypal.me\/flamescan>  \r\nKo-Fi Link:  \r\n<https:\/\/ko-fi.com\/flamescans>  \r\nWebsite link:  \r\n<https:\/\/flamescans.org>  \r\nDiscord Link:  \r\n<https:\/\/discord.gg\/flamescans>\r\n<https:\/\/discord.gg\/M6wcq6ZPQg>",
+                        "twitter": null,
+                        "mangaUpdates": "https:\/\/www.mangaupdates.com\/group\/btgsdiy\/flame-scans",
+                        "focusedLanguages": [
+                            "en"
+                        ],
+                        "official": false,
+                        "verified": false,
+                        "inactive": true,
+                        "publishDelay": null,
+                        "exLicensed": false,
+                        "createdAt": "2021-04-19T21:45:59+00:00",
+                        "updatedAt": "2023-10-22T20:33:29+00:00",
+                        "version": 12
+                    }
+                },
+                {
+                    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+                    "type": "manga"
+                },
+                {
+                    "id": "c55f8354-ec7c-4543-afaf-71a5e7088124",
+                    "type": "user"
+                }
+            ]
+        },
+        {
+            "id": "af110cfc-3307-4ff6-ac37-e376a8f5ddc9",
+            "type": "chapter",
+            "attributes": {
+                "volume": null,
+                "chapter": "4",
+                "title": null,
+                "translatedLanguage": "en",
+                "externalUrl": null,
+                "publishAt": "2022-08-28T06:37:21+00:00",
+                "readableAt": "2022-08-28T06:37:21+00:00",
+                "createdAt": "2022-08-28T06:37:20+00:00",
+                "updatedAt": "2022-08-28T06:38:16+00:00",
+                "pages": 89,
+                "version": 3
+            },
+            "relationships": [
+                {
+                    "id": "fdad9851-164f-43fc-9ab0-25b8054c99ed",
+                    "type": "scanlation_group",
+                    "attributes": {
+                        "name": "Flame Scans",
+                        "altNames": [
+                            {
+                                "en": "FLAME-SCANS"
+                            }
+                        ],
+                        "locked": false,
+                        "website": "https:\/\/flamescans.org",
+                        "ircServer": null,
+                        "ircChannel": null,
+                        "discord": "M6wcq6ZPQg",
+                        "contactEmail": "flamescanlations@gmail.com",
+                        "description": "**Flame Scans is a scanlation group, that dedicates itself to creating comic translations for Mangas, Manhwas, And Manhuas!**   \r\n\r\n\r\n---\r\n\r\n  \r\n**We currently do:**  \r\n-Solo Leveling  \r\n-Omniscient Reader  \r\n-A Returner's Magic Should Be Special  \r\n-The Skeleton Soldier Couldn't Defend the Dungeon  \r\n-Dungeon Reset  \r\n-Trinity Seven  \r\n-Berserk of Gluttony  \r\n-Unnamed Memory  \r\n- Spring's Espresso  \r\n-The Villainess Is a Marionette  \r\n-My Wife is Actually The Empress?  \r\n-The Reincarnated Inferior Magic Swordsman  \r\n\r\n\r\n---\r\n\r\n  \r\n**Links**  \r\nPatreon Link:   \r\n<https:\/\/www.patreon.com\/flamescans>  \r\nPayPal Link:  \r\n<https:\/\/www.paypal.me\/flamescan>  \r\nKo-Fi Link:  \r\n<https:\/\/ko-fi.com\/flamescans>  \r\nWebsite link:  \r\n<https:\/\/flamescans.org>  \r\nDiscord Link:  \r\n<https:\/\/discord.gg\/flamescans>\r\n<https:\/\/discord.gg\/M6wcq6ZPQg>",
+                        "twitter": null,
+                        "mangaUpdates": "https:\/\/www.mangaupdates.com\/group\/btgsdiy\/flame-scans",
+                        "focusedLanguages": [
+                            "en"
+                        ],
+                        "official": false,
+                        "verified": false,
+                        "inactive": true,
+                        "publishDelay": null,
+                        "exLicensed": false,
+                        "createdAt": "2021-04-19T21:45:59+00:00",
+                        "updatedAt": "2023-10-22T20:33:29+00:00",
+                        "version": 12
+                    }
+                },
+                {
+                    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+                    "type": "manga"
+                },
+                {
+                    "id": "c55f8354-ec7c-4543-afaf-71a5e7088124",
+                    "type": "user"
+                }
+            ]
+        },
+        {
+            "id": "0c6635d3-d99f-4b2f-9144-c0543ab35497",
+            "type": "chapter",
+            "attributes": {
+                "volume": null,
+                "chapter": "5",
+                "title": null,
+                "translatedLanguage": "en",
+                "externalUrl": null,
+                "publishAt": "2022-09-23T07:11:28+00:00",
+                "readableAt": "2022-09-23T07:11:28+00:00",
+                "createdAt": "2022-09-23T07:11:27+00:00",
+                "updatedAt": "2022-09-23T07:14:10+00:00",
+                "pages": 81,
+                "version": 3
+            },
+            "relationships": [
+                {
+                    "id": "fdad9851-164f-43fc-9ab0-25b8054c99ed",
+                    "type": "scanlation_group",
+                    "attributes": {
+                        "name": "Flame Scans",
+                        "altNames": [
+                            {
+                                "en": "FLAME-SCANS"
+                            }
+                        ],
+                        "locked": false,
+                        "website": "https:\/\/flamescans.org",
+                        "ircServer": null,
+                        "ircChannel": null,
+                        "discord": "M6wcq6ZPQg",
+                        "contactEmail": "flamescanlations@gmail.com",
+                        "description": "**Flame Scans is a scanlation group, that dedicates itself to creating comic translations for Mangas, Manhwas, And Manhuas!**   \r\n\r\n\r\n---\r\n\r\n  \r\n**We currently do:**  \r\n-Solo Leveling  \r\n-Omniscient Reader  \r\n-A Returner's Magic Should Be Special  \r\n-The Skeleton Soldier Couldn't Defend the Dungeon  \r\n-Dungeon Reset  \r\n-Trinity Seven  \r\n-Berserk of Gluttony  \r\n-Unnamed Memory  \r\n- Spring's Espresso  \r\n-The Villainess Is a Marionette  \r\n-My Wife is Actually The Empress?  \r\n-The Reincarnated Inferior Magic Swordsman  \r\n\r\n\r\n---\r\n\r\n  \r\n**Links**  \r\nPatreon Link:   \r\n<https:\/\/www.patreon.com\/flamescans>  \r\nPayPal Link:  \r\n<https:\/\/www.paypal.me\/flamescan>  \r\nKo-Fi Link:  \r\n<https:\/\/ko-fi.com\/flamescans>  \r\nWebsite link:  \r\n<https:\/\/flamescans.org>  \r\nDiscord Link:  \r\n<https:\/\/discord.gg\/flamescans>\r\n<https:\/\/discord.gg\/M6wcq6ZPQg>",
+                        "twitter": null,
+                        "mangaUpdates": "https:\/\/www.mangaupdates.com\/group\/btgsdiy\/flame-scans",
+                        "focusedLanguages": [
+                            "en"
+                        ],
+                        "official": false,
+                        "verified": false,
+                        "inactive": true,
+                        "publishDelay": null,
+                        "exLicensed": false,
+                        "createdAt": "2021-04-19T21:45:59+00:00",
+                        "updatedAt": "2023-10-22T20:33:29+00:00",
+                        "version": 12
+                    }
+                },
+                {
+                    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+                    "type": "manga"
+                },
+                {
+                    "id": "c55f8354-ec7c-4543-afaf-71a5e7088124",
+                    "type": "user"
+                }
+            ]
+        },
+        {
+            "id": "cd56808c-7855-4771-88b8-47829fc55a92",
+            "type": "chapter",
+            "attributes": {
+                "volume": null,
+                "chapter": "6",
+                "title": null,
+                "translatedLanguage": "en",
+                "externalUrl": null,
+                "publishAt": "2022-09-23T07:16:43+00:00",
+                "readableAt": "2022-09-23T07:16:43+00:00",
+                "createdAt": "2022-09-23T07:16:42+00:00",
+                "updatedAt": "2022-09-24T21:01:59+00:00",
+                "pages": 93,
+                "version": 4
+            },
+            "relationships": [
+                {
+                    "id": "fdad9851-164f-43fc-9ab0-25b8054c99ed",
+                    "type": "scanlation_group",
+                    "attributes": {
+                        "name": "Flame Scans",
+                        "altNames": [
+                            {
+                                "en": "FLAME-SCANS"
+                            }
+                        ],
+                        "locked": false,
+                        "website": "https:\/\/flamescans.org",
+                        "ircServer": null,
+                        "ircChannel": null,
+                        "discord": "M6wcq6ZPQg",
+                        "contactEmail": "flamescanlations@gmail.com",
+                        "description": "**Flame Scans is a scanlation group, that dedicates itself to creating comic translations for Mangas, Manhwas, And Manhuas!**   \r\n\r\n\r\n---\r\n\r\n  \r\n**We currently do:**  \r\n-Solo Leveling  \r\n-Omniscient Reader  \r\n-A Returner's Magic Should Be Special  \r\n-The Skeleton Soldier Couldn't Defend the Dungeon  \r\n-Dungeon Reset  \r\n-Trinity Seven  \r\n-Berserk of Gluttony  \r\n-Unnamed Memory  \r\n- Spring's Espresso  \r\n-The Villainess Is a Marionette  \r\n-My Wife is Actually The Empress?  \r\n-The Reincarnated Inferior Magic Swordsman  \r\n\r\n\r\n---\r\n\r\n  \r\n**Links**  \r\nPatreon Link:   \r\n<https:\/\/www.patreon.com\/flamescans>  \r\nPayPal Link:  \r\n<https:\/\/www.paypal.me\/flamescan>  \r\nKo-Fi Link:  \r\n<https:\/\/ko-fi.com\/flamescans>  \r\nWebsite link:  \r\n<https:\/\/flamescans.org>  \r\nDiscord Link:  \r\n<https:\/\/discord.gg\/flamescans>\r\n<https:\/\/discord.gg\/M6wcq6ZPQg>",
+                        "twitter": null,
+                        "mangaUpdates": "https:\/\/www.mangaupdates.com\/group\/btgsdiy\/flame-scans",
+                        "focusedLanguages": [
+                            "en"
+                        ],
+                        "official": false,
+                        "verified": false,
+                        "inactive": true,
+                        "publishDelay": null,
+                        "exLicensed": false,
+                        "createdAt": "2021-04-19T21:45:59+00:00",
+                        "updatedAt": "2023-10-22T20:33:29+00:00",
+                        "version": 12
+                    }
+                },
+                {
+                    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+                    "type": "manga"
+                },
+                {
+                    "id": "c55f8354-ec7c-4543-afaf-71a5e7088124",
+                    "type": "user"
+                }
+            ]
+        },
+        {
+            "id": "bfabe4b7-425a-47b3-b4b6-f26a62200188",
+            "type": "chapter",
+            "attributes": {
+                "volume": null,
+                "chapter": "7",
+                "title": null,
+                "translatedLanguage": "en",
+                "externalUrl": null,
+                "publishAt": "2022-09-23T07:18:29+00:00",
+                "readableAt": "2022-09-23T07:18:29+00:00",
+                "createdAt": "2022-09-23T07:18:28+00:00",
+                "updatedAt": "2022-09-24T21:02:13+00:00",
+                "pages": 21,
+                "version": 4
+            },
+            "relationships": [
+                {
+                    "id": "fdad9851-164f-43fc-9ab0-25b8054c99ed",
+                    "type": "scanlation_group",
+                    "attributes": {
+                        "name": "Flame Scans",
+                        "altNames": [
+                            {
+                                "en": "FLAME-SCANS"
+                            }
+                        ],
+                        "locked": false,
+                        "website": "https:\/\/flamescans.org",
+                        "ircServer": null,
+                        "ircChannel": null,
+                        "discord": "M6wcq6ZPQg",
+                        "contactEmail": "flamescanlations@gmail.com",
+                        "description": "**Flame Scans is a scanlation group, that dedicates itself to creating comic translations for Mangas, Manhwas, And Manhuas!**   \r\n\r\n\r\n---\r\n\r\n  \r\n**We currently do:**  \r\n-Solo Leveling  \r\n-Omniscient Reader  \r\n-A Returner's Magic Should Be Special  \r\n-The Skeleton Soldier Couldn't Defend the Dungeon  \r\n-Dungeon Reset  \r\n-Trinity Seven  \r\n-Berserk of Gluttony  \r\n-Unnamed Memory  \r\n- Spring's Espresso  \r\n-The Villainess Is a Marionette  \r\n-My Wife is Actually The Empress?  \r\n-The Reincarnated Inferior Magic Swordsman  \r\n\r\n\r\n---\r\n\r\n  \r\n**Links**  \r\nPatreon Link:   \r\n<https:\/\/www.patreon.com\/flamescans>  \r\nPayPal Link:  \r\n<https:\/\/www.paypal.me\/flamescan>  \r\nKo-Fi Link:  \r\n<https:\/\/ko-fi.com\/flamescans>  \r\nWebsite link:  \r\n<https:\/\/flamescans.org>  \r\nDiscord Link:  \r\n<https:\/\/discord.gg\/flamescans>\r\n<https:\/\/discord.gg\/M6wcq6ZPQg>",
+                        "twitter": null,
+                        "mangaUpdates": "https:\/\/www.mangaupdates.com\/group\/btgsdiy\/flame-scans",
+                        "focusedLanguages": [
+                            "en"
+                        ],
+                        "official": false,
+                        "verified": false,
+                        "inactive": true,
+                        "publishDelay": null,
+                        "exLicensed": false,
+                        "createdAt": "2021-04-19T21:45:59+00:00",
+                        "updatedAt": "2023-10-22T20:33:29+00:00",
+                        "version": 12
+                    }
+                },
+                {
+                    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+                    "type": "manga"
+                },
+                {
+                    "id": "c55f8354-ec7c-4543-afaf-71a5e7088124",
+                    "type": "user"
+                }
+            ]
+        },
+        {
+            "id": "bdeeec12-08b5-4cb8-ac98-4bea4a5c8441",
+            "type": "chapter",
+            "attributes": {
+                "volume": null,
+                "chapter": "8",
+                "title": null,
+                "translatedLanguage": "en",
+                "externalUrl": null,
+                "publishAt": "2022-09-26T00:49:29+00:00",
+                "readableAt": "2022-09-26T00:49:29+00:00",
+                "createdAt": "2022-09-26T00:49:28+00:00",
+                "updatedAt": "2022-09-26T00:51:49+00:00",
+                "pages": 19,
+                "version": 3
+            },
+            "relationships": [
+                {
+                    "id": "fdad9851-164f-43fc-9ab0-25b8054c99ed",
+                    "type": "scanlation_group",
+                    "attributes": {
+                        "name": "Flame Scans",
+                        "altNames": [
+                            {
+                                "en": "FLAME-SCANS"
+                            }
+                        ],
+                        "locked": false,
+                        "website": "https:\/\/flamescans.org",
+                        "ircServer": null,
+                        "ircChannel": null,
+                        "discord": "M6wcq6ZPQg",
+                        "contactEmail": "flamescanlations@gmail.com",
+                        "description": "**Flame Scans is a scanlation group, that dedicates itself to creating comic translations for Mangas, Manhwas, And Manhuas!**   \r\n\r\n\r\n---\r\n\r\n  \r\n**We currently do:**  \r\n-Solo Leveling  \r\n-Omniscient Reader  \r\n-A Returner's Magic Should Be Special  \r\n-The Skeleton Soldier Couldn't Defend the Dungeon  \r\n-Dungeon Reset  \r\n-Trinity Seven  \r\n-Berserk of Gluttony  \r\n-Unnamed Memory  \r\n- Spring's Espresso  \r\n-The Villainess Is a Marionette  \r\n-My Wife is Actually The Empress?  \r\n-The Reincarnated Inferior Magic Swordsman  \r\n\r\n\r\n---\r\n\r\n  \r\n**Links**  \r\nPatreon Link:   \r\n<https:\/\/www.patreon.com\/flamescans>  \r\nPayPal Link:  \r\n<https:\/\/www.paypal.me\/flamescan>  \r\nKo-Fi Link:  \r\n<https:\/\/ko-fi.com\/flamescans>  \r\nWebsite link:  \r\n<https:\/\/flamescans.org>  \r\nDiscord Link:  \r\n<https:\/\/discord.gg\/flamescans>\r\n<https:\/\/discord.gg\/M6wcq6ZPQg>",
+                        "twitter": null,
+                        "mangaUpdates": "https:\/\/www.mangaupdates.com\/group\/btgsdiy\/flame-scans",
+                        "focusedLanguages": [
+                            "en"
+                        ],
+                        "official": false,
+                        "verified": false,
+                        "inactive": true,
+                        "publishDelay": null,
+                        "exLicensed": false,
+                        "createdAt": "2021-04-19T21:45:59+00:00",
+                        "updatedAt": "2023-10-22T20:33:29+00:00",
+                        "version": 12
+                    }
+                },
+                {
+                    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+                    "type": "manga"
+                },
+                {
+                    "id": "c55f8354-ec7c-4543-afaf-71a5e7088124",
+                    "type": "user"
+                }
+            ]
+        },
+        {
+            "id": "2800e297-f2ae-4f1b-b904-43ab16530605",
+            "type": "chapter",
+            "attributes": {
+                "volume": null,
+                "chapter": "9",
+                "title": null,
+                "translatedLanguage": "en",
+                "externalUrl": null,
+                "publishAt": "2022-09-26T00:52:19+00:00",
+                "readableAt": "2022-09-26T00:52:19+00:00",
+                "createdAt": "2022-09-26T00:52:19+00:00",
+                "updatedAt": "2022-09-26T00:55:46+00:00",
+                "pages": 95,
+                "version": 3
+            },
+            "relationships": [
+                {
+                    "id": "fdad9851-164f-43fc-9ab0-25b8054c99ed",
+                    "type": "scanlation_group",
+                    "attributes": {
+                        "name": "Flame Scans",
+                        "altNames": [
+                            {
+                                "en": "FLAME-SCANS"
+                            }
+                        ],
+                        "locked": false,
+                        "website": "https:\/\/flamescans.org",
+                        "ircServer": null,
+                        "ircChannel": null,
+                        "discord": "M6wcq6ZPQg",
+                        "contactEmail": "flamescanlations@gmail.com",
+                        "description": "**Flame Scans is a scanlation group, that dedicates itself to creating comic translations for Mangas, Manhwas, And Manhuas!**   \r\n\r\n\r\n---\r\n\r\n  \r\n**We currently do:**  \r\n-Solo Leveling  \r\n-Omniscient Reader  \r\n-A Returner's Magic Should Be Special  \r\n-The Skeleton Soldier Couldn't Defend the Dungeon  \r\n-Dungeon Reset  \r\n-Trinity Seven  \r\n-Berserk of Gluttony  \r\n-Unnamed Memory  \r\n- Spring's Espresso  \r\n-The Villainess Is a Marionette  \r\n-My Wife is Actually The Empress?  \r\n-The Reincarnated Inferior Magic Swordsman  \r\n\r\n\r\n---\r\n\r\n  \r\n**Links**  \r\nPatreon Link:   \r\n<https:\/\/www.patreon.com\/flamescans>  \r\nPayPal Link:  \r\n<https:\/\/www.paypal.me\/flamescan>  \r\nKo-Fi Link:  \r\n<https:\/\/ko-fi.com\/flamescans>  \r\nWebsite link:  \r\n<https:\/\/flamescans.org>  \r\nDiscord Link:  \r\n<https:\/\/discord.gg\/flamescans>\r\n<https:\/\/discord.gg\/M6wcq6ZPQg>",
+                        "twitter": null,
+                        "mangaUpdates": "https:\/\/www.mangaupdates.com\/group\/btgsdiy\/flame-scans",
+                        "focusedLanguages": [
+                            "en"
+                        ],
+                        "official": false,
+                        "verified": false,
+                        "inactive": true,
+                        "publishDelay": null,
+                        "exLicensed": false,
+                        "createdAt": "2021-04-19T21:45:59+00:00",
+                        "updatedAt": "2023-10-22T20:33:29+00:00",
+                        "version": 12
+                    }
+                },
+                {
+                    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+                    "type": "manga"
+                },
+                {
+                    "id": "c55f8354-ec7c-4543-afaf-71a5e7088124",
+                    "type": "user"
+                }
+            ]
+        },
+        {
+            "id": "7741a551-9451-4eb2-819a-9512fba87b45",
+            "type": "chapter",
+            "attributes": {
+                "volume": null,
+                "chapter": "10",
+                "title": null,
+                "translatedLanguage": "en",
+                "externalUrl": null,
+                "publishAt": "2022-10-03T04:23:31+00:00",
+                "readableAt": "2022-10-03T04:23:31+00:00",
+                "createdAt": "2022-10-03T04:23:30+00:00",
+                "updatedAt": "2022-10-03T04:25:47+00:00",
+                "pages": 101,
+                "version": 3
+            },
+            "relationships": [
+                {
+                    "id": "fdad9851-164f-43fc-9ab0-25b8054c99ed",
+                    "type": "scanlation_group",
+                    "attributes": {
+                        "name": "Flame Scans",
+                        "altNames": [
+                            {
+                                "en": "FLAME-SCANS"
+                            }
+                        ],
+                        "locked": false,
+                        "website": "https:\/\/flamescans.org",
+                        "ircServer": null,
+                        "ircChannel": null,
+                        "discord": "M6wcq6ZPQg",
+                        "contactEmail": "flamescanlations@gmail.com",
+                        "description": "**Flame Scans is a scanlation group, that dedicates itself to creating comic translations for Mangas, Manhwas, And Manhuas!**   \r\n\r\n\r\n---\r\n\r\n  \r\n**We currently do:**  \r\n-Solo Leveling  \r\n-Omniscient Reader  \r\n-A Returner's Magic Should Be Special  \r\n-The Skeleton Soldier Couldn't Defend the Dungeon  \r\n-Dungeon Reset  \r\n-Trinity Seven  \r\n-Berserk of Gluttony  \r\n-Unnamed Memory  \r\n- Spring's Espresso  \r\n-The Villainess Is a Marionette  \r\n-My Wife is Actually The Empress?  \r\n-The Reincarnated Inferior Magic Swordsman  \r\n\r\n\r\n---\r\n\r\n  \r\n**Links**  \r\nPatreon Link:   \r\n<https:\/\/www.patreon.com\/flamescans>  \r\nPayPal Link:  \r\n<https:\/\/www.paypal.me\/flamescan>  \r\nKo-Fi Link:  \r\n<https:\/\/ko-fi.com\/flamescans>  \r\nWebsite link:  \r\n<https:\/\/flamescans.org>  \r\nDiscord Link:  \r\n<https:\/\/discord.gg\/flamescans>\r\n<https:\/\/discord.gg\/M6wcq6ZPQg>",
+                        "twitter": null,
+                        "mangaUpdates": "https:\/\/www.mangaupdates.com\/group\/btgsdiy\/flame-scans",
+                        "focusedLanguages": [
+                            "en"
+                        ],
+                        "official": false,
+                        "verified": false,
+                        "inactive": true,
+                        "publishDelay": null,
+                        "exLicensed": false,
+                        "createdAt": "2021-04-19T21:45:59+00:00",
+                        "updatedAt": "2023-10-22T20:33:29+00:00",
+                        "version": 12
+                    }
+                },
+                {
+                    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+                    "type": "manga"
+                },
+                {
+                    "id": "c55f8354-ec7c-4543-afaf-71a5e7088124",
+                    "type": "user"
+                }
+            ]
+        }
+    ],
+    "limit": 10,
+    "offset": 0,
+    "total": 69
+}

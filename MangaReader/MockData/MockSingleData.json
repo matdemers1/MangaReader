@@ -1,0 +1,262 @@
+{
+    "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+    "type": "manga",
+    "attributes": {
+        "title": {
+            "en": "I Became the Tyrant of a Defense Game"
+        },
+        "altTitles": [
+            {
+                "ko": "디펜스 게임의 폭군이 되었다"
+            },
+            {
+                "en": "Tyrant of the Tower Defense Game"
+            }
+        ],
+        "description": {
+            "en": "Protect the Empire was considered unbeatable for over a decade until streamer extraordinaire Mr. Gamer Geek comes along and defeats the game on its hardest mode. But just when he's about to rest on his laurels, he's sucked into the world of the game by some mysterious figure and thrust into Prince Ash's body!\n\nAsh now realizes that every click and command he had mindlessly sent out had real, gruesome costs - including his teammates' lives that he sacrificed for the sake of victory. To make up for his previous actions, Ash promises to keep his whole team alive this time while using his wits and knowledge to survive the hellish onslaught of monsters. \n\nBut who brought him to this world in the first place, and why?\n\nAsh may soon find the answers to these questions - if he can survive the bloody battlefield first!",
+            "ko": "타워디펜스&던전오펜스 RPG <제국을 지켜라>\n누구도 클리어하지 못한 난이도로 게임의 엔딩을 봤다.\n그런데 정신을 차리니 게임 속이다.\n그것도 공략이 불가능한 튜토리얼 스테이지다.\n\"반드시 클리어해 주마, 이 거지 같은 게임……!\""
+        },
+        "isLocked": false,
+        "links": {
+            "al": "153513",
+            "ap": "i-became-the-tyrant-of-a-defence-game",
+            "mu": "i5sjf4k",
+            "nu": "i-became-the-tyrant-of-a-defense-game",
+            "mal": "153518",
+            "raw": "https:\\/\\/comic.naver.com\\/webtoon\\/list?titleId=798182",
+            "engtl": "https:\\/\\/www.tappytoon.com\\/en\\/book\\/tyrant-of-the-tower-defense-game"
+        },
+        "originalLanguage": "ko",
+        "lastVolume": "",
+        "lastChapter": "",
+        "publicationDemographic": null,
+        "status": "ongoing",
+        "year": 2022,
+        "contentRating": "safe",
+        "tags": [
+            {
+                "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Monsters"
+                    },
+                    "description": {},
+                    "group": "theme",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Action"
+                    },
+                    "description": {},
+                    "group": "genre",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "3e2b8dae-350e-4ab8-a8ce-016e844b9f0d",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Long Strip"
+                    },
+                    "description": {},
+                    "group": "format",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Survival"
+                    },
+                    "description": {},
+                    "group": "theme",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Adventure"
+                    },
+                    "description": {},
+                    "group": "genre",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "9438db5a-7e2a-4ac0-b39e-e0d95a34b8a8",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Video Games"
+                    },
+                    "description": {},
+                    "group": "theme",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Magic"
+                    },
+                    "description": {},
+                    "group": "theme",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "ace04997-f6bd-436e-b261-779182193d3d",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Isekai"
+                    },
+                    "description": {},
+                    "group": "genre",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Gore"
+                    },
+                    "description": {},
+                    "group": "content",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Drama"
+                    },
+                    "description": {},
+                    "group": "genre",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Fantasy"
+                    },
+                    "description": {},
+                    "group": "genre",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "e197df38-d0e7-43b5-9b09-2842d0c326dd",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Web Comic"
+                    },
+                    "description": {},
+                    "group": "format",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Adaptation"
+                    },
+                    "description": {},
+                    "group": "format",
+                    "version": 1
+                },
+                "relationships": []
+            },
+            {
+                "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
+                "type": "tag",
+                "attributes": {
+                    "name": {
+                        "en": "Full Color"
+                    },
+                    "description": {},
+                    "group": "format",
+                    "version": 1
+                },
+                "relationships": []
+            }
+        ],
+        "state": "published",
+        "chapterNumbersResetOnNewVolume": false,
+        "createdAt": "2022-08-06T21:26:14+00:00",
+        "updatedAt": "2023-11-05T20:10:38+00:00",
+        "version": 8,
+        "availableTranslatedLanguages": [
+            "en"
+        ],
+        "latestUploadedChapter": "a7e6985a-6476-48c4-bf14-13a5eaad5ef4"
+    },
+    "relationships": [
+        {
+            "id": "f0ab3670-5694-4baa-aa27-01efa50e9ad3",
+            "type": "author"
+        },
+        {
+            "id": "f4a87e0a-d7f2-46ba-afe3-9e7336771065",
+            "type": "author"
+        },
+        {
+            "id": "502a8554-9688-4ac0-85c5-e3167c9dd3c7",
+            "type": "artist"
+        },
+        {
+            "id": "642609b1-9cc3-432d-aca2-f1c931d9c341",
+            "type": "cover_art",
+            "attributes": {
+                "description": "https:\\/\\/comicthumb-phinf.pstatic.net\\/20220812_183\\/pocket_1660271730300YCinq_JPEG\\/%BD%C3%B8%AE%C1%EE_%C7%A5%C1%F6_690x1000.jpg",
+                "volume": "1.1",
+                "fileName": "71675d54-8c30-45f7-a07b-bfc3518c6695.png",
+                "locale": "ko",
+                "createdAt": "2022-08-18T04:11:04+00:00",
+                "updatedAt": "2022-08-18T04:11:04+00:00",
+                "version": 1
+            }
+        },
+        {
+            "id": "3678de43-a55d-43be-b2ab-5c32a8219021",
+            "type": "creator"
+        }
+    ]
+}

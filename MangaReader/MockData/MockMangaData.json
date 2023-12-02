@@ -1,0 +1,1809 @@
+[
+    {
+        "id": "4702058d-c553-4966-ab09-1deab6328384",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "xxxHOLiC"
+            },
+            "altTitles": [
+                {
+                    "ru": "Триплексоголик"
+                },
+                {
+                    "ja": "×××ホリック"
+                },
+                {
+                    "ja-ro": "×××ＨＯＬｉＣ"
+                }
+            ],
+            "description": {
+                "en": "Watanuki Kimihiro is haunted by visions of ghosts and spirits. Seemingly by chance, he encounters a mysterious witch named Yuuko, who claims she can help. In desperation, he accepts, but realizes that he's just been tricked into working for Yuuko in order to pay off the cost of her services. Soon he's employed in her little shop- a job which turns out to be nothing like his previous work experience!",
+                "ja": "アヤカシを視たり、惹き寄せたりする体質に悩む高校生の四月一日君尋（ワタヌキ　キミヒロ）。ある日、引き寄せられるように\"ミセ\"と呼ばれる館にたどり着き、女店主・壱原侑子（イチハラ　ユウコ）と出逢う。そこは見合った対価さえ支払えば、どんな願いでもかなえてくれる不思議な\"ミセ\"。四月一日は「アヤカシを視えなくしてもらう」という願いをかなえてもらうかわりに、対価として住み込みで働き、\"ミセ\"を訪れる客とともに、様々な怪奇現象に巻き込まれていくのだった。",
+                "pt-br": "Kimihiro Watanuki é um estudante do secundário persuido por youkai e ayakashi, espíritos com uma forte atracção por ele. Os espíritos são invisíveis aos olhos dos outros e os encontros com eles são sempre problemáticos. Quando ele se depara com uma loja que concede desejos, os eventos da sua vida prometem deixar de ser normais. A loja é dirigida por Yuko Ichihara, uma mestiriosa e linda bruxa de vários nomes e de renome esotérico. Por um preço, ela oferecesse para conceder o desejo de os espíritos desapareceram a Kimihiro. O preço, de acordo com ela, deve ser igual em valor e assim, como pagamento, ele torna-se temporariamente o criado de Yuko. O trabalho dele consiste em pequenos recados em lidar com o sobrenatural e as tarefas de casa. O seu amor, Himawari Kunogi, e \"rival\", Shizuka Domeki, ocasionalmente juntam-se a ele no seu trabalho a pedido de Yuko. Os três tornam-se incrivelmente próximos apesar da contrariadade de Kimihiro e Domeki. Yuko refere-se constantemente ao hitsuzen, querendo dizer o inevitável, destino, ou sina, como sendo a força que guia o mundo. Ela afirma constantemente que as coincidências não existem, e que cada acção ou decisão é inevitável, porque sem eles, outros acontecimentos no futuro poderiam não acontecer."
+            },
+            "isLocked": false,
+            "links": {
+                "al": "30010",
+                "ap": "xxxholic",
+                "bw": "series\\/4263",
+                "kt": "32",
+                "mu": "341",
+                "amz": "https:\\/\\/www.amazon.co.jp\\/gp\\/aw\\/d\\/B074CMP8PC",
+                "ebj": "https:\\/\\/ebookjapan.yahoo.co.jp\\/books\\/126702\\/",
+                "mal": "10",
+                "raw": "https:\\/\\/comic-days.com\\/episode\\/10834108156629765408",
+                "engtl": "https:\\/\\/kodansha.us\\/series\\/xxxholic-omnibus\\/"
+            },
+            "originalLanguage": "ja",
+            "lastVolume": "19",
+            "lastChapter": "111",
+            "publicationDemographic": "seinen",
+            "status": "completed",
+            "year": 2003,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Psychological"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Comedy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Drama"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Fantasy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Supernatural"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "ee968100-4191-4968-93d3-f82d72be7e46",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Mystery"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2018-04-19T00:36:25+00:00",
+            "updatedAt": "2023-06-06T18:46:47+00:00",
+            "version": 15,
+            "availableTranslatedLanguages": [
+                "en",
+                "ru",
+                "bg",
+                "pt-br",
+                "pl",
+                "hu"
+            ],
+            "latestUploadedChapter": "7eb7b0bd-78c9-4757-9726-641bba0de18d"
+        },
+        "relationships": [
+            {
+                "id": "60bc549c-f2ac-488e-9b83-c840a76d17ce",
+                "type": "author"
+            },
+            {
+                "id": "937ca459-3e37-450f-9114-ef81a37e335f",
+                "type": "author"
+            },
+            {
+                "id": "259db6b3-3c79-4bbc-82f4-b65dde73e904",
+                "type": "artist"
+            },
+            {
+                "id": "3dffe29e-f96d-446b-a288-84120d4f1297",
+                "type": "artist"
+            },
+            {
+                "id": "60bc549c-f2ac-488e-9b83-c840a76d17ce",
+                "type": "artist"
+            },
+            {
+                "id": "16754796-e6c9-4b36-bef9-0d5c7967845f",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "19",
+                    "fileName": "1403208a-5a93-4e35-bd99-a68ae324685a.jpg",
+                    "locale": "ja",
+                    "createdAt": "2022-06-05T22:19:50+00:00",
+                    "updatedAt": "2022-06-05T22:19:50+00:00",
+                    "version": 1
+                }
+            },
+            {
+                "id": "00f84604-101c-4aea-96ea-ecf85d8ffa68",
+                "type": "manga",
+                "related": "spin_off"
+            },
+            {
+                "id": "245f2aac-1aee-4983-b2d5-34ea5dab460e",
+                "type": "manga",
+                "related": "sequel"
+            },
+            {
+                "id": "466de5d4-83d1-4bbb-8f0f-1b84982877b8",
+                "type": "manga",
+                "related": "sequel"
+            },
+            {
+                "id": "4aae6db2-e828-4775-9bda-6b48639508f8",
+                "type": "manga",
+                "related": "alternate_story"
+            },
+            {
+                "id": "55173de0-cb9b-4211-867f-7bc8bd52b0d7",
+                "type": "manga",
+                "related": "doujinshi"
+            },
+            {
+                "id": "e4967558-c7fa-4c48-9a4f-1e462f50fb2c",
+                "type": "manga",
+                "related": "shared_universe"
+            },
+            {
+                "id": "f830514d-f3e1-4b11-b18b-e5f7b6d9b861",
+                "type": "manga",
+                "related": "shared_universe"
+            }
+        ]
+    },
+    {
+        "id": "5bc8917e-2d26-479c-95fc-4a145bb9729a",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "Re Re Honey ~S.O.S Daisakusen~"
+            },
+            "altTitles": [
+                {
+                    "en": "Re Re ハニ　〜大作戦〜"
+                },
+                {
+                    "en": "リリハニ　〜大作戦〜"
+                }
+            ],
+            "description": {
+                "en": "ReRe Hello x Honey and Granulated Sugar  \nA crossover featuring Minato and Ririko from ReRe Hello (by Minami Touko), and Nao and Taiga from the oneshot Honey, which later became the series Granulated Sugar (by Meguro Amu)."
+            },
+            "isLocked": false,
+            "links": null,
+            "originalLanguage": "ja",
+            "lastVolume": null,
+            "lastChapter": null,
+            "publicationDemographic": "shoujo",
+            "status": "completed",
+            "year": null,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Romance"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Comedy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Drama"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2018-08-10T11:27:02+00:00",
+            "updatedAt": "2021-05-25T15:42:47+00:00",
+            "version": 2,
+            "availableTranslatedLanguages": [
+                "fr",
+                "pt-br"
+            ],
+            "latestUploadedChapter": "cb7b4700-552c-408a-9bee-fd34905cab29"
+        },
+        "relationships": [
+            {
+                "id": "47fab430-5b66-4503-9d13-2d800715df0c",
+                "type": "author"
+            },
+            {
+                "id": "ece81ede-6585-4233-a459-d393a0e6b46f",
+                "type": "author"
+            },
+            {
+                "id": "47fab430-5b66-4503-9d13-2d800715df0c",
+                "type": "artist"
+            },
+            {
+                "id": "ece81ede-6585-4233-a459-d393a0e6b46f",
+                "type": "artist"
+            },
+            {
+                "id": "c509310c-538c-4f11-8e10-8dedbc07a260",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": null,
+                    "fileName": "02bfc58d-b1dd-45d4-b7e1-098dc6197008.jpg",
+                    "locale": "ja",
+                    "createdAt": "2021-05-24T16:41:30+00:00",
+                    "updatedAt": "2021-05-24T16:41:30+00:00",
+                    "version": 1
+                }
+            },
+            {
+                "id": "36455f09-15db-4946-ab2e-23b537c24839",
+                "type": "manga",
+                "related": "adapted_from"
+            },
+            {
+                "id": "7aaaded7-9057-4e34-8dda-deeb69b1e400",
+                "type": "manga",
+                "related": "adapted_from"
+            },
+            {
+                "id": "93a55db6-b6ec-4799-bf8d-1d0643eb2d78",
+                "type": "manga",
+                "related": "adapted_from"
+            }
+        ]
+    },
+    {
+        "id": "a846b1d7-2e57-4622-acdf-9c584d07ce7f",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "I Became the Tyrant of a Defense Game"
+            },
+            "altTitles": [
+                {
+                    "ko": "디펜스 게임의 폭군이 되었다"
+                },
+                {
+                    "en": "Tyrant of the Tower Defense Game"
+                }
+            ],
+            "description": {
+                "en": "Protect the Empire was considered unbeatable for over a decade until streamer extraordinaire Mr. Gamer Geek comes along and defeats the game on its hardest mode. But just when he's about to rest on his laurels, he's sucked into the world of the game by some mysterious figure and thrust into Prince Ash's body!\n\nAsh now realizes that every click and command he had mindlessly sent out had real, gruesome costs - including his teammates' lives that he sacrificed for the sake of victory. To make up for his previous actions, Ash promises to keep his whole team alive this time while using his wits and knowledge to survive the hellish onslaught of monsters. \n\nBut who brought him to this world in the first place, and why?\n\nAsh may soon find the answers to these questions - if he can survive the bloody battlefield first!",
+                "ko": "타워디펜스&던전오펜스 RPG <제국을 지켜라>\n누구도 클리어하지 못한 난이도로 게임의 엔딩을 봤다.\n그런데 정신을 차리니 게임 속이다.\n그것도 공략이 불가능한 튜토리얼 스테이지다.\n\"반드시 클리어해 주마, 이 거지 같은 게임……!\""
+            },
+            "isLocked": false,
+            "links": {
+                "al": "153513",
+                "ap": "i-became-the-tyrant-of-a-defence-game",
+                "mu": "i5sjf4k",
+                "nu": "i-became-the-tyrant-of-a-defense-game",
+                "mal": "153518",
+                "raw": "https:\\/\\/comic.naver.com\\/webtoon\\/list?titleId=798182",
+                "engtl": "https:\\/\\/www.tappytoon.com\\/en\\/book\\/tyrant-of-the-tower-defense-game"
+            },
+            "originalLanguage": "ko",
+            "lastVolume": "",
+            "lastChapter": "",
+            "publicationDemographic": null,
+            "status": "ongoing",
+            "year": 2022,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Monsters"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Action"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "3e2b8dae-350e-4ab8-a8ce-016e844b9f0d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Long Strip"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Survival"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Adventure"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "9438db5a-7e2a-4ac0-b39e-e0d95a34b8a8",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Video Games"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Magic"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "ace04997-f6bd-436e-b261-779182193d3d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Isekai"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Gore"
+                        },
+                        "description": {},
+                        "group": "content",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Drama"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Fantasy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "e197df38-d0e7-43b5-9b09-2842d0c326dd",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Web Comic"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Adaptation"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Full Color"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2022-08-06T21:26:14+00:00",
+            "updatedAt": "2023-11-05T20:10:38+00:00",
+            "version": 8,
+            "availableTranslatedLanguages": [
+                "en"
+            ],
+            "latestUploadedChapter": "a7e6985a-6476-48c4-bf14-13a5eaad5ef4"
+        },
+        "relationships": [
+            {
+                "id": "f0ab3670-5694-4baa-aa27-01efa50e9ad3",
+                "type": "author"
+            },
+            {
+                "id": "f4a87e0a-d7f2-46ba-afe3-9e7336771065",
+                "type": "author"
+            },
+            {
+                "id": "502a8554-9688-4ac0-85c5-e3167c9dd3c7",
+                "type": "artist"
+            },
+            {
+                "id": "642609b1-9cc3-432d-aca2-f1c931d9c341",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "https:\\/\\/comicthumb-phinf.pstatic.net\\/20220812_183\\/pocket_1660271730300YCinq_JPEG\\/%BD%C3%B8%AE%C1%EE_%C7%A5%C1%F6_690x1000.jpg",
+                    "volume": "1.1",
+                    "fileName": "71675d54-8c30-45f7-a07b-bfc3518c6695.png",
+                    "locale": "ko",
+                    "createdAt": "2022-08-18T04:11:04+00:00",
+                    "updatedAt": "2022-08-18T04:11:04+00:00",
+                    "version": 1
+                }
+            },
+            {
+                "id": "3678de43-a55d-43be-b2ab-5c32a8219021",
+                "type": "creator"
+            }
+        ]
+    },
+    {
+        "id": "34019331-7377-4e2c-837e-f6e1ab2b5ef7",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "The Seven Deadly Sins: Four Knights of the Apocalypse"
+            },
+            "altTitles": [
+                {
+                    "ja": "黙示録の四騎士"
+                },
+                {
+                    "en": "The Four Knights of Apocalypse"
+                },
+                {
+                    "es-la": "Los cuatro caballeros del apocalipsis"
+                },
+                {
+                    "uk": "Чотири лицарі Апокаліпсису"
+                },
+                {
+                    "ko": "묵시록의 사기사"
+                },
+                {
+                    "zh-hk": "默示錄的四騎士"
+                },
+                {
+                    "tr": "Mahşerin Dört Şövalyesi"
+                },
+                {
+                    "tr": "Yedi Ölümcül Günah: Mahşerin Dört Şövalyesi"
+                },
+                {
+                    "pt-br": "Os quatro cavaleiros do apocalipse"
+                },
+                {
+                    "ru": "Четыре рыцаря Апокалипсиса"
+                },
+                {
+                    "ja-ro": "Mokushiroku no Yonkishi"
+                }
+            ],
+            "description": {
+                "en": "Percival, a kind boy, lives with his grandfather in a remote place called \"God's Finger\". However, the world will not allow him to live in peace. An encounter with a mysterious knight changes their fate, and a shocking secret is revealed. The boy sets out on an endless journey. Whether you know \"The Seven Deadly Sins\" or not, you can still enjoy it! The world's most awaited adventure fantasy!",
+                "es": "La profecía se ha cumplido. \"En un futuro no muy lejano, habrá cuatro caballeros sagrados que destruirán el mundo. Son los Cuatro Jinetes del Apocalipsis.\"\"\nLos santos caballeros que juraron fidelidad al rey Arturo estaban ansiosos por cortar el mal de raíz. Las consecuencias de estos acontecimientos llegan hasta la frontera... y sacuden el destino de un niño. Un niño que da el primer paso como le dice su corazón. ¿Qué le espera: sueños, esperanzas, gloria o pecado? La fantasía heroica del pasado y del presente, ¡el inicio!",
+                "fr": "Percival vit seul avec son grand-père Bargis, au sommet d’une haute montagne nommée le “Doigt divin”. Il y mène une vie heureuse, préservé du monde extérieur. Mais le jour de ses 16 ans, son destin bascule : un mystérieux guerrier à l’armure rouge s’en prend violemment à lui et à son grand-père. En effet, ce Chevalier sacré de Camelot est chargé d’éliminer quiconque s’apparenterait aux “Four Knights of the Apocalypse”, un groupe de cavaliers qui, d’après la prophétie, apparaîtra pour renverser le roi Arthur… Laissé pour mort, Percival survit à ses blessures et décide de partir en quête de vengeance, et d’aventures !",
+                "ja": "『七つの大罪』正統続編！ 全世界待望の冒険ファンタジー!!\n\n予言は示された。「遠くない未来、世界を滅ぼす四人の聖騎士が現れる。――その名を〈黙示録の四騎士〉」。厄災の芽を摘まんと色めき立つは、アーサー王に忠誠を誓いし一騎当千の聖騎士たち。その余波は、遠く辺境にまで及び……、一人の少年の運命を揺るがす！ 己が心の命ずるまま、一歩を踏み出す少年。その前途に待つは、夢か希望か栄光か罪か。古今無双のヒロイック・ファンタジー、開幕!!",
+                "tr": "Nazik bir çocuk olan Percival, büyükbabasıyla birlikte \"Tanrı'nın Parmağı\" adlı uzak bir yerde yaşıyor. Ancak dünya onun barış içinde yaşamasına izin vermeyecektir. Gizemli bir şövalyeyle karşılaşmaları kaderlerini değiştirir ve şok edici bir sır ortaya çıkar. Çocuk sonsuz bir yolculuğa çıkar. \"Yedi Ölümcül Günah\"ı bilseniz de bilmeseniz de tadını çıkarabilirsiniz! Dünyanın en çok beklenen macera fantezisi!",
+                "uk": "Історія є продовженням манги \"Сім Смертних гріхів\". Початок манги знайомить нас з Персівалем - шістнадцятирічний хлопець з ширяючого острова «Палець бога», який після певних подій вирушає в подорож чарівним королівством під назвою Британія.",
+                "es-la": "Percival, un niño bondadoso, vive con su abuelo en un lugar remoto llamado \"El dedo de Dios\". Sin embargo, el mundo no le permite vivir en paz. Un encuentro con un misterioso caballero cambia su destino, y se revela un impactante secreto. El niño emprende un viaje interminable. Tanto si conoce \"Los siete pecados capitales\" como si no, ¡podrá disfrutar de él! ¡La fantasía de aventuras más esperada del mundo!",
+                "pt-br": "Percival, um menino bem-humorado, vive com seu avô em um lugar remoto chamado “O Dedo de Deus”. No entanto, o mundo não permite que ele viva em paz. Um encontro com um misterioso cavaleiro muda seu destino, e um segredo chocante é revelado. O menino embarca em uma jornada sem fim."
+            },
+            "isLocked": false,
+            "links": {
+                "al": "129117",
+                "ap": "the-four-knights-of-the-apocalypse",
+                "bw": "series\\/296221",
+                "kt": "58856",
+                "mu": "164506",
+                "amz": "https:\\/\\/www.amazon.co.jp\\/gp\\/product\\/B096RC3P82",
+                "cdj": "https:\\/\\/www.cdjapan.co.jp\\/product\\/NEOBK-2666179",
+                "ebj": "https:\\/\\/ebookjapan.yahoo.co.jp\\/books\\/632278\\/",
+                "mal": "128691",
+                "raw": "https:\\/\\/pocket.shonenmagazine.com\\/episode\\/13933686331805452163",
+                "engtl": "https:\\/\\/kodansha.us\\/series\\/the-seven-deadly-sins-four-knights-of-the-apocalypse\\/"
+            },
+            "originalLanguage": "ja",
+            "lastVolume": "",
+            "lastChapter": "",
+            "publicationDemographic": "shounen",
+            "status": "ongoing",
+            "year": 2021,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Action"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "39730448-9a5f-48a2-85b0-a70db87b1233",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Demons"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Comedy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Adventure"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Magic"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Drama"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Fantasy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Supernatural"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2021-02-03T02:43:33+00:00",
+            "updatedAt": "2023-11-13T00:37:59+00:00",
+            "version": 24,
+            "availableTranslatedLanguages": [
+                "id",
+                "ru",
+                "pt-br",
+                "pl",
+                "fr",
+                "en",
+                "tr",
+                "es-la",
+                "ar",
+                "es",
+                "mn",
+                "it",
+                "vi"
+            ],
+            "latestUploadedChapter": "4e2ed31d-c354-4ef5-b124-43c44242e1d0"
+        },
+        "relationships": [
+            {
+                "id": "5b0372bb-28f9-4840-894b-a217d774c4f2",
+                "type": "author"
+            },
+            {
+                "id": "5b0372bb-28f9-4840-894b-a217d774c4f2",
+                "type": "artist"
+            },
+            {
+                "id": "3f259ed9-87c7-478f-b73b-9236a79e5369",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "14",
+                    "fileName": "ca847b1b-4ab8-4f37-97b8-c982e3a6b28f.jpg",
+                    "locale": "ja",
+                    "createdAt": "2023-10-12T15:48:05+00:00",
+                    "updatedAt": "2023-10-12T15:48:05+00:00",
+                    "version": 1
+                }
+            },
+            {
+                "id": "e52d9403-3356-403b-b7bb-d7d6a420dd50",
+                "type": "manga",
+                "related": "prequel"
+            }
+        ]
+    },
+    {
+        "id": "675619a6-2ddb-4923-84fe-133d3800bf45",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "Zutto Miteita Mono desu kara"
+            },
+            "altTitles": [
+                {
+                    "en": "ずっとみていたものですから"
+                }
+            ],
+            "description": {
+                "en": "A high-school girl with a hand fetish loves her mean teacher's hands."
+            },
+            "isLocked": false,
+            "links": {
+                "al": "82429",
+                "ap": "zutto-miteita-mono-desu-kara",
+                "kt": "11155",
+                "mu": "100116",
+                "mal": "52429"
+            },
+            "originalLanguage": "ja",
+            "lastVolume": null,
+            "lastChapter": null,
+            "publicationDemographic": "shoujo",
+            "status": "completed",
+            "year": null,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Romance"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2018-12-05T20:44:57+00:00",
+            "updatedAt": "2021-05-25T15:43:19+00:00",
+            "version": 2,
+            "availableTranslatedLanguages": [
+                "pt-br",
+                "en"
+            ],
+            "latestUploadedChapter": "107f7f41-bd58-4232-9dda-bf1b8c6a09ac"
+        },
+        "relationships": [
+            {
+                "id": "108e7313-6656-45b6-aa49-0ca6b9f166e8",
+                "type": "author"
+            },
+            {
+                "id": "108e7313-6656-45b6-aa49-0ca6b9f166e8",
+                "type": "artist"
+            },
+            {
+                "id": "c371190c-b7b8-4f7b-a9ce-62765cb50bc1",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": null,
+                    "fileName": "78db3411-8689-4de4-b392-80fec5811263.jpg",
+                    "locale": "ja",
+                    "createdAt": "2021-05-24T16:53:43+00:00",
+                    "updatedAt": "2021-05-24T16:53:43+00:00",
+                    "version": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "abe0bb3b-a05e-4602-aa4f-578e0b962cf9",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "Star-Embracing Swordmaster"
+            },
+            "altTitles": [
+                {
+                    "ko": "별을 품은 소드마스터"
+                },
+                {
+                    "en": "Star-Fostered Swordmaster"
+                }
+            ],
+            "description": {
+                "en": "Vlad was a vagrant child of the slums who always admired knights. After an incident where he was struck by black lightning, he began hearing a voice.\n\nA knight of blue moonlight appeared one day, and Vlad’s back-alley life was turned upside down…\n\nEven an obscure star that does not shine in the highest peaks of the night sky is still a star if it wishes to shine."
+            },
+            "isLocked": false,
+            "links": {
+                "mu": "cnro3u3",
+                "mal": "163116",
+                "raw": "https:\\/\\/comic.naver.com\\/webtoon\\/list?titleId=816809"
+            },
+            "originalLanguage": "ko",
+            "lastVolume": "",
+            "lastChapter": "",
+            "publicationDemographic": null,
+            "status": "ongoing",
+            "year": 2023,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "33771934-028e-4cb3-8744-691e866a923e",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Historical"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Action"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "3e2b8dae-350e-4ab8-a8ce-016e844b9f0d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Long Strip"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Magic"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Drama"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Fantasy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "e197df38-d0e7-43b5-9b09-2842d0c326dd",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Web Comic"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Adaptation"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Full Color"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2023-10-20T14:50:43+00:00",
+            "updatedAt": "2023-10-20T17:38:32+00:00",
+            "version": 4,
+            "availableTranslatedLanguages": [
+                "en"
+            ],
+            "latestUploadedChapter": "7d891e20-ec6f-40bd-b572-2ae028991883"
+        },
+        "relationships": [
+            {
+                "id": "06371e48-86b5-430e-92fb-0f232dbdd3ac",
+                "type": "author"
+            },
+            {
+                "id": "9cfa8206-2230-4ffe-b018-14f9f3b4d4a6",
+                "type": "author"
+            },
+            {
+                "id": "8e62ad42-7e0c-4c48-9249-67f54146a691",
+                "type": "artist"
+            },
+            {
+                "id": "5107c221-7afe-466c-a2f6-ea7506095c06",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "1",
+                    "fileName": "79b55c2b-0fb4-4569-8c48-aa1e1ff97eb7.jpg",
+                    "locale": "ko",
+                    "createdAt": "2023-10-20T14:50:45+00:00",
+                    "updatedAt": "2023-10-20T14:50:45+00:00",
+                    "version": 1
+                }
+            },
+            {
+                "id": "dc114c41-d113-4f6e-88bf-5cefb6cf7263",
+                "type": "creator"
+            }
+        ]
+    },
+    {
+        "id": "25cfb743-559b-44c5-a1dd-69de2cf0320d",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "Bloody Kiss"
+            },
+            "altTitles": [
+                {
+                    "en": "Bloody Honey"
+                },
+                {
+                    "en": "Bloody Kiss (YAGAMI Rina)"
+                },
+                {
+                    "en": "Un Chocoholic"
+                },
+                {
+                    "ru": "Кровавый поцелуй"
+                },
+                {
+                    "th": "จูบรักรสเลือด"
+                }
+            ],
+            "description": {
+                "en": "Wakaba has no memories about her first love. The only thing she kept from her first love was a matching pendant. One day, the vampire of rumors, Yukito, came into her school… and he has the same pendant as her?! Wakaba is sure that Yukito is her first love! Just after telling him, he kissed her. But why is he so cold with her after that?!  \n  \nIncludes two other side stories:  \nUn Chocoholic  \nBloody Honey",
+                "pt-br": "Wakaba não tem memórias sobre o seu primeiro amor... A única coisa que ela tem é um pingente combinado. Um dia, com boatos de vampiros, Yukito, vem para sua escola. E ele tem o mesmo pingente dela?! Wakaba tem certeza que Yukito é seu primeiro amor. Depois de contá-lo, ele a beijou. Mas por que ele ficou frio com ela depois disso?!"
+            },
+            "isLocked": false,
+            "links": {
+                "al": "56121",
+                "ap": "bloody-kiss-rina-yagami",
+                "kt": "19531",
+                "mu": "59990",
+                "amz": "https:\\/\\/www.amazon.co.jp\\/dp\\/B009JZGE7A\\/",
+                "mal": "26121"
+            },
+            "originalLanguage": "ja",
+            "lastVolume": "1",
+            "lastChapter": "5",
+            "publicationDemographic": "shoujo",
+            "status": "completed",
+            "year": 2010,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Romance"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "caaa44eb-cd40-4177-b930-79d3ef2afe87",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "School Life"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "d7d1730f-6eb0-4ba6-9437-602cac38664c",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Vampires"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Supernatural"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2018-03-18T22:59:28+00:00",
+            "updatedAt": "2023-09-20T14:55:00+00:00",
+            "version": 5,
+            "availableTranslatedLanguages": [
+                "pt-br",
+                "pl",
+                "ru"
+            ],
+            "latestUploadedChapter": "98282cec-9b69-4f34-82c2-ab95cb5f527d"
+        },
+        "relationships": [
+            {
+                "id": "0a43e025-7ca5-4906-96ed-ec5ee14b6173",
+                "type": "author"
+            },
+            {
+                "id": "0a43e025-7ca5-4906-96ed-ec5ee14b6173",
+                "type": "artist"
+            },
+            {
+                "id": "9b189c65-ab4c-4f50-8740-c1a6f78274ee",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "1",
+                    "fileName": "8a6b38f3-faa2-4eb1-b540-1d6e497c56b7.jpg",
+                    "locale": "ja",
+                    "createdAt": "2021-05-24T17:18:42+00:00",
+                    "updatedAt": "2022-04-21T18:20:04+00:00",
+                    "version": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": "9a414441-bbad-43f1-a3a7-dc262ca790a3",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "Omniscient Reader's Viewpoint"
+            },
+            "altTitles": [
+                {
+                    "ko": "전지적 독자 시점"
+                },
+                {
+                    "fr": "Lecteur omniscient"
+                },
+                {
+                    "es": "Lector omnisciente"
+                },
+                {
+                    "en": "ORV"
+                },
+                {
+                    "pl": "Punkt Widzenia Wszechwiedzącego Czytelnika"
+                },
+                {
+                    "ru": "Всеведущий читатель"
+                },
+                {
+                    "ar": "دیدگاه خواننده‌ی همه‌چی‌دون"
+                },
+                {
+                    "ar": "وجهة نظر القارئ العراف"
+                },
+                {
+                    "th": "อ่านชะตาวันสิ้นโลก"
+                },
+                {
+                    "ja": "全知的な読者の視点から"
+                },
+                {
+                    "zh-hk": "全知讀者視角"
+                },
+                {
+                    "zh": "全知读者"
+                },
+                {
+                    "ko": "전독시"
+                },
+                {
+                    "ko": "Jeonjijeok Dokja Sijeom"
+                },
+                {
+                    "en": "Omniscient Reader"
+                },
+                {
+                    "de": "Der allwissende Leser"
+                },
+                {
+                    "vi": "Toàn Trí Độc Giả"
+                },
+                {
+                    "zh": "全知读者视角"
+                },
+                {
+                    "vi": "Góc nhìn của Độc giả Toàn tri"
+                }
+            ],
+            "description": {
+                "de": "Damals hatte Dokja noch überhaupt keine Ahnung. Er hatte keine Ahnung, dass sein Lieblings-Web-Roman ‘Drei Wege um die Apokalypse zu überleben’ Realität wird und dass er der einzige ist, der weiß wie der Weltuntergang aussehen wird. Er hatte auch keine Ahnung, dass er letztendlich der Protagonist von diesem Roman werden würde. Jetzt begibt sich Dokja auf eine Reise, um den Lauf der Geschichte zu ändern und die Menschheit zu retten!\r\n\r\n---\r\n- [Webtoon Trailer](https:\\/\\/www.youtube.com\\/watch?v=cB9fwJAnQFk) | [ENG](https:\\/\\/www.youtube.com\\/watch?v=8OHzcTtoLo4)\r\n---\r\n- [Original Book <Aladin>](https:\\/\\/www.aladin.co.kr\\/shop\\/wproduct.aspx?ItemId=258422833)\r\n- [Original Book <Yes24>](http:\\/\\/www.yes24.com\\/Product\\/Goods\\/96195415)\r\n>\r\n- [Taiwan Official Website](https:\\/\\/www.starwatcher.com.tw\\/edm\\/orv\\/)\r\n---\r\n- [Official Traditional Chinese Translation](https:\\/\\/www.webtoons.com\\/zh-hant\\/fantasy\\/duzhe\\/list?title_no=2089)\r\n\r\n- [Official Simplified Chinese Translation](https:\\/\\/www.podoteng.com\\/)\r\n\r\n- [Official Spanish <Es> Translation](https:\\/\\/www.webtoons.com\\/es\\/fantasy\\/omniscient-reader\\/list?title_no=2208)\r\n\r\n- [Official Indonesian Translation](https:\\/\\/www.webtoons.com\\/id\\/fantasy\\/omniscient-reader\\/list?title_no=2109)\r\n\r\n- [Official Japanese Translation](https:\\/\\/manga.line.me\\/product\\/periodic?id=Z0000822)\r\n\r\n- [Official German Translation](https:\\/\\/www.webtoons.com\\/de\\/fantasy\\/omniscient-reader\\/list?title_no=2582)\r\n\r\n- [Official French Translation](https:\\/\\/www.webtoons.com\\/fr\\/fantasy\\/omniscient-reader\\/list?title_no=2175)\r\n\r\n- [Official Thai Translation](https:\\/\\/www.webtoons.com\\/th\\/fantasy\\/omniscient-reader\\/list?title_no=2106)\r\n---\r\n- [Web Novel Trailer](https:\\/\\/www.youtube.com\\/watch?v=5hHGZKgzEXo)\r\n>\r\n- Original Web Novel <Naver> [Web](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=3400123)\\/[Book](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=6020546)\r\n- Original Web Novel <Munpia> [Web](https:\\/\\/novel.munpia.com\\/104753)\\/[Book](https:\\/\\/novel.munpia.com\\/256726)\r\n---\r\n- [3B2S Website](http:\\/\\/3b2s.co.kr\\/?page_id=1477)",
+                "en": "Dokja was an average office worker whose sole interest was reading his favorite web novel 'Three Ways to Survive the Apocalypse.' But when the novel suddenly becomes reality, he is the only person who knows how the world will end. Armed with this realization, Dokja uses his understanding to change the course of the story, and the world, as he knows it.",
+                "es": "En ese entonces, Dokja no tenía idea de que su novela web favorita, Tres maneras de sobrevivir al apocalipsis, cobraría vida y que solo él sabría cómo iba a terminar el mundo. Tampoco tenía idea de que se convertiría en el protagonista de esta novela transformada en realidad. Ahora Dokja debe embarcarse en un viaje para alterar el curso de la historia y salvar a la humanidad de una vez por todas.\r\n\r\n---\r\n- [Webtoon Trailer](https:\\/\\/www.youtube.com\\/watch?v=cB9fwJAnQFk) | [ENG](https:\\/\\/www.youtube.com\\/watch?v=8OHzcTtoLo4)\r\n---\r\n- [Original Book <Aladin>](https:\\/\\/www.aladin.co.kr\\/shop\\/wproduct.aspx?ItemId=258422833)\r\n- [Original Book <Yes24>](http:\\/\\/www.yes24.com\\/Product\\/Goods\\/96195415)\r\n>\r\n- [Taiwan Official Website](https:\\/\\/www.starwatcher.com.tw\\/edm\\/orv\\/)\r\n---\r\n- [Official Traditional Chinese Translation](https:\\/\\/www.webtoons.com\\/zh-hant\\/fantasy\\/duzhe\\/list?title_no=2089)\r\n\r\n- [Official Simplified Chinese Translation](https:\\/\\/www.podoteng.com\\/)\r\n\r\n- [Official Spanish <Es> Translation](https:\\/\\/www.webtoons.com\\/es\\/fantasy\\/omniscient-reader\\/list?title_no=2208)\r\n\r\n- [Official Indonesian Translation](https:\\/\\/www.webtoons.com\\/id\\/fantasy\\/omniscient-reader\\/list?title_no=2109)\r\n\r\n- [Official Japanese Translation](https:\\/\\/manga.line.me\\/product\\/periodic?id=Z0000822)\r\n\r\n- [Official German Translation](https:\\/\\/www.webtoons.com\\/de\\/fantasy\\/omniscient-reader\\/list?title_no=2582)\r\n\r\n- [Official French Translation](https:\\/\\/www.webtoons.com\\/fr\\/fantasy\\/omniscient-reader\\/list?title_no=2175)\r\n\r\n- [Official Thai Translation](https:\\/\\/www.webtoons.com\\/th\\/fantasy\\/omniscient-reader\\/list?title_no=2106)\r\n---\r\n- [Web Novel Trailer](https:\\/\\/www.youtube.com\\/watch?v=5hHGZKgzEXo)\r\n>\r\n- Original Web Novel <Naver> [Web](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=3400123)\\/[Book](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=6020546)\r\n- Original Web Novel <Munpia> [Web](https:\\/\\/novel.munpia.com\\/104753)\\/[Book](https:\\/\\/novel.munpia.com\\/256726)\r\n---\r\n- [3B2S Website](http:\\/\\/3b2s.co.kr\\/?page_id=1477)",
+                "fr": "« Je suis le seul lecteur à connaître la fin du monde. » [Les trois façons de survivre dans un monde en ruine], ce roman fantastique de 3 149 chapitres, est devenu la réalité. Et il n'existe qu'une seule personne qui a lu l'intégralité de l'ouvrage.\r\n\r\n---\r\n- [Webtoon Trailer](https:\\/\\/www.youtube.com\\/watch?v=cB9fwJAnQFk) | [ENG](https:\\/\\/www.youtube.com\\/watch?v=8OHzcTtoLo4)\r\n---\r\n- [Original Book <Aladin>](https:\\/\\/www.aladin.co.kr\\/shop\\/wproduct.aspx?ItemId=258422833)\r\n- [Original Book <Yes24>](http:\\/\\/www.yes24.com\\/Product\\/Goods\\/96195415)\r\n>\r\n- [Taiwan Official Website](https:\\/\\/www.starwatcher.com.tw\\/edm\\/orv\\/)\r\n---\r\n- [Official Traditional Chinese Translation](https:\\/\\/www.webtoons.com\\/zh-hant\\/fantasy\\/duzhe\\/list?title_no=2089)\r\n\r\n- [Official Simplified Chinese Translation](https:\\/\\/www.podoteng.com\\/)\r\n\r\n- [Official Spanish <Es> Translation](https:\\/\\/www.webtoons.com\\/es\\/fantasy\\/omniscient-reader\\/list?title_no=2208)\r\n\r\n- [Official Indonesian Translation](https:\\/\\/www.webtoons.com\\/id\\/fantasy\\/omniscient-reader\\/list?title_no=2109)\r\n\r\n- [Official Japanese Translation](https:\\/\\/manga.line.me\\/product\\/periodic?id=Z0000822)\r\n\r\n- [Official German Translation](https:\\/\\/www.webtoons.com\\/de\\/fantasy\\/omniscient-reader\\/list?title_no=2582)\r\n\r\n- [Official French Translation](https:\\/\\/www.webtoons.com\\/fr\\/fantasy\\/omniscient-reader\\/list?title_no=2175)\r\n\r\n- [Official Thai Translation](https:\\/\\/www.webtoons.com\\/th\\/fantasy\\/omniscient-reader\\/list?title_no=2106)\r\n---\r\n- [Web Novel Trailer](https:\\/\\/www.youtube.com\\/watch?v=5hHGZKgzEXo)\r\n>\r\n- Original Web Novel <Naver> [Web](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=3400123)\\/[Book](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=6020546)\r\n- Original Web Novel <Munpia> [Web](https:\\/\\/novel.munpia.com\\/104753)\\/[Book](https:\\/\\/novel.munpia.com\\/256726)\r\n---\r\n- [3B2S Website](http:\\/\\/3b2s.co.kr\\/?page_id=1477)",
+                "id": "\"Jalan cerita ini... hanya aku yang tahu!\" Dunia baru akan datang, maka dunia yang lama harus hancur. Apakah dia bisa menyelamatkan diri dari kehancuran dunia yang lama?!\r\n\r\n---\r\n- [Webtoon Trailer](https:\\/\\/www.youtube.com\\/watch?v=cB9fwJAnQFk) | [ENG](https:\\/\\/www.youtube.com\\/watch?v=8OHzcTtoLo4)\r\n---\r\n- [Original Book <Aladin>](https:\\/\\/www.aladin.co.kr\\/shop\\/wproduct.aspx?ItemId=258422833)\r\n- [Original Book <Yes24>](http:\\/\\/www.yes24.com\\/Product\\/Goods\\/96195415)\r\n>\r\n- [Taiwan Official Website](https:\\/\\/www.starwatcher.com.tw\\/edm\\/orv\\/)\r\n---\r\n- [Official Traditional Chinese Translation](https:\\/\\/www.webtoons.com\\/zh-hant\\/fantasy\\/duzhe\\/list?title_no=2089)\r\n\r\n- [Official Simplified Chinese Translation](https:\\/\\/www.podoteng.com\\/)\r\n\r\n- [Official Spanish <Es> Translation](https:\\/\\/www.webtoons.com\\/es\\/fantasy\\/omniscient-reader\\/list?title_no=2208)\r\n\r\n- [Official Indonesian Translation](https:\\/\\/www.webtoons.com\\/id\\/fantasy\\/omniscient-reader\\/list?title_no=2109)\r\n\r\n- [Official Japanese Translation](https:\\/\\/manga.line.me\\/product\\/periodic?id=Z0000822)\r\n\r\n- [Official German Translation](https:\\/\\/www.webtoons.com\\/de\\/fantasy\\/omniscient-reader\\/list?title_no=2582)\r\n\r\n- [Official French Translation](https:\\/\\/www.webtoons.com\\/fr\\/fantasy\\/omniscient-reader\\/list?title_no=2175)\r\n\r\n- [Official Thai Translation](https:\\/\\/www.webtoons.com\\/th\\/fantasy\\/omniscient-reader\\/list?title_no=2106)\r\n---\r\n- [Web Novel Trailer](https:\\/\\/www.youtube.com\\/watch?v=5hHGZKgzEXo)\r\n>\r\n- Original Web Novel <Naver> [Web](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=3400123)\\/[Book](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=6020546)\r\n- Original Web Novel <Munpia> [Web](https:\\/\\/novel.munpia.com\\/104753)\\/[Book](https:\\/\\/novel.munpia.com\\/256726)\r\n---\r\n- [3B2S Website](http:\\/\\/3b2s.co.kr\\/?page_id=1477)",
+                "ja": "「ありえない...これは俺が知っている展開だ。」 10年以上読み続けた小説の最終話を読んだ日、世界は滅亡し小説の世界が現実となった。 平凡で冴えないサラリーマンの主人公・ドクシャ。 そんな彼の趣味はWEB小説『滅亡した世界で生き残る３つの方法』を読むこと。 ついに最終話を読み終えたかと思いきや、作者からのメッセージが届き小説のモンスターと登場人物が突如現れ、新たな世界が幕を開けた！ 「俺は、この世界の結末を知る唯一の読者となった。」 たった一人だけが読み終えたファンタジー小説が現実に。 果たしてドクシャは滅亡した世界を救うことができるのか？\r\n\r\n---\r\n- [Webtoon Trailer](https:\\/\\/www.youtube.com\\/watch?v=cB9fwJAnQFk) | [ENG](https:\\/\\/www.youtube.com\\/watch?v=8OHzcTtoLo4)\r\n---\r\n- [Original Book <Aladin>](https:\\/\\/www.aladin.co.kr\\/shop\\/wproduct.aspx?ItemId=258422833)\r\n- [Original Book <Yes24>](http:\\/\\/www.yes24.com\\/Product\\/Goods\\/96195415)\r\n>\r\n- [Taiwan Official Website](https:\\/\\/www.starwatcher.com.tw\\/edm\\/orv\\/)\r\n---\r\n- [Official Traditional Chinese Translation](https:\\/\\/www.webtoons.com\\/zh-hant\\/fantasy\\/duzhe\\/list?title_no=2089)\r\n\r\n- [Official Simplified Chinese Translation](https:\\/\\/www.podoteng.com\\/)\r\n\r\n- [Official Spanish <Es> Translation](https:\\/\\/www.webtoons.com\\/es\\/fantasy\\/omniscient-reader\\/list?title_no=2208)\r\n\r\n- [Official Indonesian Translation](https:\\/\\/www.webtoons.com\\/id\\/fantasy\\/omniscient-reader\\/list?title_no=2109)\r\n\r\n- [Official Japanese Translation](https:\\/\\/manga.line.me\\/product\\/periodic?id=Z0000822)\r\n\r\n- [Official German Translation](https:\\/\\/www.webtoons.com\\/de\\/fantasy\\/omniscient-reader\\/list?title_no=2582)\r\n\r\n- [Official French Translation](https:\\/\\/www.webtoons.com\\/fr\\/fantasy\\/omniscient-reader\\/list?title_no=2175)\r\n\r\n- [Official Thai Translation](https:\\/\\/www.webtoons.com\\/th\\/fantasy\\/omniscient-reader\\/list?title_no=2106)\r\n---\r\n- [Web Novel Trailer](https:\\/\\/www.youtube.com\\/watch?v=5hHGZKgzEXo)\r\n>\r\n- Original Web Novel <Naver> [Web](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=3400123)\\/[Book](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=6020546)\r\n- Original Web Novel <Munpia> [Web](https:\\/\\/novel.munpia.com\\/104753)\\/[Book](https:\\/\\/novel.munpia.com\\/256726)\r\n---\r\n- [3B2S Website](http:\\/\\/3b2s.co.kr\\/?page_id=1477)",
+                "ko": "'이건 내가 아는 그 전개다'\r\n한순간에 세계가 멸망하고, 새로운 세상이 펼쳐졌다.\r\n오직 나만이 완주했던 소설 세계에서 평범했던 독자의 새로운 삶이 시작된다.\r\n\r\n---\r\n- [Webtoon Trailer](https:\\/\\/www.youtube.com\\/watch?v=cB9fwJAnQFk) | [ENG](https:\\/\\/www.youtube.com\\/watch?v=8OHzcTtoLo4)\r\n---\r\n- [Original Book <Aladin>](https:\\/\\/www.aladin.co.kr\\/shop\\/wproduct.aspx?ItemId=258422833)\r\n- [Original Book <Yes24>](http:\\/\\/www.yes24.com\\/Product\\/Goods\\/96195415)\r\n>\r\n- [Taiwan Official Website](https:\\/\\/www.starwatcher.com.tw\\/edm\\/orv\\/)\r\n---\r\n- [Official Traditional Chinese Translation](https:\\/\\/www.webtoons.com\\/zh-hant\\/fantasy\\/duzhe\\/list?title_no=2089)\r\n\r\n- [Official Simplified Chinese Translation](https:\\/\\/www.podoteng.com\\/)\r\n\r\n- [Official Spanish <Es> Translation](https:\\/\\/www.webtoons.com\\/es\\/fantasy\\/omniscient-reader\\/list?title_no=2208)\r\n\r\n- [Official Indonesian Translation](https:\\/\\/www.webtoons.com\\/id\\/fantasy\\/omniscient-reader\\/list?title_no=2109)\r\n\r\n- [Official Japanese Translation](https:\\/\\/manga.line.me\\/product\\/periodic?id=Z0000822)\r\n\r\n- [Official German Translation](https:\\/\\/www.webtoons.com\\/de\\/fantasy\\/omniscient-reader\\/list?title_no=2582)\r\n\r\n- [Official French Translation](https:\\/\\/www.webtoons.com\\/fr\\/fantasy\\/omniscient-reader\\/list?title_no=2175)\r\n\r\n- [Official Thai Translation](https:\\/\\/www.webtoons.com\\/th\\/fantasy\\/omniscient-reader\\/list?title_no=2106)\r\n---\r\n- [Web Novel Trailer](https:\\/\\/www.youtube.com\\/watch?v=5hHGZKgzEXo)\r\n>\r\n- Original Web Novel <Naver> [Web](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=3400123)\\/[Book](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=6020546)\r\n- Original Web Novel <Munpia> [Web](https:\\/\\/novel.munpia.com\\/104753)\\/[Book](https:\\/\\/novel.munpia.com\\/256726)\r\n---\r\n- [3B2S Website](http:\\/\\/3b2s.co.kr\\/?page_id=1477)",
+                "ru": "«Я знаю то, что сейчас будет».\r\nВ тот момент, когда он подумал об этом, мир был уже разрушен, и вдруг открылась новая вселенная. Новая жизнь обычного читателя начинается в мире романа, романа, который смог прочесть лишь он.\r\n\r\n---\r\n- [Webtoon Trailer](https:\\/\\/www.youtube.com\\/watch?v=cB9fwJAnQFk) | [ENG](https:\\/\\/www.youtube.com\\/watch?v=8OHzcTtoLo4)\r\n---\r\n- [Original Book <Aladin>](https:\\/\\/www.aladin.co.kr\\/shop\\/wproduct.aspx?ItemId=258422833)\r\n- [Original Book <Yes24>](http:\\/\\/www.yes24.com\\/Product\\/Goods\\/96195415)\r\n>\r\n- [Taiwan Official Website](https:\\/\\/www.starwatcher.com.tw\\/edm\\/orv\\/)\r\n---\r\n- [Official Traditional Chinese Translation](https:\\/\\/www.webtoons.com\\/zh-hant\\/fantasy\\/duzhe\\/list?title_no=2089)\r\n\r\n- [Official Simplified Chinese Translation](https:\\/\\/www.podoteng.com\\/)\r\n\r\n- [Official Spanish <Es> Translation](https:\\/\\/www.webtoons.com\\/es\\/fantasy\\/omniscient-reader\\/list?title_no=2208)\r\n\r\n- [Official Indonesian Translation](https:\\/\\/www.webtoons.com\\/id\\/fantasy\\/omniscient-reader\\/list?title_no=2109)\r\n\r\n- [Official Japanese Translation](https:\\/\\/manga.line.me\\/product\\/periodic?id=Z0000822)\r\n\r\n- [Official German Translation](https:\\/\\/www.webtoons.com\\/de\\/fantasy\\/omniscient-reader\\/list?title_no=2582)\r\n\r\n- [Official French Translation](https:\\/\\/www.webtoons.com\\/fr\\/fantasy\\/omniscient-reader\\/list?title_no=2175)\r\n\r\n- [Official Thai Translation](https:\\/\\/www.webtoons.com\\/th\\/fantasy\\/omniscient-reader\\/list?title_no=2106)\r\n---\r\n- [Web Novel Trailer](https:\\/\\/www.youtube.com\\/watch?v=5hHGZKgzEXo)\r\n>\r\n- Original Web Novel <Naver> [Web](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=3400123)\\/[Book](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=6020546)\r\n- Original Web Novel <Munpia> [Web](https:\\/\\/novel.munpia.com\\/104753)\\/[Book](https:\\/\\/novel.munpia.com\\/256726)\r\n---\r\n- [3B2S Website](http:\\/\\/3b2s.co.kr\\/?page_id=1477)",
+                "th": "\"เดี๋ยวนะ สถานการณ์นี่มันคุ้นๆ?\" โลกใบเดิมพลิกผันไปในชั่วพริบตา! ชีวิตพนักงานบริษัทธรรมดาๆ ของผมเปลี่ยนแปลงไปอย่างฉับพลัน นี่มันโลกในนิยายที่มีผมอ่านอยู่แค่คนเดียวนี่!\r\n\r\n---\r\n- [Webtoon Trailer](https:\\/\\/www.youtube.com\\/watch?v=cB9fwJAnQFk) | [ENG](https:\\/\\/www.youtube.com\\/watch?v=8OHzcTtoLo4)\r\n---\r\n- [Original Book <Aladin>](https:\\/\\/www.aladin.co.kr\\/shop\\/wproduct.aspx?ItemId=258422833)\r\n- [Original Book <Yes24>](http:\\/\\/www.yes24.com\\/Product\\/Goods\\/96195415)\r\n>\r\n- [Taiwan Official Website](https:\\/\\/www.starwatcher.com.tw\\/edm\\/orv\\/)\r\n---\r\n- [Official Traditional Chinese Translation](https:\\/\\/www.webtoons.com\\/zh-hant\\/fantasy\\/duzhe\\/list?title_no=2089)\r\n\r\n- [Official Simplified Chinese Translation](https:\\/\\/www.podoteng.com\\/)\r\n\r\n- [Official Spanish <Es> Translation](https:\\/\\/www.webtoons.com\\/es\\/fantasy\\/omniscient-reader\\/list?title_no=2208)\r\n\r\n- [Official Indonesian Translation](https:\\/\\/www.webtoons.com\\/id\\/fantasy\\/omniscient-reader\\/list?title_no=2109)\r\n\r\n- [Official Japanese Translation](https:\\/\\/manga.line.me\\/product\\/periodic?id=Z0000822)\r\n\r\n- [Official German Translation](https:\\/\\/www.webtoons.com\\/de\\/fantasy\\/omniscient-reader\\/list?title_no=2582)\r\n\r\n- [Official French Translation](https:\\/\\/www.webtoons.com\\/fr\\/fantasy\\/omniscient-reader\\/list?title_no=2175)\r\n\r\n- [Official Thai Translation](https:\\/\\/www.webtoons.com\\/th\\/fantasy\\/omniscient-reader\\/list?title_no=2106)\r\n---\r\n- [Web Novel Trailer](https:\\/\\/www.youtube.com\\/watch?v=5hHGZKgzEXo)\r\n>\r\n- Original Web Novel <Naver> [Web](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=3400123)\\/[Book](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=6020546)\r\n- Original Web Novel <Munpia> [Web](https:\\/\\/novel.munpia.com\\/104753)\\/[Book](https:\\/\\/novel.munpia.com\\/256726)\r\n---\r\n- [3B2S Website](http:\\/\\/3b2s.co.kr\\/?page_id=1477)",
+                "vi": "'Mình biết diễn biến tiếp theo của câu chuyện này.' Ngay trong khoảnh khắc ấy, thế giới cũ bị diệt vong, và một thế giới khác được mở ra. Cuộc sống của một độc giả tầm thường bỗng chuyển sang chương mới, giữa thế giới của một cuốn tiểu thuyết nọ, một cuốn tiểu thuyết mà chỉ mình anh ta biết được kết cục.",
+                "zh-hk": "「您收到了主線任務。」 長著角的妖怪，熟悉的人物登場…… 太扯了...這是我所讀過的小說劇情！\r\n\r\n---\r\n- [Webtoon Trailer](https:\\/\\/www.youtube.com\\/watch?v=cB9fwJAnQFk) | [ENG](https:\\/\\/www.youtube.com\\/watch?v=8OHzcTtoLo4)\r\n---\r\n- [Original Book <Aladin>](https:\\/\\/www.aladin.co.kr\\/shop\\/wproduct.aspx?ItemId=258422833)\r\n- [Original Book <Yes24>](http:\\/\\/www.yes24.com\\/Product\\/Goods\\/96195415)\r\n>\r\n- [Taiwan Official Website](https:\\/\\/www.starwatcher.com.tw\\/edm\\/orv\\/)\r\n---\r\n- [Official Traditional Chinese Translation](https:\\/\\/www.webtoons.com\\/zh-hant\\/fantasy\\/duzhe\\/list?title_no=2089)\r\n\r\n- [Official Simplified Chinese Translation](https:\\/\\/www.podoteng.com\\/)\r\n\r\n- [Official Spanish <Es> Translation](https:\\/\\/www.webtoons.com\\/es\\/fantasy\\/omniscient-reader\\/list?title_no=2208)\r\n\r\n- [Official Indonesian Translation](https:\\/\\/www.webtoons.com\\/id\\/fantasy\\/omniscient-reader\\/list?title_no=2109)\r\n\r\n- [Official Japanese Translation](https:\\/\\/manga.line.me\\/product\\/periodic?id=Z0000822)\r\n\r\n- [Official German Translation](https:\\/\\/www.webtoons.com\\/de\\/fantasy\\/omniscient-reader\\/list?title_no=2582)\r\n\r\n- [Official French Translation](https:\\/\\/www.webtoons.com\\/fr\\/fantasy\\/omniscient-reader\\/list?title_no=2175)\r\n\r\n- [Official Thai Translation](https:\\/\\/www.webtoons.com\\/th\\/fantasy\\/omniscient-reader\\/list?title_no=2106)\r\n---\r\n- [Web Novel Trailer](https:\\/\\/www.youtube.com\\/watch?v=5hHGZKgzEXo)\r\n>\r\n- Original Web Novel <Naver> [Web](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=3400123)\\/[Book](https:\\/\\/series.naver.com\\/novel\\/detail.series?productNo=6020546)\r\n- Original Web Novel <Munpia> [Web](https:\\/\\/novel.munpia.com\\/104753)\\/[Book](https:\\/\\/novel.munpia.com\\/256726)\r\n---\r\n- [3B2S Website](http:\\/\\/3b2s.co.kr\\/?page_id=1477)"
+            },
+            "isLocked": true,
+            "links": {
+                "al": "119257",
+                "ap": "omniscient-readers-viewpoint",
+                "kt": "omniscient-readers-point-of-view",
+                "mu": "167681",
+                "nu": "omniscient-readers-viewpoint",
+                "mal": "132214",
+                "raw": "https:\\/\\/comic.naver.com\\/webtoon\\/list?titleId=747269",
+                "engtl": "https:\\/\\/www.webtoons.com\\/en\\/action\\/omniscient-reader\\/list?title_no=2154"
+            },
+            "originalLanguage": "ko",
+            "lastVolume": null,
+            "lastChapter": null,
+            "publicationDemographic": null,
+            "status": "ongoing",
+            "year": 2020,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Award Winning"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "0bc90acb-ccc1-44ca-a34a-b9f3a73259d0",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Reincarnation"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Monsters"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Action"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "3e2b8dae-350e-4ab8-a8ce-016e844b9f0d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Long Strip"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Survival"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Adventure"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "9467335a-1b83-4497-9231-765337a00b96",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Post-Apocalyptic"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Magic"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "ace04997-f6bd-436e-b261-779182193d3d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Isekai"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Fantasy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "e197df38-d0e7-43b5-9b09-2842d0c326dd",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Web Comic"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Supernatural"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Adaptation"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "f5ba408b-0e7a-484d-8d49-4e9125ac96de",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Full Color"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2020-07-23T10:37:19+00:00",
+            "updatedAt": "2023-07-15T15:10:35+00:00",
+            "version": 34,
+            "availableTranslatedLanguages": [
+                "it",
+                "en",
+                "id",
+                "pl",
+                "th",
+                "tr",
+                "de",
+                "ru",
+                "pt-br",
+                "vi",
+                "uk",
+                "hu",
+                "es",
+                "ar"
+            ],
+            "latestUploadedChapter": "39ca9087-3d99-45f6-9a5c-7e03692892f6"
+        },
+        "relationships": [
+            {
+                "id": "385c7225-4a07-4f78-bb5e-8f79fb802bbd",
+                "type": "author"
+            },
+            {
+                "id": "b117b481-a835-4a00-80e4-865d1b21717c",
+                "type": "author"
+            },
+            {
+                "id": "48bc1ea4-50b5-48ca-bc34-b6c3f216f22a",
+                "type": "artist"
+            },
+            {
+                "id": "3a349b55-abf9-4fe8-b65d-c366d326bdb5",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "0",
+                    "fileName": "aeb88211-faa2-4f9f-adee-a8e4d814d51a.jpg",
+                    "locale": "ko",
+                    "createdAt": "2021-05-23T07:36:03+00:00",
+                    "updatedAt": "2021-05-23T07:36:03+00:00",
+                    "version": 2
+                }
+            },
+            {
+                "id": "14b81959-13ed-46eb-a277-da66f672acb5",
+                "type": "manga",
+                "related": "shared_universe"
+            },
+            {
+                "id": "64beeb43-c3fd-4392-a45d-e688ba5e0ade",
+                "type": "manga",
+                "related": "doujinshi"
+            },
+            {
+                "id": "aa0df6ce-a7dd-45d2-af0e-780b9d29a011",
+                "type": "manga",
+                "related": "doujinshi"
+            },
+            {
+                "id": "e8067480-6c51-4c61-a365-50f36461644e",
+                "type": "manga",
+                "related": "doujinshi"
+            }
+        ]
+    },
+    {
+        "id": "376231b2-e7f7-4d6b-b8e8-7ce2b933fd3b",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "Ruru Chouchou"
+            },
+            "altTitles": [
+                {
+                    "ja": "瑠瑠蝶々"
+                }
+            ],
+            "description": {
+                "en": "Set in feudal Japan, Sorano is often mistaken for a girl, and he is saved one day by Iori from some pushy guys; the two hang out together the following day."
+            },
+            "isLocked": false,
+            "links": {
+                "al": "77807",
+                "ap": "ruru-chouchou",
+                "kt": "5241",
+                "mu": "91047",
+                "mal": "47807"
+            },
+            "originalLanguage": "ja",
+            "lastVolume": "",
+            "lastChapter": "",
+            "publicationDemographic": null,
+            "status": "completed",
+            "year": 2012,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "0234a31e-a729-4e28-9d6a-3f87c4966b9e",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Oneshot"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "33771934-028e-4cb3-8744-691e866a923e",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Historical"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "9ab53f92-3eed-4e9b-903a-917c86035ee3",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Crossdressing"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2018-07-02T12:23:47+00:00",
+            "updatedAt": "2023-01-25T00:06:42+00:00",
+            "version": 4,
+            "availableTranslatedLanguages": [
+                "en",
+                "pt-br",
+                "pl"
+            ],
+            "latestUploadedChapter": "715391b4-5f31-448e-8d5b-17442e0d7d63"
+        },
+        "relationships": [
+            {
+                "id": "a59e9c94-4d52-4af7-b62c-394ac7157281",
+                "type": "author"
+            },
+            {
+                "id": "a59e9c94-4d52-4af7-b62c-394ac7157281",
+                "type": "artist"
+            },
+            {
+                "id": "0da7eb07-15cb-4f9f-9b6a-c7253e139f35",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": null,
+                    "fileName": "5139cef9-441f-481e-ad36-1223a488811b.jpg",
+                    "locale": "ja",
+                    "createdAt": "2021-05-24T18:39:36+00:00",
+                    "updatedAt": "2021-05-24T18:39:36+00:00",
+                    "version": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "694e4e48-0f03-4f57-8f53-ea554dc9dd53",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "Rinjin wa Chou"
+            },
+            "altTitles": [
+                {
+                    "en": "Butterfly Neighbor"
+                },
+                {
+                    "en": "The Neighbor is a Butterfly"
+                },
+                {
+                    "zh": "蝴蝶邻居"
+                },
+                {
+                    "ja": "隣人は蝶"
+                }
+            ],
+            "description": {
+                "en": "Collection of 4 short stories including:  \n  \n1. Rinjin wa Chou  \nChouka, a 20-year-old college student, is a freely flying butterfly and has never been captured. She always fools around with men and everything seems to be under her control. However, her life changes when she met her neighbor, a 33-year-old man…  \n  \n2. Suki de Tamaru ka!  \nAnri has a strange dream about her neighbor and childhood friend Takeru Okada, but it's been years since they stopped being friends… What does this dream mean? …Are they Anri's repressed wishes?  \n  \n3. Datte, Yueni, Hatsukoichuu…  \n  \n4. Iki wo Kirashite Ai ni Kite"
+            },
+            "isLocked": false,
+            "links": {
+                "al": "67275",
+                "ap": "rinjin-wa-chou",
+                "kt": "15812",
+                "mu": "78452",
+                "mal": "37275"
+            },
+            "originalLanguage": "ja",
+            "lastVolume": "1",
+            "lastChapter": "4",
+            "publicationDemographic": "shoujo",
+            "status": "completed",
+            "year": null,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Romance"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Drama"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2018-04-21T04:19:12+00:00",
+            "updatedAt": "2022-04-10T23:06:29+00:00",
+            "version": 3,
+            "availableTranslatedLanguages": [
+                "pt-br",
+                "en"
+            ],
+            "latestUploadedChapter": "343c7f63-d6a7-4616-bf8c-d61be98dacb2"
+        },
+        "relationships": [
+            {
+                "id": "bc4002bd-a216-4c4a-bd43-ea68d0d107df",
+                "type": "author"
+            },
+            {
+                "id": "bc4002bd-a216-4c4a-bd43-ea68d0d107df",
+                "type": "artist"
+            },
+            {
+                "id": "de14543b-f5eb-4fa1-af6b-52c59c1bc9ca",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": null,
+                    "fileName": "e8e1972d-c11d-48ed-9660-b04a0d00709b.jpg",
+                    "locale": "ja",
+                    "createdAt": "2021-05-24T17:55:48+00:00",
+                    "updatedAt": "2021-05-24T17:55:48+00:00",
+                    "version": 1
+                }
+            }
+        ]
+    }
+]
