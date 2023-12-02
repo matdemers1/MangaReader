@@ -88,6 +88,13 @@ struct MangaDetailView: View {
                 .padding()
             }
         }
+            .ignoresSafeArea(edges: .top)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing: Button(action: {
+                print("Favorite")
+            }) {
+                Image(systemName: "heart")
+            })
     }
     
 }
