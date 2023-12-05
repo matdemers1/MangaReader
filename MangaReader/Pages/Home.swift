@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
-    let mangas: [Manga] = loadMockData()
+    let mangas: [Manga] = fetchHomePage()
     
     var body: some View {
         ScrollView {
@@ -22,6 +22,25 @@ struct HomeView: View {
                 }
             }
         }
-        .padding()
+        .padding(.horizontal, 20)
     }
+}
+
+func fetchHomePage() -> [Manga] {
+    let url = URL(string: "https://api.mangadex.org/manga?includes[]=cover_art")!
+    let request = URLRequest(url: url)
+    let semaphore = DispatchSemaphore(value: 0)
+    var mangas: [Manga] = []
+
+    URLSession.shared.dataTask(with: request) { data, response, error in
+        if let data = data {
+            let decoder = JSONDecoder()
+            let mangaResponse = try? decoder.decode(MangaResponse.self, from: data)
+            mangas = mangaResponse?.data ?? []
+        }
+        semaphore.signal()
+    }.resume()
+
+    semaphore.wait()
+    return mangas
 }
