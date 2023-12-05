@@ -9,28 +9,31 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+  @Environment(\.modelContext) private var modelContext
+  @Query private var items: [Item]
+  @State private var selection = "search"
 
-    var body: some View {
-        NavigationView {
-            TabView {
-                HomeView()
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                    }
-
-                SearchView()
-                    .tabItem {
-                        Label("Search", systemImage: "magnifyingglass")
-                    }
+  var body: some View {
+    NavigationView {
+      TabView(selection: $selection) {
+        HomeView()
+            .tabItem {
+              Label("Home", systemImage: "house")
             }
-        }
+            .tag("home")
+
+        SearchView()
+            .tabItem {
+              Label("Search", systemImage: "magnifyingglass")
+            }
+            .tag("search")
+      }
     }
+  }
 }
 
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
-        .colorScheme(.dark)
+  ContentView()
+      .modelContainer(for: Item.self, inMemory: true)
+      .colorScheme(.dark)
 }
