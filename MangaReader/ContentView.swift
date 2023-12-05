@@ -13,17 +13,17 @@ struct ContentView: View {
     @Query private var items: [Item]
 
     var body: some View {
-        TabView {
-            NavigationView{
+        NavigationView {
+            TabView {
                 HomeView()
-            }
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-            
-        SearchView()
-            .tabItem {
-                Label("Search", systemImage: "magnifyingglass")
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+
+                SearchView()
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
             }
         }
     }

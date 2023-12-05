@@ -9,38 +9,71 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
-    let mangas: [Manga] = fetchHomePage()
-    
-    var body: some View {
+  @State private var mangas: [Manga] = []
+  @State private var page: Int = 1
+  @State private var isLoading: Bool = false
+
+  var body: some View {
+    ZStack {
+      if !mangas.isEmpty{
         ScrollView {
-            Text("Home")
-                .font(.largeTitle)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            LazyVStack {
-                ForEach(mangas, id: \.id) { manga in
-                    MangaCardView(manga: manga)
-                }
+          Text("Home")
+              .font(.largeTitle)
+              .frame(maxWidth: .infinity, alignment: .leading)
+
+          LazyVStack {
+            ForEach(mangas, id: \.id) { manga in
+              MangaCardView(manga: manga)
             }
+            Button(action: loadMoreMangas) {
+              Text("Load more")
+            }
+          }
         }
-        .padding(.horizontal, 20)
+            .padding(.horizontal, 8)
+      }
+
+      if isLoading {
+        ProgressView()
+            .scaleEffect(1.5, anchor: .center)
+            .progressViewStyle(CircularProgressViewStyle(tint: .primary))
+      }
     }
+        .onAppear(perform: loadInitialMangas)
+  }
+
+  private func loadInitialMangas() {
+    isLoading = true
+    fetchHomePage(page: 1) { mangas in
+      self.mangas = mangas
+      self.isLoading = false
+    }
+  }
+
+  private func loadMoreMangas() {
+    page += 1
+    fetchHomePage(page: page) { newMangas in
+      self.mangas.append(contentsOf: newMangas)
+    }
+  }
 }
 
-func fetchHomePage() -> [Manga] {
-    let url = URL(string: "https://api.mangadex.org/manga?includes[]=cover_art")!
-    let request = URLRequest(url: url)
-    let semaphore = DispatchSemaphore(value: 0)
-    var mangas: [Manga] = []
 
-    URLSession.shared.dataTask(with: request) { data, response, error in
+func fetchHomePage(page: Int, completion: @escaping ([Manga]) -> Void) {
+  print("Fetching page \(page)")
+  let url = URL(string: "https://api.mangadex.org/manga?includes[]=cover_art&offset=\(page*10)&limit=10")!
+  let request = URLRequest(url: url)
+
+  URLSession.shared.dataTask(with: request) { data, response, error in
+        var mangas: [Manga] = []
         if let data = data {
-            let decoder = JSONDecoder()
-            let mangaResponse = try? decoder.decode(MangaResponse.self, from: data)
-            mangas = mangaResponse?.data ?? []
+          let decoder = JSONDecoder()
+          let mangaResponse = try? decoder.decode(MangaResponse.self, from: data)
+          mangas = mangaResponse?.data ?? []
         }
-        semaphore.signal()
-    }.resume()
-
-    semaphore.wait()
-    return mangas
+        DispatchQueue.main.async {
+          completion(mangas)
+        }
+      }.resume()
 }
+
