@@ -5,15 +5,25 @@
 import Foundation
 import SwiftUI
 
-struct FilterView:View {
+struct FilterView: View {
+  @Binding var filterState: FilterState
+
   var body: some View {
-    VStack {
+    VStack(alignment: .leading) {
       Text("Filter")
-        .font(.largeTitle)
-        .frame(maxWidth: .infinity, alignment: .leading)
-      HStack {
-       Text("Filters Go Here")
+          .font(.largeTitle)
+          .frame(maxWidth: .infinity, alignment: .leading)
+
+          .font(.subheadline)
+          .frame(maxWidth: .infinity, alignment: .leading)
+      ScrollView {
+        StatusFilter(filterState: $filterState)
+        PublicationDemoFilter(filterState: $filterState)
+        ContentRatingFilter(filterState: $filterState)
+        TagFilter(filterState: $filterState)
       }
     }
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
   }
 }

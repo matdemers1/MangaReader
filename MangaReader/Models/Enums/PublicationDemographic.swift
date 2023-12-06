@@ -9,5 +9,17 @@ enum PublicationDemographic: String, CaseIterable {
   case shoujo = "shoujo"
   case josei = "josei"
   case seinen = "seinen"
-  case none = "none"
+
+  var description: String {
+    switch self {
+    case .shounen:
+      return "Shounen"
+    case .shoujo:
+      return "Shoujo"
+    case .josei:
+      return "Josei"
+    case .seinen:
+      return "Seinen"
+    }
+  }
 }

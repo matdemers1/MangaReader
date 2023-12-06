@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SearchView: View {
     @State var showSheet = false
+    @State var filterState = FilterState()
     var body: some View {
         VStack {
             Text("Search")
@@ -25,10 +26,12 @@ struct SearchView: View {
                     Image(systemName: "slider.horizontal.3")
                 }
                     .sheet(isPresented: $showSheet, content: {
-                        FilterView()
+                        FilterView(filterState: $filterState)
                     })
             }
                 .padding(.horizontal, 8)
         }
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 }

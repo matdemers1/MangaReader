@@ -8,4 +8,15 @@ enum ContentRating: String, CaseIterable{
   case safe = "safe"
   case suggestive = "suggestive"
   case erotica = "erotica"
+
+  var description: String {
+    switch self {
+    case .safe:
+      return "Safe"
+    case .suggestive:
+      return "Suggestive"
+    case .erotica:
+      return "Erotica"
+    }
+  }
 }

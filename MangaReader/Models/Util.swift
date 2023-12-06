@@ -8,14 +8,14 @@
 import Foundation
 
 // Relationship to other entities (e.g., related manga)
-struct Relationship: Codable, Identifiable {
+struct Relationship: Codable, Identifiable, Equatable, Hashable {
     let id: UUID
     let type: String
     let related: String?
     let attributes: RelationshipAttributes?
 }
 
-struct RelationshipAttributes: Codable {
+struct RelationshipAttributes: Codable, Equatable, Hashable {
     let name: String?
     let altNames: [LocalizedNames]?
     let locked: Bool?
@@ -40,19 +40,6 @@ struct RelationshipAttributes: Codable {
 
 }
 
-
-struct Tag: Codable, Hashable {
-    let id: String
-    let type: String
-    let attributes: TagAttributes
-}
-
-struct TagAttributes: Codable, Hashable {
-    let name: [String: String]
-    let description: [String: String]?
-    let group: String
-    let version: Int
-}
 
 struct Title: Codable {
     var localizedTitles: [String: String]
@@ -91,7 +78,7 @@ struct Description: Codable {
     }
 }
 
-struct LocalizedNames: Codable {
+struct LocalizedNames: Codable, Equatable, Hashable {
     var names: [String: String]
 
     init(from decoder: Decoder) throws {

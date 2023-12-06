@@ -15,3 +15,8 @@ enum Order: String, CaseIterable {
   case revelance = "revelance"
   case rating = "rating"
 }
+
+enum OrderDirection: String, CaseIterable {
+  case asc = "asc"
+  case desc = "desc"
+}
