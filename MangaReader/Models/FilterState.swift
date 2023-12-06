@@ -9,7 +9,7 @@ import Foundation
 struct FilterState{
   var order: Order?
   var orderDirection: OrderDirection?
-  var title: String?
+  var title: String = ""
   var year: Int?
   var includedTags: [Tag]? = []
   var excludeTags: [Tag]? = []
