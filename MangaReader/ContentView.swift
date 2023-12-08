@@ -11,7 +11,7 @@ import SwiftData
 struct ContentView: View {
   @Environment(\.modelContext) private var modelContext
   @Query private var items: [Item]
-  @State private var selection = "account"
+  @State private var selection = "home"
 
   var body: some View {
     NavigationView {

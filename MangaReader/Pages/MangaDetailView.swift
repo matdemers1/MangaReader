@@ -70,7 +70,7 @@ struct MangaDetailView: View {
               .padding(.bottom, 4)
           if let chapters = chapters {
             ForEach(chapters, id: \.id){ chapter in
-              NavigationLink(destination: ChapterView(chapterId: chapter.id.description)) {
+              NavigationLink(destination: ChapterView(chapters: chapters, chapterId: chapter.id.description ?? "N/A")) {
                 VStack {
                   HStack(alignment: .center) {
                     Text(chapter.attributes.chapter ?? "N/A")
