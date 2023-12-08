@@ -11,7 +11,7 @@ import SwiftData
 struct ContentView: View {
   @Environment(\.modelContext) private var modelContext
   @Query private var items: [Item]
-  @State private var selection = "search"
+  @State private var selection = "account"
 
   var body: some View {
     NavigationView {
@@ -27,6 +27,12 @@ struct ContentView: View {
               Label("Search", systemImage: "magnifyingglass")
             }
             .tag("search")
+
+        AccountView()
+            .tabItem {
+              Label("Account", systemImage: "person")
+            }
+            .tag("account")
       }
     }
   }

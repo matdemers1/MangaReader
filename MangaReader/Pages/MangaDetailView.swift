@@ -49,6 +49,9 @@ struct MangaDetailView: View {
             Text("Artist Placeholder")
                 .font(.subheadline)
                 .foregroundColor(.gray)
+            Text(manga.id)
+                .font(.caption)
+                .foregroundColor(.secondary)
           }
               .padding()
 
