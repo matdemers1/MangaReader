@@ -13,6 +13,7 @@ struct MangaReaderApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             History.self,
+            UserAuth.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

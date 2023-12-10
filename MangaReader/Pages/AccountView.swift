@@ -7,9 +7,12 @@ import SwiftUI
 
 struct AccountView: View {
   var body: some View {
-    VStack {
-      AccountHeader()
-      Spacer()
+    NavigationStack {
+      VStack {
+        AccountHeader()
+        Spacer()
+      }
+          .navigationTitle("Account")
     }
   }
 }

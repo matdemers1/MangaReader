@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var selection = "history"
+  @State private var selection = "account"
 
   var body: some View {
     NavigationView {
@@ -39,9 +39,4 @@ struct ContentView: View {
       }
     }
   }
-}
-
-#Preview {
-  ContentView()
-      .colorScheme(.dark)
 }
