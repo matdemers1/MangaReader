@@ -13,18 +13,20 @@
 		366E33FB964C19F2EC4BF020 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3F0F0FDE05D9B1DFE945 /* Order.swift */; };
 		366E36865829B8839F31A1E3 /* TagFilterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3B3327BDFD5E8632C09D /* TagFilterSection.swift */; };
 		366E376EA0C60AFC8BD79C35 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E30143FF12D2B6115EC16 /* AccountView.swift */; };
+		366E37FFF3DD955AC9E4CD89 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E36740E3144862D4F67B3 /* History.swift */; };
 		366E38CCE6993E322612F99F /* FilterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3DB6C92D7399BFD57174 /* FilterState.swift */; };
 		366E3B39A1B744FE1801173F /* TagFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3157AEB040BF8411D9B5 /* TagFilter.swift */; };
+		366E3B5192408E28EF6AF99C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E33D9AA3995075AE65BD5 /* Account.swift */; };
 		366E3B61BC44131E4F5E2BC5 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3CAB64C3653E38ED4921 /* FilterView.swift */; };
 		366E3B86EA6C0F738D76CAC7 /* PublicationDemographicFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E301EE2B72FFE3C5C97C2 /* PublicationDemographicFilter.swift */; };
 		366E3BB7A69D5F8480B190FE /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E30218538561EB63D4FDB /* Status.swift */; };
 		366E3BBD2A357E291188F282 /* AccountHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3C35E8ED93BC18B257B6 /* AccountHeader.swift */; };
+		366E3D119DB685FDA03F3A99 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E388453DB44787BD2D89D /* HistoryView.swift */; };
 		366E3DE63EBECF2F2108D3A5 /* ContentRatingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E34132392FC3463F872DE /* ContentRatingFilter.swift */; };
 		366E3F0DF4C0EAA175772995 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E302436DA76076F16AE0B /* Tags.swift */; };
 		366E3FAF9CA91C72579B0377 /* PublicationDemographic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E39291CE6DC8F9F7E28A6 /* PublicationDemographic.swift */; };
 		9C12B23E2B16A15B000FB71F /* MangaReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B23D2B16A15B000FB71F /* MangaReaderApp.swift */; };
 		9C12B2402B16A15B000FB71F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B23F2B16A15B000FB71F /* ContentView.swift */; };
-		9C12B2422B16A15B000FB71F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B2412B16A15B000FB71F /* Item.swift */; };
 		9C12B2442B16A15C000FB71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C12B2432B16A15C000FB71F /* Assets.xcassets */; };
 		9C12B2482B16A15C000FB71F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C12B2472B16A15C000FB71F /* Preview Assets.xcassets */; };
 		9C12B2502B16A313000FB71F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B24F2B16A313000FB71F /* Home.swift */; };
@@ -57,7 +59,10 @@
 		366E3153C3ED4D91CBDD2382 /* ContentRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentRating.swift; sourceTree = "<group>"; };
 		366E3157AEB040BF8411D9B5 /* TagFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilter.swift; sourceTree = "<group>"; };
 		366E32F112B3834B68CAE831 /* ChapterVeiwModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterVeiwModel.swift; sourceTree = "<group>"; };
+		366E33D9AA3995075AE65BD5 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		366E34132392FC3463F872DE /* ContentRatingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentRatingFilter.swift; sourceTree = "<group>"; };
+		366E36740E3144862D4F67B3 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		366E388453DB44787BD2D89D /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		366E39291CE6DC8F9F7E28A6 /* PublicationDemographic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationDemographic.swift; sourceTree = "<group>"; };
 		366E3B3327BDFD5E8632C09D /* TagFilterSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterSection.swift; sourceTree = "<group>"; };
 		366E3C35E8ED93BC18B257B6 /* AccountHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountHeader.swift; sourceTree = "<group>"; };
@@ -68,7 +73,6 @@
 		9C12B23A2B16A15B000FB71F /* MangaReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MangaReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C12B23D2B16A15B000FB71F /* MangaReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaReaderApp.swift; sourceTree = "<group>"; };
 		9C12B23F2B16A15B000FB71F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9C12B2412B16A15B000FB71F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9C12B2432B16A15C000FB71F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C12B2452B16A15C000FB71F /* MangaReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MangaReader.entitlements; sourceTree = "<group>"; };
 		9C12B2472B16A15C000FB71F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -162,7 +166,6 @@
 				9C12B24E2B16A2F2000FB71F /* Pages */,
 				9C12B23D2B16A15B000FB71F /* MangaReaderApp.swift */,
 				9C12B23F2B16A15B000FB71F /* ContentView.swift */,
-				9C12B2412B16A15B000FB71F /* Item.swift */,
 				9C12B2432B16A15C000FB71F /* Assets.xcassets */,
 				9C12B2452B16A15C000FB71F /* MangaReader.entitlements */,
 				9C12B2462B16A15C000FB71F /* Preview Content */,
@@ -187,6 +190,7 @@
 				9CC9E0582B1ACE5D00995321 /* ChapterView.swift */,
 				366E3CAB64C3653E38ED4921 /* FilterView.swift */,
 				366E30143FF12D2B6115EC16 /* AccountView.swift */,
+				366E388453DB44787BD2D89D /* HistoryView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -217,6 +221,8 @@
 				366E33E617E5B695BCDC3F01 /* Enums */,
 				366E3DB6C92D7399BFD57174 /* FilterState.swift */,
 				366E302436DA76076F16AE0B /* Tags.swift */,
+				366E36740E3144862D4F67B3 /* History.swift */,
+				366E33D9AA3995075AE65BD5 /* Account.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,7 +333,6 @@
 				9CEA88E32B181117009017D0 /* ChapterResponse.swift in Sources */,
 				9C12B2402B16A15B000FB71F /* ContentView.swift in Sources */,
 				9C12B2612B16A9FC000FB71F /* MangaCardView.swift in Sources */,
-				9C12B2422B16A15B000FB71F /* Item.swift in Sources */,
 				9C12B2632B16BD6E000FB71F /* MangaCoverArt.swift in Sources */,
 				9C12B25C2B16A870000FB71F /* MangaAttributes.swift in Sources */,
 				9CC9E0572B1ACD8E00995321 /* AtHomeReponse.swift in Sources */,
@@ -353,6 +358,9 @@
 				366E36865829B8839F31A1E3 /* TagFilterSection.swift in Sources */,
 				366E376EA0C60AFC8BD79C35 /* AccountView.swift in Sources */,
 				366E3BBD2A357E291188F282 /* AccountHeader.swift in Sources */,
+				366E37FFF3DD955AC9E4CD89 /* History.swift in Sources */,
+				366E3B5192408E28EF6AF99C /* Account.swift in Sources */,
+				366E3D119DB685FDA03F3A99 /* HistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

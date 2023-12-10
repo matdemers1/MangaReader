@@ -70,7 +70,12 @@ struct MangaDetailView: View {
               .padding(.bottom, 4)
           if let chapters = chapters {
             ForEach(chapters, id: \.id){ chapter in
-              NavigationLink(destination: ChapterView(chapters: chapters, chapterId: chapter.id.description ?? "N/A")) {
+              NavigationLink(destination: ChapterView(
+                  chapters: chapters,
+                  chapterId: chapter.id.description ?? "N/A",
+                  mangaId: manga.id.description,
+                  mangaName: manga.attributes.title["en"] ?? "N/A"
+              )) {
                 VStack {
                   HStack(alignment: .center) {
                     Text(chapter.attributes.chapter ?? "N/A")
@@ -140,7 +145,6 @@ func fetchChapterResponse(mangaId: String) -> ChapterResponse? {
 
 #Preview {
   MangaDetailView(manga: loadMockSingleData())
-      .modelContainer(for: Item.self, inMemory: true)
       .colorScheme(.dark)
 }
 

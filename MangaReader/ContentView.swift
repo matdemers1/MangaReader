@@ -6,12 +6,9 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-  @Environment(\.modelContext) private var modelContext
-  @Query private var items: [Item]
-  @State private var selection = "home"
+  @State private var selection = "history"
 
   var body: some View {
     NavigationView {
@@ -28,6 +25,12 @@ struct ContentView: View {
             }
             .tag("search")
 
+        HistoryView()
+            .tabItem {
+              Label("History", systemImage: "clock")
+            }
+            .tag("history")
+
         AccountView()
             .tabItem {
               Label("Account", systemImage: "person")
@@ -40,6 +43,5 @@ struct ContentView: View {
 
 #Preview {
   ContentView()
-      .modelContainer(for: Item.self, inMemory: true)
       .colorScheme(.dark)
 }

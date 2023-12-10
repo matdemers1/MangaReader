@@ -6,12 +6,19 @@
 //
 import Foundation
 import SwiftUI
+import SwiftData
 
 struct ChapterView: View {
-    @StateObject var viewModel = ChapterViewModel()
+    @Environment(\.modelContext) private var modelContext
+    @Query private var history: [History]
+
     let chapters: [Chapter]
-    @State var atHomeResponse: AtHomeResponse?
     @State var chapterId: String = ""
+    let mangaId: String
+    let mangaName: String
+
+    @StateObject var viewModel = ChapterViewModel()
+    @State var atHomeResponse: AtHomeResponse?
     @State var nextChapterId: String?
     @State var lastChapterId: String?
 
@@ -51,6 +58,7 @@ struct ChapterView: View {
             }
         }
             .onAppear {
+                addChapterToHistory()
                 viewModel.fetchChapterData(chapterId: chapterId) { response in
                     self.atHomeResponse = response
                 }
@@ -109,6 +117,7 @@ struct ChapterView: View {
         self.chapterId = nextChapterId
         self.nextChapterId = getNextChapter()
         self.lastChapterId = getLastChapter()
+        addChapterToHistory()
         viewModel.fetchChapterData(chapterId: chapterId) { response in
             self.atHomeResponse = response
         }
@@ -119,8 +128,22 @@ struct ChapterView: View {
         self.chapterId = lastChapterId
         self.nextChapterId = getNextChapter()
         self.lastChapterId = getLastChapter()
+        addChapterToHistory()
         viewModel.fetchChapterData(chapterId: chapterId) { response in
             self.atHomeResponse = response
         }
+    }
+
+    private func addChapterToHistory() {
+        if let history = history.first(where: { $0.mangaId == mangaId }) {
+            if !history.chapterIds.contains(chapterId) {
+                history.chapterIds.append(chapterId)
+            }
+            history.lastReadChapterId = chapterId
+            history.lastRead = Date()
+            return
+        }
+        let history = History(mangaId: mangaId, mangaName: mangaName, totalChapters: chapters.count, chapterIds: [chapterId], lastRead: Date(), lastReadChapterId: chapterId)
+        try! modelContext.insert(history)
     }
 }

@@ -13,42 +13,54 @@ struct SearchView: View {
     @State var filterState = FilterState()
     @State var mangaList: [Manga] = []
     var body: some View {
-        VStack {
-            Text("Search")
-                .font(.largeTitle)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            HStack {
-                Image(systemName: "magnifyingglass")
-                TextField("Search", text: $filterState.title)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .onSubmit(search)
-                Spacer()
-                Button(action: {
-                    showSheet.toggle()
-                }) {
-                    Image(systemName: "slider.horizontal.3")
+        NavigationStack {
+            VStack {
+                Text("Search")
+                    .font(.largeTitle)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                    TextField("Search", text: $filterState.title)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .onSubmit(search)
+                    Spacer()
+                    Button(action: {
+                        showSheet.toggle()
+                    }) {
+                        Image(systemName: "slider.horizontal.3")
+                    }
+                        .sheet(isPresented: $showSheet, content: {
+                            FilterView(filterState: $filterState)
+                        })
                 }
-                    .sheet(isPresented: $showSheet, content: {
-                        FilterView(filterState: $filterState)
-                    })
-            }
-                .padding(.horizontal, 8)
-            if !mangaList.isEmpty {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(mangaList, id: \.id) { manga in
-                            NavigationLink(destination: MangaDetailView(manga: manga)) {
-                                MangaCardView(manga: manga)
+                    .padding(.horizontal, 8)
+                if !mangaList.isEmpty {
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(mangaList, id: \.id) { manga in
+                                NavigationLink(destination: MangaDetailView(manga: manga)) {
+                                    MangaCardView(manga: manga)
+                                }
                             }
                         }
                     }
+                } else {
+                    Text("No results")
                 }
-            } else {
-                Text("No results")
             }
+                .padding()
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
-            .padding()
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .navigationTitle("Search")
+            .overlay{
+                if mangaList.isEmpty {
+                    ContentUnavailableView(
+                        "No results",
+                        systemImage: "magnifyingglass",
+                        description: Text("Try changing your search terms or filters")
+                    )
+                }
+            }
     }
 
     func search() {
