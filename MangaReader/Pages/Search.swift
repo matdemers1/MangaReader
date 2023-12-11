@@ -84,6 +84,7 @@ struct SearchView: View {
     func urlBuilder() -> URL {
         var url = URLComponents(string: "https://api.mangadex.org/manga")!
         var queryItems: [URLQueryItem] = []
+        queryItems.append(URLQueryItem(name: "includes[]", value: "cover_art"))
         if !filterState.title.isEmpty {
             queryItems.append(URLQueryItem(name: "title", value: filterState.title))
         }

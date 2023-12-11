@@ -14,16 +14,19 @@ struct HistoryView: View {
     NavigationStack {
       List {
         ForEach(history, id: \.self) { entry in
-          VStack(alignment: .leading) {
-            Text(entry.mangaName)
-            HStack {
-              Text(entry.lastRead, style: .date)
-                  .font(.caption)
-                  .foregroundColor(.secondary)
-              Spacer()
-              Text("Viewed: \(entry.chapterIds.count) / \(entry.totalChapters) Chapters")
-                  .font(.caption)
-                  .foregroundColor(.secondary)
+          NavigationLink(destination: MangaDetailView(mangaId: entry.mangaId)) {
+
+            VStack(alignment: .leading) {
+              Text(entry.mangaName)
+              HStack {
+                Text(entry.lastRead, style: .date)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                Spacer()
+                Text("Viewed: \(entry.chapterIds.count) / \(entry.totalChapters) Chapters")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+              }
             }
           }
         }

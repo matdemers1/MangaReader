@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var selection = "account"
+  @State private var selection = "history"
 
   var body: some View {
     NavigationView {
@@ -31,11 +31,11 @@ struct ContentView: View {
             }
             .tag("history")
 
-        AccountView()
-            .tabItem {
-              Label("Account", systemImage: "person")
-            }
-            .tag("account")
+//        AccountView()
+//            .tabItem {
+//              Label("Account", systemImage: "person")
+//            }
+//            .tag("account")
       }
     }
   }

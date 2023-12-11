@@ -14,32 +14,35 @@ struct HomeView: View {
   @State private var isLoading: Bool = false
 
   var body: some View {
-    ZStack {
-      if !mangas.isEmpty{
-        ScrollView {
-          Text("Home")
-              .font(.largeTitle)
-              .frame(maxWidth: .infinity, alignment: .leading)
-
-          LazyVStack {
-            ForEach(mangas, id: \.id) { manga in
-              MangaCardView(manga: manga)
-            }
-            Button(action: loadMoreMangas) {
-              Text("Load more")
+    NavigationStack{
+      ZStack {
+        if !mangas.isEmpty{
+          ScrollView {
+            LazyVStack {
+              ForEach(mangas, id: \.id) { manga in
+                MangaCardView(manga: manga)
+              }
+              Button(action: loadMoreMangas) {
+                Text("Load more")
+              }
             }
           }
+              .padding(.horizontal, 8)
         }
-            .padding(.horizontal, 8)
-      }
 
-      if isLoading {
-        ProgressView()
-            .scaleEffect(1.5, anchor: .center)
-            .progressViewStyle(CircularProgressViewStyle(tint: .primary))
+        if isLoading {
+          ProgressView()
+              .scaleEffect(1.5, anchor: .center)
+              .progressViewStyle(CircularProgressViewStyle(tint: .primary))
+        }
       }
+          .navigationTitle("Home")
     }
-        .onAppear(perform: loadInitialMangas)
+        .onAppear() {
+          if mangas.isEmpty {
+            loadInitialMangas()
+          }
+        }
   }
 
   private func loadInitialMangas() {
