@@ -12,6 +12,7 @@ struct ChapterView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var history: [History]
 
+    let totalChapters: Int
     let chapters: [Chapter]
     @State var chapterId: String = ""
     let mangaId: String
@@ -143,7 +144,7 @@ struct ChapterView: View {
             history.lastRead = Date()
             return
         }
-        let history = History(mangaId: mangaId, mangaName: mangaName, totalChapters: chapters.count, chapterIds: [chapterId], lastRead: Date(), lastReadChapterId: chapterId)
+        let history = History(mangaId: mangaId, mangaName: mangaName, totalChapters: totalChapters, chapterIds: [chapterId], lastRead: Date(), lastReadChapterId: chapterId)
         try! modelContext.insert(history)
     }
 }

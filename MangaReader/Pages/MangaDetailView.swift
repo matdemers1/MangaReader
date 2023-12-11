@@ -68,6 +68,7 @@ struct MangaDetailView: View {
             if let chapters = chapters {
               ForEach(chapters, id: \.id) { chapter in
                 NavigationLink(destination: ChapterView(
+                    totalChapters: chaptersResponse?.total ?? 0,
                     chapters: chapters,
                     chapterId: chapter.id.description ?? "N/A",
                     mangaId: manga.id.description,
