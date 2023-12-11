@@ -35,24 +35,32 @@ struct LoginPage: View {
     let url = URL(string: "https://auth.mangadex.org/realms/mangadex/protocol/openid-connect/token")!
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
-    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
 
-    let body = [
+    let bodyParameters = [
+      "grant_type": "password",
       "username": username,
       "password": password,
       "client_id": clientId,
       "client_secret": clientSecret
     ]
 
-    let jsonData = try? JSONSerialization.data(withJSONObject: body)
-    request.httpBody = jsonData
+    let bodyString = bodyParameters.map { "\($0.key)=\($0.value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)" }.joined(separator: "&")
+    request.httpBody = bodyString.data(using: .utf8)
 
     URLSession.shared.dataTask(with: request) { data, response, error in
       if let data = data {
         if let decodedResponse = try? JSONDecoder().decode(AuthResponse.self, from: data) {
           DispatchQueue.main.async {
-            self.accessToken = decodedResponse.accessToken
-            self.refreshToken = decodedResponse.refreshToken
+            let userAuth = UserAuth(
+                username: username,
+                password: password,
+                clientId: clientId,
+                clientSecret: clientSecret,
+                accessToken: decodedResponse.accessToken,
+                refreshToken: decodedResponse.refreshToken
+            )
+            modelContext.insert(userAuth)
           }
           return
         }
@@ -60,7 +68,7 @@ struct LoginPage: View {
       print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
     }.resume()
 
-    let userAuth = UserAuth(username: username, password: password, clientId: clientId, clientSecret: clientSecret, accessToken: accessToken, refreshToken: refreshToken)
-    modelContext.insert(userAuth)
+
   }
+
 }

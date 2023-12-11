@@ -30,6 +30,16 @@ struct AccountHeader: View {
           }
         }
       }
+          .padding()
+          .background(Color(.systemBackground))
+          .shadow(radius: 1)
+      Divider()
+      Text("username \(userAuth.first?.username ?? "No username")")
+          .font(.subheadline)
+      Text("refresh token \(userAuth.first?.refreshToken ?? "No refresh token")")
+          .font(.subheadline)
+      Text("Access Token \(userAuth.first?.accessToken ?? "No access Token")")
+          .font(.subheadline)
     }
   }
 
