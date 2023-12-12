@@ -13,7 +13,7 @@ struct MangaCardView: View {
     let manga: Manga
 
     var body: some View {
-        NavigationLink(destination: MangaDetailView(manga: manga)) {
+        NavigationLink(destination: MangaDetailView(manga: manga, mangaId: manga.id.description)) {
             VStack {
                 HStack(alignment: .top) {
                     // Cover Art

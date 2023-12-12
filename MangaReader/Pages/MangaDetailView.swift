@@ -7,12 +7,17 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
 struct MangaDetailView: View {
   @State var manga: Manga? = nil
-  @State var mangaId: String? = nil
+  @State var mangaId: String = ""
   @State var chaptersResponse: ChapterResponse?
-  @State var chapters: [Chapter]?
+  @State var chapters: [Chapter]? = []
+  @State var offset = 0
+  @State var showMoreButton = true
+  @State var historyForMangaId: History? = nil
+  @Query var history: [History]
 
 
   var body: some View {
@@ -78,23 +83,50 @@ struct MangaDetailView: View {
                     HStack(alignment: .center) {
                       Text(chapter.attributes.chapter ?? "N/A")
                           .font(.headline)
-                          .foregroundColor(Color.primary)
+                          .foregroundColor(
+                              historyForMangaId?.chapterIds.contains(chapter.id.description) ?? false
+                                  ? Color.gray
+                                  : Color.primary
+                          )
                       VStack(alignment: .leading) {
                         Text(chapter.attributes.title ?? "No Title")
                             .font(.headline)
-                            .foregroundColor(Color.primary)
+                            .foregroundColor(
+                                historyForMangaId?.chapterIds.contains(chapter.id.description) ?? false
+                                    ? Color.gray
+                                    : Color.primary
+                            )
                         Text(getChapterScanlationGroupName(chapter: chapter))
                             .font(.subheadline)
-                            .foregroundColor(Color.primary)
+                            .foregroundColor(
+                                historyForMangaId?.chapterIds.contains(chapter.id.description) ?? false
+                                    ? Color.gray
+                                    : Color.primary
+                            )
                       }
                       Spacer()
                       Image(systemName: "chevron.right")
-                          .foregroundColor(Color.primary)
+                          .foregroundColor(
+                              historyForMangaId?.chapterIds.contains(chapter.id.description) ?? false
+                                  ? Color.gray
+                                  : Color.primary
+                          )
                     }
                     Divider()
                         .overlay(Color.gray)
                         .frame(height: 4)
                   }
+                }
+              }
+              if showMoreButton {
+                Button(action: {
+                  offset += 1
+                  fetchChapterResponse(mangaId: manga.id.description, offset: offset)
+                }) {
+                  Text("Load more chapters")
+                      .font(.headline)
+                      .frame(maxWidth: .infinity)
+                      .padding()
                 }
               }
             } else {
@@ -112,10 +144,11 @@ struct MangaDetailView: View {
         .onAppear() {
           if let manga = manga {
             fetchChapterResponse(mangaId: manga.id.description)
-          } else if let mangaId = mangaId {
+          } else {
             fetchManga(mangaId: mangaId)
             fetchChapterResponse(mangaId: mangaId)
           }
+          historyForMangaId = history.first(where: { $0.mangaId == mangaId })
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing: Button(action: {
@@ -148,8 +181,8 @@ struct MangaDetailView: View {
     }.resume()
   }
 
-  func fetchChapterResponse(mangaId: String) {
-    let url = URL(string: "https://api.mangadex.org/manga/\(mangaId)/feed?translatedLanguage[]=en&order[chapter]=desc&limit=100&contentRating[]=safe&contentRating[]=suggestive&contentRating[]=erotica&contentRating[]=pornographic&includes[]=scanlation_group")!
+  func fetchChapterResponse(mangaId: String, offset: Int = 0) {
+    let url = URL(string: "https://api.mangadex.org/manga/\(mangaId)/feed?translatedLanguage[]=en&order[chapter]=desc&limit=100&offset=\(offset*100)&contentRating[]=safe&contentRating[]=suggestive&contentRating[]=erotica&contentRating[]=pornographic&includes[]=scanlation_group")!
     let request = URLRequest(url: url)
     let semaphore = DispatchSemaphore(value: 0)
     var chapterResponse: ChapterResponse?
@@ -158,7 +191,11 @@ struct MangaDetailView: View {
           if let data = data {
             do {
               chapterResponse = try JSONDecoder().decode(ChapterResponse.self, from: data)
-              chapters = chapterResponse?.data
+              chapters?.append(contentsOf: chapterResponse?.data ?? [])
+              print("Chapters: \(chapters?.count ?? 0) / \(chapterResponse?.total ?? 0)")
+              if chapters?.count == chapterResponse?.total {
+                showMoreButton = false
+              }
               self.chaptersResponse = chapterResponse
             } catch {
               print("Error decoding JSON: \(error)")
