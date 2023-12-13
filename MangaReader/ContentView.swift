@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
-  @State private var selection = "home"
+  @Environment(\.modelContext) private var modelContext
+  @Query private var readingListGroups: [ReadingListGroup]
+
+  @State private var selection = "readingList"
 
   var body: some View {
     NavigationView {
@@ -25,6 +29,12 @@ struct ContentView: View {
             }
             .tag("search")
 
+        ReadingListView()
+            .tabItem {
+              Label("Reading List", systemImage: "book")
+            }
+            .tag("readingList")
+
         HistoryView()
             .tabItem {
               Label("History", systemImage: "clock")
@@ -38,5 +48,16 @@ struct ContentView: View {
 //            .tag("account")
       }
     }
+        .onAppear() {
+          if readingListGroups.isEmpty {
+            let defaultGroups = [
+              ReadingListGroup(groupId: UUID(), groupName: "Plan to Read"),
+              ReadingListGroup(groupId: UUID(), groupName: "Reading"),
+            ]
+            defaultGroups.forEach { group in
+              try! modelContext.insert(group)
+            }
+          }
+        }
   }
 }

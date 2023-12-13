@@ -17,7 +17,10 @@ struct MangaDetailView: View {
   @State var offset = 0
   @State var showMoreButton = true
   @State var historyForMangaId: History? = nil
+  @State var showAddToGroup = false
+  @State var selectedGroup: ReadingListGroup? = nil
   @Query var history: [History]
+  @Query var readingListGroups: [ReadingListGroup]
 
 
   var body: some View {
@@ -152,10 +155,23 @@ struct MangaDetailView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing: Button(action: {
-          print("Favorite")
+          showAddToGroup.toggle()
         }) {
           Image(systemName: "heart")
-        })
+        }
+            .alert("Add to Reading List", isPresented: $showAddToGroup) {
+              List {
+                Picker("Select a group", selection: $selectedGroup) {
+                  ForEach(readingListGroups, id: \.self) { group in
+                    Text(group.groupName).tag(group)
+                  }
+                }
+                    .pickerStyle(.inline)
+              }
+            } message: {
+              Text("Select a group to add this manga to")
+            }
+        )
   }
 
   func getChapterScanlationGroupName(chapter: Chapter) -> String {

@@ -14,6 +14,8 @@ struct MangaReaderApp: App {
         let schema = Schema([
             History.self,
             UserAuth.self,
+            ReadingListGroup.self,
+            ReadingListItem.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
