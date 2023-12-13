@@ -20,6 +20,7 @@
 		366E3B5192408E28EF6AF99C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E33D9AA3995075AE65BD5 /* Account.swift */; };
 		366E3B61BC44131E4F5E2BC5 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3CAB64C3653E38ED4921 /* FilterView.swift */; };
 		366E3B86EA6C0F738D76CAC7 /* PublicationDemographicFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E301EE2B72FFE3C5C97C2 /* PublicationDemographicFilter.swift */; };
+		366E3BA96DC0305D8683BA21 /* SkeletonBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E33649CC56DF1748D845E /* SkeletonBox.swift */; };
 		366E3BB7A69D5F8480B190FE /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E30218538561EB63D4FDB /* Status.swift */; };
 		366E3BBD2A357E291188F282 /* AccountHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3C35E8ED93BC18B257B6 /* AccountHeader.swift */; };
 		366E3D119DB685FDA03F3A99 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E388453DB44787BD2D89D /* HistoryView.swift */; };
@@ -62,6 +63,7 @@
 		366E3153C3ED4D91CBDD2382 /* ContentRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentRating.swift; sourceTree = "<group>"; };
 		366E3157AEB040BF8411D9B5 /* TagFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilter.swift; sourceTree = "<group>"; };
 		366E32F112B3834B68CAE831 /* ChapterVeiwModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterVeiwModel.swift; sourceTree = "<group>"; };
+		366E33649CC56DF1748D845E /* SkeletonBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonBox.swift; sourceTree = "<group>"; };
 		366E33D9AA3995075AE65BD5 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		366E34132392FC3463F872DE /* ContentRatingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentRatingFilter.swift; sourceTree = "<group>"; };
 		366E3655F143A6F251DC581C /* AuthResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				9CE57ED12B16F03B00D4D4A6 /* ExpandableText.swift */,
 				366E302181B8E3C0B70B829C /* Filters */,
 				366E3799A5BF8FE7D781467B /* Account */,
+				366E33649CC56DF1748D845E /* SkeletonBox.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				366E3DCE85A29602E9B950AF /* UserAuth.swift in Sources */,
 				366E3F130B4A966E401277B1 /* LoginPage.swift in Sources */,
 				366E3369C963011C89685B5D /* AuthResponse.swift in Sources */,
+				366E3BA96DC0305D8683BA21 /* SkeletonBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

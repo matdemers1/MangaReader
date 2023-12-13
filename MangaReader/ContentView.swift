@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var selection = "history"
+  @State private var selection = "home"
 
   var body: some View {
     NavigationView {
