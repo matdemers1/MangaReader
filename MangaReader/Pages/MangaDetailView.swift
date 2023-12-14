@@ -18,7 +18,7 @@ struct MangaDetailView: View {
   @State var showMoreButton = true
   @State var historyForMangaId: History? = nil
   @State var showAddToGroup = false
-  @State var selectedGroup: ReadingListGroup? = nil
+  @State var selectedGroup: UUID? = nil
   @Query var history: [History]
   @Query var readingListGroups: [ReadingListGroup]
 
@@ -159,17 +159,27 @@ struct MangaDetailView: View {
         }) {
           Image(systemName: "heart")
         }
-            .alert("Add to Reading List", isPresented: $showAddToGroup) {
-              List {
-                Picker("Select a group", selection: $selectedGroup) {
-                  ForEach(readingListGroups, id: \.self) { group in
-                    Text(group.groupName).tag(group)
+            .sheet(isPresented: $showAddToGroup) {
+              VStack {
+                Text("Add to Group")
+                    .font(.title)
+                    .padding([.top, .leading, .trailing])
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Picker("Reading List Group", selection: $selectedGroup) {
+                  ForEach(readingListGroups, id: \.groupId) { group in
+                    Text(group.groupName).tag(group.groupId as UUID?)
                   }
                 }
-                    .pickerStyle(.inline)
+                    .pickerStyle(.wheel)
+                Button("Add to Group") {
+                  addMangaToReadingList()
+                  showAddToGroup.toggle()
+                }
+                    .padding([.bottom])
+                    .frame(maxWidth: .infinity)
               }
-            } message: {
-              Text("Select a group to add this manga to")
+                  .presentationDetents([.height(300)])
+
             }
         )
   }
@@ -220,6 +230,15 @@ struct MangaDetailView: View {
           semaphore.signal()
         }.resume()
     semaphore.wait()
+  }
+
+  func addMangaToReadingList() {
+    print("Adding manga to reading list")
+    print("Selected group: \(selectedGroup?.description ?? "None")")
+    if let group = readingListGroups.first(where: { $0.groupId == selectedGroup}) {
+      print("Adding to group: \(group.groupName)")
+      group.readingListItems.append(ReadingListItem(mangaId: mangaId, mangaName: manga?.attributes.title["en"] ?? "Unknown Manga"))
+    }
   }
 }
 

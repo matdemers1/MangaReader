@@ -16,6 +16,7 @@ struct ReadingListView: View {
   @Query private var readingListGroups: [ReadingListGroup]
   @State private var showAddGroup = false
   @State private var name = ""
+  @State private var expandedGroups: Set<UUID> = []  // New state to track expanded groups
 
   var body: some View {
     VStack {
@@ -45,18 +46,49 @@ struct ReadingListView: View {
           .frame(maxWidth: .infinity, alignment: .leading)
       List {
         ForEach(readingListGroups, id: \.self) { entry in
-          Section(header: Text(entry.groupName)) {
-            ForEach(entry.readingListItems, id: \.self) { item in
-              NavigationLink(destination: MangaDetailView(mangaId: item.mangaId)) {
-                Text(item.mangaName)
+          Section(
+              header: HStack {
+                Text(entry.groupName)
+                    .fontWeight(.semibold)
+                Spacer()
+                // Chip showing the item count
+                Text("\(entry.readingListItems.count) mangas")
+                    .font(.caption)
+                    .padding(5)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                // Arrow indicator
+                Image(systemName: "chevron.right")
+                    .rotationEffect(.degrees(expandedGroups.contains(entry.groupId) ? 90 : 0))
+                    .animation(.easeInOut, value: expandedGroups.contains(entry.groupId))
+              }
+                  .cornerRadius(8)
+                  .contentShape(Rectangle())
+                  .frame(maxWidth: .infinity)
+                  .onTapGesture {
+                    withAnimation {
+                      if expandedGroups.contains(entry.groupId) {
+                        expandedGroups.remove(entry.groupId)
+                      } else {
+                        expandedGroups.insert(entry.groupId)
+                      }
+                    }
+                  }
+          ) {
+            if expandedGroups.contains(entry.groupId) {
+              ForEach(entry.readingListItems, id: \.self) { item in
+                NavigationLink(destination: MangaDetailView(mangaId: item.mangaId)) {
+                  Text(item.mangaName)
+                }
               }
             }
           }
         }
             .onDelete(perform: deleteReadingGroup)
-
       }
           .listStyle(.sidebar)
+
     }
   }
 

@@ -100,7 +100,6 @@ struct ChapterView: View {
         if index == chapters.count - 1 { return nil }
         let nextChapter = chapters[index + 1]
         let nextChapterId = nextChapter.id.description
-        print("Next chapter id: \(nextChapterId)")
         return nextChapterId
     }
 
@@ -109,7 +108,6 @@ struct ChapterView: View {
         if index == 0 { return nil }
         let lastChapter = chapters[index - 1]
         let lastChapterId = lastChapter.id.description
-        print("Last chapter id: \(lastChapterId)")
         return lastChapterId
     }
 

@@ -9,11 +9,9 @@ import SwiftData
 class ReadingListItem {
   var mangaId: String
   var mangaName: String
-  var lastRead: Date
 
-  init(mangaId: String, mangaName: String, lastRead: Date) {
+  init(mangaId: String, mangaName: String) {
     self.mangaId = mangaId
     self.mangaName = mangaName
-    self.lastRead = lastRead
   }
 }
