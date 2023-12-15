@@ -49,7 +49,7 @@ struct SearchView: View {
                         LazyVStack {
                             ForEach(mangaList, id: \.id) { manga in
                                 NavigationLink(destination: MangaDetailView(manga: manga, mangaId: manga.id.description)) {
-                                    MangaCardView(manga: manga)
+                                    MangaCardView(manga: manga, showTags: true)
                                 }
                             }
                         }

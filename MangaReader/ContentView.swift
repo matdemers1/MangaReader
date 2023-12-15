@@ -12,7 +12,7 @@ struct ContentView: View {
   @Environment(\.modelContext) private var modelContext
   @Query private var readingListGroups: [ReadingListGroup]
 
-  @State private var selection = "account"
+  @State private var selection = "home"
 
   var body: some View {
     NavigationView {

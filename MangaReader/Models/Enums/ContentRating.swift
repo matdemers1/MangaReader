@@ -11,6 +11,13 @@ enum ContentRating: String, CaseIterable{
   case erotica = "erotica"
   case pornographic = "pornographic"
 
+  static subscript(_ rating: String?) -> ContentRating{
+    guard let rating = rating else {
+      return .safe
+    }
+    return ContentRating(rawValue: rating) ?? .safe
+  }
+
   var description: String {
     switch self {
     case .safe:

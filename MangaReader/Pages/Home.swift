@@ -29,7 +29,7 @@ struct HomeView: View {
           ScrollView {
             LazyVStack {
               ForEach(mangas, id: \.id) { manga in
-                MangaCardView(manga: manga)
+                MangaCardView(manga: manga, showTags: false)
               }
               Button(action: loadMoreMangas) {
                 Text("Load more")

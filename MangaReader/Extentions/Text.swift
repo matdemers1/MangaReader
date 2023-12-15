@@ -9,12 +9,16 @@ import Foundation
 import SwiftUI
 
 extension Text {
-    func withPillStyle() -> some View {
-        self.font(.caption2)
-            .padding(5)
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
+    func withPillStyle( color: Color ) -> some View {
+        self.font(.caption)
+            .padding(.vertical, 4)
+            .padding(.horizontal, 6)
+            .foregroundColor(color)
+            .cornerRadius(4)
+            .overlay(
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(color, lineWidth: 1)
+            )
     }
 }
 

@@ -16,17 +16,6 @@ struct SkeletonBox: View {
     HStack(alignment: .top, spacing: 16) {
       secondaryColor
           .frame(width: width, height: height)
-
-      VStack(alignment: .leading, spacing: 6) {
-        secondaryColor
-            .frame(height: 20)
-
-        primaryColor
-            .frame(height: 20)
-
-        primaryColor
-            .frame(width: 94, height: 15)
-      }
     }
         .cornerRadius(10)
   }

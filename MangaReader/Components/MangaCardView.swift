@@ -11,6 +11,7 @@ import WrappingHStack
 
 struct MangaCardView: View {
   let manga: Manga
+  let showTags: Bool
 
   var body: some View {
     NavigationLink(destination: MangaDetailView(manga: manga, mangaId: manga.id.description)) {
@@ -48,24 +49,22 @@ struct MangaCardView: View {
           }.padding([.top], 8)
         }
         WrappingHStack(alignment: .leading, fitContentWidth: true) {
+          Text(manga.attributes.contentRating?.capitalized ?? "N/A")
+              .withPillStyle(color: ContentRating( rawValue: manga.attributes.contentRating ?? "safe" )?.color ?? .primary)
           Text("Status: \(manga.attributes.status?.capitalized ?? "N/A")")
-              .withPillStyle()
+              .withPillStyle(color: Status( rawValue: manga.attributes.status ?? "ongoing" )?.color ?? .primary)
           Text("Year: \(manga.attributes.year.map(String.init) ?? "N/A")")
-              .withPillStyle()
-          Text("Rating: \(manga.attributes.contentRating?.capitalized ?? "N/A")")
-              .withPillStyle()
-          Text("State: \(manga.attributes.state?.capitalized ?? "N/A")")
-              .withPillStyle()
-        }
-            .font(.footnote)
-        // Tags
-        WrappingHStack(alignment: .center) {
-          ForEach(manga.attributes.tags ?? [], id: \.id) { tag in
-            Text(tag.attributes.name["en"] ?? "Unknown")
-                .withPillStyle()
+              .withPillStyle(color: .primary)
+          if showTags {
+            ForEach(manga.attributes.tags ?? [], id: \.self) { tag in
+              Text(tag.attributes.name["en"] ?? "Unknown Tag")
+                  .withPillStyle(color: .primary)
+            }
           }
         }
-            .padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 8)
+            .padding(.bottom, 8)
       }
           .frame(maxWidth: .infinity, alignment: .leading)
           .background(Color("CardBackground"))
