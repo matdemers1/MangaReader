@@ -68,9 +68,15 @@ struct HomeView: View {
 
 
 func fetchHomePage(page: Int, completion: @escaping ([Manga]) -> Void) {
-  print("Fetching page \(page)")
-  let url = URL(string: "https://api.mangadex.org/manga?includes[]=cover_art&offset=\(page*10)&limit=10")!
-  let request = URLRequest(url: url)
+  var url = URLComponents(string: "https://api.mangadex.org/manga")!
+
+  var queryItems: [URLQueryItem] = []
+  queryItems.append(URLQueryItem(name: "limit", value: "20"))
+  queryItems.append(URLQueryItem(name: "offset", value: String(page * 20)))
+  queryItems.append(URLQueryItem(name: "includes[]", value: "cover_art"))
+  url.queryItems = queryItems
+
+  let request = URLRequest(url: url.url!)
 
   URLSession.shared.dataTask(with: request) { data, response, error in
         var mangas: [Manga] = []

@@ -12,6 +12,9 @@ struct SearchView: View {
     @State var showSheet = false
     @State var filterState = FilterState()
     @State var mangaList: [Manga] = []
+    @State var page = 0
+    @State var totalPages = 0
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -26,7 +29,10 @@ struct SearchView: View {
                     Image(systemName: "magnifyingglass")
                     TextField("Search", text: $filterState.title)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .onSubmit(search)
+                        .onSubmit({
+                            page = 0
+                            search()
+                        })
                     Spacer()
                     Button(action: {
                         showSheet.toggle()
@@ -47,6 +53,32 @@ struct SearchView: View {
                                 }
                             }
                         }
+                            .padding(.horizontal, 8)
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                if page > 0 {
+                                    page -= 1
+                                    search()
+                                }
+                            }) {
+                                Image(systemName: "chevron.left")
+                            }
+                                .disabled(page == 0)
+                            Text("\(page + 1) / \(totalPages)")
+                            Button(action: {
+                                if page < totalPages - 1 {
+                                    page += 1
+                                    search()
+                                }
+                            }) {
+                                Image(systemName: "chevron.right")
+                            }
+                                .disabled(page == totalPages - 1)
+                            Spacer()
+                        }
+                            .padding(.vertical, 8)
+                            .padding(.bottom, 16)
                     }
                 } else {
                     Text("No results")
@@ -77,6 +109,13 @@ struct SearchView: View {
             if let decodedResponse = try? JSONDecoder().decode(MangaResponse.self, from: data) {
                 DispatchQueue.main.async {
                     self.mangaList = decodedResponse.data
+                    var totalMangas = decodedResponse.total ?? 0
+                    // get the totalPages by dividing the total mangas by the limit
+                    self.totalPages = totalMangas / (decodedResponse.limit ?? 0)
+                    // if there is a remainder, add 1 to the totalPages
+                    if totalMangas % (decodedResponse.limit ?? 0) != 0 {
+                        self.totalPages += 1
+                    }
                 }
                 return
             }
@@ -87,6 +126,8 @@ struct SearchView: View {
     func urlBuilder() -> URL {
         var url = URLComponents(string: "https://api.mangadex.org/manga")!
         var queryItems: [URLQueryItem] = []
+        queryItems.append(URLQueryItem(name: "limit", value: "20"))
+        queryItems.append(URLQueryItem(name: "offset", value: String(page * 20)))
         queryItems.append(URLQueryItem(name: "includes[]", value: "cover_art"))
         if !filterState.title.isEmpty {
             queryItems.append(URLQueryItem(name: "title", value: filterState.title))
@@ -116,7 +157,6 @@ struct SearchView: View {
             queryItems.append(URLQueryItem(name: "contentRating[]", value: contentRating.map { $0.rawValue }.joined(separator: ",")))
         }
         url.queryItems = queryItems
-        print(url.url!)
         return url.url!
     }
 }
