@@ -19,76 +19,78 @@ struct ReadingListView: View {
   @State private var expandedGroups: Set<UUID> = []  // New state to track expanded groups
 
   var body: some View {
-    VStack {
-      HStack {
-        Text("Reading List")
-            .font(.largeTitle.bold())
-            .padding()
-        Spacer()
-        Button(action: {
-          showAddGroup.toggle()
-        }, label: {
-          Image(systemName: "plus")
-              .font(.system(size: 20))
-        })
-            .padding()
-            .bold()
-            .alert("Create a new Group", isPresented: $showAddGroup){
-              TextField("Enter your name", text: $name)
-              Button("OK", action: createNewGroup)
-              Button("Cancel", role: .cancel) {
-                showAddGroup.toggle()
+    NavigationStack {
+      VStack {
+        HStack {
+          Text("Reading List")
+              .font(.largeTitle.bold())
+              .padding()
+          Spacer()
+          Button(action: {
+            showAddGroup.toggle()
+          }, label: {
+            Image(systemName: "plus")
+                .font(.system(size: 20))
+          })
+              .padding()
+              .bold()
+              .alert("Create a new Group", isPresented: $showAddGroup) {
+                TextField("Enter your name", text: $name)
+                Button("OK", action: createNewGroup)
+                Button("Cancel", role: .cancel) {
+                  showAddGroup.toggle()
+                }
+              } message: {
+                Text("Enter the name of the new group")
               }
-            } message: {
-              Text("Enter the name of the new group")
-            }
-      }
-          .frame(maxWidth: .infinity, alignment: .leading)
-      List {
-        ForEach(readingListGroups, id: \.self) { entry in
-          Section(
-              header: HStack {
-                Text(entry.groupName)
-                    .fontWeight(.semibold)
-                Spacer()
-                // Chip showing the item count
-                Text("\(entry.readingListItems.count) mangas")
-                    .font(.caption)
-                    .padding(5)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                // Arrow indicator
-                Image(systemName: "chevron.right")
-                    .rotationEffect(.degrees(expandedGroups.contains(entry.groupId) ? 90 : 0))
-                    .animation(.easeInOut, value: expandedGroups.contains(entry.groupId))
-              }
-                  .cornerRadius(8)
-                  .contentShape(Rectangle())
-                  .frame(maxWidth: .infinity)
-                  .onTapGesture {
-                    withAnimation {
-                      if expandedGroups.contains(entry.groupId) {
-                        expandedGroups.remove(entry.groupId)
-                      } else {
-                        expandedGroups.insert(entry.groupId)
+        }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        List {
+          ForEach(readingListGroups, id: \.self) { entry in
+            Section(
+                header: HStack {
+                  Text(entry.groupName)
+                      .fontWeight(.semibold)
+                  Spacer()
+                  // Chip showing the item count
+                  Text("\(entry.readingListItems.count) mangas")
+                      .font(.caption)
+                      .padding(5)
+                      .background(Color.blue)
+                      .foregroundColor(.white)
+                      .cornerRadius(10)
+                  // Arrow indicator
+                  Image(systemName: "chevron.right")
+                      .rotationEffect(.degrees(expandedGroups.contains(entry.groupId) ? 90 : 0))
+                      .animation(.easeInOut, value: expandedGroups.contains(entry.groupId))
+                }
+                    .cornerRadius(8)
+                    .contentShape(Rectangle())
+                    .frame(maxWidth: .infinity)
+                    .onTapGesture {
+                      withAnimation {
+                        if expandedGroups.contains(entry.groupId) {
+                          expandedGroups.remove(entry.groupId)
+                        } else {
+                          expandedGroups.insert(entry.groupId)
+                        }
                       }
                     }
+            ) {
+              if expandedGroups.contains(entry.groupId) {
+                ForEach(entry.readingListItems, id: \.self) { item in
+                  NavigationLink(destination: MangaDetailView(mangaId: item.mangaId)) {
+                    Text(item.mangaName)
                   }
-          ) {
-            if expandedGroups.contains(entry.groupId) {
-              ForEach(entry.readingListItems, id: \.self) { item in
-                NavigationLink(destination: MangaDetailView(mangaId: item.mangaId)) {
-                  Text(item.mangaName)
                 }
               }
             }
           }
+              .onDelete(perform: deleteReadingGroup)
         }
-            .onDelete(perform: deleteReadingGroup)
-      }
-          .listStyle(.sidebar)
+            .listStyle(.sidebar)
 
+      }
     }
   }
 

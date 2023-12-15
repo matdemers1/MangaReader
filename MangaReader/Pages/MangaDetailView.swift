@@ -145,13 +145,15 @@ struct MangaDetailView: View {
     }
         .ignoresSafeArea(edges: .top)
         .onAppear() {
-          if let manga = manga {
-            fetchChapterResponse(mangaId: manga.id.description)
-          } else {
-            fetchManga(mangaId: mangaId)
-            fetchChapterResponse(mangaId: mangaId)
+          if chapters?.count == 0 {
+            if let manga = manga {
+              fetchChapterResponse(mangaId: manga.id.description)
+            } else {
+              fetchManga(mangaId: mangaId)
+              fetchChapterResponse(mangaId: mangaId)
+            }
+            historyForMangaId = history.first(where: { $0.mangaId == mangaId })
           }
-          historyForMangaId = history.first(where: { $0.mangaId == mangaId })
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing: Button(action: {

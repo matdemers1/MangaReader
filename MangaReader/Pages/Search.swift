@@ -15,8 +15,12 @@ struct SearchView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Search")
-                    .font(.largeTitle)
+                HStack {
+                    Text("Search")
+                        .font(.largeTitle.bold())
+                        .padding()
+                    Spacer()
+                }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 HStack {
                     Image(systemName: "magnifyingglass")
@@ -48,7 +52,6 @@ struct SearchView: View {
                     Text("No results")
                 }
             }
-                .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
             .navigationTitle("Search")

@@ -10,6 +10,7 @@ import SwiftData
 
 @main
 struct MangaReaderApp: App {
+    @State private var isActive: Bool = false
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             History.self,
@@ -28,7 +29,18 @@ struct MangaReaderApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isActive {
+                ContentView() // Your main view
+            } else {
+                SplashScreenView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { // 3-second delay
+                            withAnimation {
+                                self.isActive = true
+                            }
+                        }
+                    }
+            }
         }
         .modelContainer(sharedModelContainer)
     }

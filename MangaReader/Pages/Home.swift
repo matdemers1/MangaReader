@@ -14,9 +14,15 @@ struct HomeView: View {
   @State private var isLoading: Bool = false
 
   var body: some View {
-    NavigationStack{
-      ZStack {
-        if !mangas.isEmpty{
+    NavigationStack {
+      VStack {
+        HStack {
+          Text("Home")
+              .font(.largeTitle.bold())
+              .padding()
+        }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        if !mangas.isEmpty {
           ScrollView {
             LazyVStack {
               ForEach(mangas, id: \.id) { manga in
@@ -36,13 +42,12 @@ struct HomeView: View {
               .progressViewStyle(CircularProgressViewStyle(tint: .primary))
         }
       }
-          .navigationTitle("Home")
-    }
-        .onAppear() {
-          if mangas.isEmpty {
-            loadInitialMangas()
+          .onAppear() {
+            if mangas.isEmpty {
+              loadInitialMangas()
+            }
           }
-        }
+    }
   }
 
   private func loadInitialMangas() {

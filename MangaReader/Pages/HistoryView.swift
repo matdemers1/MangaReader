@@ -12,6 +12,12 @@ struct HistoryView: View {
 
   var body: some View {
     NavigationStack {
+      HStack {
+        Text("History")
+            .font(.largeTitle.bold())
+            .padding()
+      }
+          .frame(maxWidth: .infinity, alignment: .leading)
       List {
         ForEach(history, id: \.self) { entry in
           NavigationLink(destination: MangaDetailView(mangaId: entry.mangaId)) {
@@ -33,7 +39,6 @@ struct HistoryView: View {
             .onDelete(perform: deleteHistoryEntry)
 
       }
-          .navigationTitle("History")
           .overlay(content: {
             if history.isEmpty {
               ContentUnavailableView(
