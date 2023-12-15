@@ -12,7 +12,7 @@ struct ContentView: View {
   @Environment(\.modelContext) private var modelContext
   @Query private var readingListGroups: [ReadingListGroup]
 
-  @State private var selection = "home"
+  @State private var selection = "account"
 
   var body: some View {
     NavigationView {
@@ -41,11 +41,11 @@ struct ContentView: View {
             }
             .tag("history")
 
-//        AccountView()
-//            .tabItem {
-//              Label("Account", systemImage: "person")
-//            }
-//            .tag("account")
+        AccountView()
+            .tabItem {
+              Label("Account", systemImage: "person")
+            }
+            .tag("account")
       }
     }
         .onAppear() {

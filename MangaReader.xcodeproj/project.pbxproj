@@ -26,7 +26,6 @@
 		366E3B86EA6C0F738D76CAC7 /* PublicationDemographicFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E301EE2B72FFE3C5C97C2 /* PublicationDemographicFilter.swift */; };
 		366E3BA96DC0305D8683BA21 /* SkeletonBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E33649CC56DF1748D845E /* SkeletonBox.swift */; };
 		366E3BB7A69D5F8480B190FE /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E30218538561EB63D4FDB /* Status.swift */; };
-		366E3BBD2A357E291188F282 /* AccountHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3C35E8ED93BC18B257B6 /* AccountHeader.swift */; };
 		366E3D119DB685FDA03F3A99 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E388453DB44787BD2D89D /* HistoryView.swift */; };
 		366E3DCE85A29602E9B950AF /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3CAC9805DE1027AAEA75 /* UserAuth.swift */; };
 		366E3DE63EBECF2F2108D3A5 /* ContentRatingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E34132392FC3463F872DE /* ContentRatingFilter.swift */; };
@@ -77,7 +76,6 @@
 		366E39291CE6DC8F9F7E28A6 /* PublicationDemographic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationDemographic.swift; sourceTree = "<group>"; };
 		366E3A235302A6C480889CF6 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		366E3B3327BDFD5E8632C09D /* TagFilterSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilterSection.swift; sourceTree = "<group>"; };
-		366E3C35E8ED93BC18B257B6 /* AccountHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountHeader.swift; sourceTree = "<group>"; };
 		366E3C7A36B742D535D0594C /* StatusFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusFilter.swift; sourceTree = "<group>"; };
 		366E3CAB64C3653E38ED4921 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		366E3CAC9805DE1027AAEA75 /* UserAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
@@ -155,14 +153,6 @@
 				366E3DDF788708D22636E8A6 /* ReadingListGroup.swift */,
 			);
 			path = ReadingList;
-			sourceTree = "<group>";
-		};
-		366E3799A5BF8FE7D781467B /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				366E3C35E8ED93BC18B257B6 /* AccountHeader.swift */,
-			);
-			path = Account;
 			sourceTree = "<group>";
 		};
 		366E3D3F4D3B32FE7CEDA45A /* User */ = {
@@ -272,7 +262,6 @@
 				9C12B2602B16A9FC000FB71F /* MangaCardView.swift */,
 				9CE57ED12B16F03B00D4D4A6 /* ExpandableText.swift */,
 				366E302181B8E3C0B70B829C /* Filters */,
-				366E3799A5BF8FE7D781467B /* Account */,
 				366E33649CC56DF1748D845E /* SkeletonBox.swift */,
 			);
 			path = Components;
@@ -397,7 +386,6 @@
 				366E3F0DF4C0EAA175772995 /* Tags.swift in Sources */,
 				366E36865829B8839F31A1E3 /* TagFilterSection.swift in Sources */,
 				366E376EA0C60AFC8BD79C35 /* AccountView.swift in Sources */,
-				366E3BBD2A357E291188F282 /* AccountHeader.swift in Sources */,
 				366E37FFF3DD955AC9E4CD89 /* History.swift in Sources */,
 				366E3B5192408E28EF6AF99C /* Account.swift in Sources */,
 				366E3D119DB685FDA03F3A99 /* HistoryView.swift in Sources */,

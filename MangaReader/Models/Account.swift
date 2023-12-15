@@ -7,9 +7,18 @@ import SwiftData
 
 @Model
 class Account {
-  var history: [History] = []
+  var miscSettings: MiscSettings
 
-  init(history: [History]) {
-    self.history = history
+  init() {
+    self.miscSettings = MiscSettings()
+  }
+}
+
+@Model
+class MiscSettings {
+  var showAdultContent: Bool
+
+  init() {
+    self.showAdultContent = false
   }
 }

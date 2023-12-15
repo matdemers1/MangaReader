@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum ContentRating: String, CaseIterable{
   case safe = "safe"
@@ -20,6 +21,19 @@ enum ContentRating: String, CaseIterable{
       return "Erotica"
     case .pornographic:
       return "Pornographic"
+    }
+  }
+
+  var color: Color{
+    switch self {
+    case .safe:
+      return .green
+    case .suggestive:
+      return .yellow
+    case .erotica:
+      return .orange
+    case .pornographic:
+      return .red
     }
   }
 }

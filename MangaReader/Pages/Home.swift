@@ -7,8 +7,11 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
 struct HomeView: View {
+  @Query private var accountSettings: [Account]
+
   @State private var mangas: [Manga] = []
   @State private var page: Int = 1
   @State private var isLoading: Bool = false
@@ -64,30 +67,40 @@ struct HomeView: View {
       self.mangas.append(contentsOf: newMangas)
     }
   }
+
+  func fetchHomePage(page: Int, completion: @escaping ([Manga]) -> Void) {
+    let allowAdultContent = accountSettings.first?.miscSettings.showAdultContent ?? false
+
+    var url = URLComponents(string: "https://api.mangadex.org/manga")!
+
+    var queryItems: [URLQueryItem] = []
+    queryItems.append(URLQueryItem(name: "limit", value: "20"))
+    queryItems.append(URLQueryItem(name: "offset", value: String(page * 20)))
+    queryItems.append(URLQueryItem(name: "includes[]", value: "cover_art"))
+    // if allowAdultContent is true, loop through the contentRating array and add each value to the queryItems
+    if allowAdultContent {
+      for rating in ContentRating.allCases {
+        queryItems.append(URLQueryItem(name: "contentRating[]", value: rating.rawValue))
+      }
+    }
+    url.queryItems = queryItems
+
+    let request = URLRequest(url: url.url!)
+
+    URLSession.shared.dataTask(with: request) { data, response, error in
+          var mangas: [Manga] = []
+          if let data = data {
+            let decoder = JSONDecoder()
+            let mangaResponse = try? decoder.decode(MangaResponse.self, from: data)
+            mangas = mangaResponse?.data ?? []
+          }
+          DispatchQueue.main.async {
+            completion(mangas)
+          }
+        }.resume()
+  }
 }
 
 
-func fetchHomePage(page: Int, completion: @escaping ([Manga]) -> Void) {
-  var url = URLComponents(string: "https://api.mangadex.org/manga")!
 
-  var queryItems: [URLQueryItem] = []
-  queryItems.append(URLQueryItem(name: "limit", value: "20"))
-  queryItems.append(URLQueryItem(name: "offset", value: String(page * 20)))
-  queryItems.append(URLQueryItem(name: "includes[]", value: "cover_art"))
-  url.queryItems = queryItems
-
-  let request = URLRequest(url: url.url!)
-
-  URLSession.shared.dataTask(with: request) { data, response, error in
-        var mangas: [Manga] = []
-        if let data = data {
-          let decoder = JSONDecoder()
-          let mangaResponse = try? decoder.decode(MangaResponse.self, from: data)
-          mangas = mangaResponse?.data ?? []
-        }
-        DispatchQueue.main.async {
-          completion(mangas)
-        }
-      }.resume()
-}
 

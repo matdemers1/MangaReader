@@ -13,8 +13,8 @@ struct MangaReaderApp: App {
     @State private var isActive: Bool = false
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
+            Account.self,
             History.self,
-            UserAuth.self,
             ReadingListGroup.self,
             ReadingListItem.self,
         ])
