@@ -27,7 +27,7 @@ struct HomeView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         if !mangas.isEmpty {
           ScrollView {
-            LazyVStack {
+            VStack {
               ForEach(mangas, id: \.id) { manga in
                 MangaCardView(manga: manga, showTags: false)
               }
@@ -35,8 +35,8 @@ struct HomeView: View {
                 Text("Load more")
               }
             }
+                .padding(.horizontal, 8)
           }
-              .padding(.horizontal, 8)
         }
 
         if isLoading {

@@ -21,7 +21,6 @@ struct SplashScreenView: View {
           .frame(width: 400, height: 400)
     }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.black) // Customizable
         .edgesIgnoringSafeArea(.all)
   }
 }
