@@ -8,6 +8,11 @@
 import SwiftUI
 import SwiftData
 
+typealias Account = SchemaV2.Account
+typealias History = SchemaV2.History
+typealias ReadingListGroup = SchemaV2.ReadingListGroup
+typealias ReadingListItem = SchemaV2.ReadingListItem
+
 @main
 struct MangaReaderApp: App {
     @State private var isActive: Bool = false
@@ -21,7 +26,10 @@ struct MangaReaderApp: App {
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            return try ModelContainer(
+                for: schema,
+                configurations: [modelConfiguration]
+            )
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }

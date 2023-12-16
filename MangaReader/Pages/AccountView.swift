@@ -13,13 +13,13 @@ struct AccountView: View {
   private var showAdultContentBinding: Binding<Bool> {
     Binding<Bool>(
         get: {
-          self.accountSettings.first?.miscSettings.showAdultContent ?? false
+          self.accountSettings.first?.showAdultContent ?? false
         },
         set: { newValue in
           print("Setting showAdultContent to \(newValue)")
           dump(self.accountSettings)
-          print("Account settings: \(self.accountSettings.first?.miscSettings.showAdultContent)")
-          self.accountSettings.first?.miscSettings.showAdultContent = newValue
+          print("Account settings: \(self.accountSettings.first?.showAdultContent)")
+          self.accountSettings.first?.showAdultContent = newValue
         }
     )
   }

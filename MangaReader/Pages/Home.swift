@@ -69,7 +69,7 @@ struct HomeView: View {
   }
 
   func fetchHomePage(page: Int, completion: @escaping ([Manga]) -> Void) {
-    let allowAdultContent = accountSettings.first?.miscSettings.showAdultContent ?? false
+    let allowAdultContent = accountSettings.first?.showAdultContent ?? false
 
     var url = URLComponents(string: "https://api.mangadex.org/manga")!
 
