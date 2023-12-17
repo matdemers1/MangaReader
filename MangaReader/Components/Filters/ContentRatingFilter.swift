@@ -4,10 +4,24 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
 struct ContentRatingFilter: View{
+  @Query private var accountSettings: [Account]
   @Binding var filterState: FilterState
   @State private var isExpanded: Bool = false
+
+  private var contentRating: [ContentRating] {
+    if let account = accountSettings.first {
+      if account.showAdultContent {
+        return ContentRating.allCases
+      } else {
+        return ContentRating.allCases.filter { $0 != .pornographic }
+      }
+    } else {
+      return []
+    }
+  }
 
   var columns: [GridItem] = [
     GridItem(.flexible(), spacing: 8),
@@ -40,7 +54,7 @@ struct ContentRatingFilter: View{
 
       if isExpanded {
         LazyVGrid(columns: columns, spacing: 16) { // Adjust spacing here
-          ForEach(ContentRating.allCases, id: \.self) { contentRating in
+          ForEach(contentRating, id: \.self) { contentRating in
             Button(action: {
               if filterState.contentRating?.contains(contentRating) ?? false {
                 filterState.contentRating?.removeAll(where: { $0 == contentRating })
