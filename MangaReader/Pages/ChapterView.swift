@@ -24,40 +24,58 @@ struct ChapterView: View {
     @State var lastChapterId: String?
 
     var body: some View {
-        ScrollView {
-            VStack {
-                if viewModel.isLoadingChapterData {
-                    Text("Fetching chapter data...")
-                } else if viewModel.loadingProgress < 1 {
+        VStack {
+            if viewModel.isLoadingChapterData {
+                Text("Fetching chapter data...")
+            } else if viewModel.loadingProgress < 1 {
+                VStack {
+                    Text("Loading images...")
+                        .font(.headline)
+                        .foregroundColor(.gray)
                     ProgressView(value: viewModel.loadingProgress)
-                        .progressViewStyle(LinearProgressViewStyle())
-                } else {
+                        .tint(.purple)
+
+                    Text("Pages loaded: \(viewModel.totalPagesLoaded)")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                    // Add average download speed in mb/s limit to 2 decimal places
+                    Text("Average download speed: \(String(format: "%.2f", viewModel.averageDownloadSpeed / 1000000)) mb/s")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+
+                }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            } else {
+                ScrollView {
                     ForEach(orderedImages(), id: \.self) { image in
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()
                     }
-                }
-                // Add buttons to go to next/last chapter
-                HStack {
-                    if lastChapterId != nil {
-                        Button(action: {
-                            goToLastChapter()
-                        }, label: {
-                            Text("Last Chapter")
-                        })
-                    }
-                    Spacer()
-                    if nextChapterId != nil {
-                        Button(action: {
-                            goToNextChapter()
-                        }, label: {
-                            Text("Next Chapter")
-                        })
+                    if !viewModel.isLoadingChapterData && viewModel.loadingProgress >= 1 {
+                        HStack {
+                            if lastChapterId != nil {
+                                Button(action: {
+                                    goToLastChapter()
+                                }, label: {
+                                    Text("Last Chapter")
+                                })
+                            }
+                            Spacer()
+                            if nextChapterId != nil {
+                                Button(action: {
+                                    goToNextChapter()
+                                }, label: {
+                                    Text("Next Chapter")
+                                })
+                            }
+                        }
                     }
                 }
             }
         }
+            // This is covering the whole screen
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .onAppear {
                 addChapterToHistory()
                 viewModel.fetchChapterData(chapterId: chapterId) { response in
