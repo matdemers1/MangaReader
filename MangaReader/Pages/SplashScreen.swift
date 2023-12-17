@@ -8,7 +8,7 @@ import SwiftUI
 struct SplashScreenView: View {
   var body: some View {
     VStack {
-      Text("Manga Reader")
+      Text("Manga UI")
           .font(.largeTitle)
           .fontWeight(.bold)
       Text("Powered by MangaDex")

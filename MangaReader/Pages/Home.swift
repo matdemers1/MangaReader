@@ -70,7 +70,7 @@ struct HomeView: View {
 
   func fetchHomePage(page: Int, completion: @escaping ([Manga]) -> Void) {
     let allowAdultContent = accountSettings.first?.showAdultContent ?? false
-    let language = accountSettings.first?.isTranslatedTo ?? Languages.english.description
+    let language = accountSettings.first?.isTranslatedTo ?? Languages.english.rawValue
     print("language: \(language)")
 
     var url = URLComponents(string: "https://api.mangadex.org/manga")!
