@@ -14,8 +14,6 @@ struct TagFilter: View {
     VStack(alignment: .leading) {
       HStack {
         Text("Tags")
-            .font(.headline)
-            .frame(maxWidth: .infinity, alignment: .leading)
 
         Spacer()
         if filterState.includedTags?.count ?? 0 > 0 {
@@ -29,8 +27,8 @@ struct TagFilter: View {
             .animation(.easeInOut, value: isExpanded) // Animate the rotation
       }
           .frame(maxWidth: .infinity, alignment: .leading)
-          .padding()
-          .cornerRadius(16)
+          .padding(.vertical, 8)
+          .padding(.trailing, 16)          .cornerRadius(16)
           .onTapGesture {
             withAnimation { // Animate the expansion and collapse
               isExpanded.toggle()
@@ -62,8 +60,6 @@ struct TagFilter: View {
     }
         .padding(.horizontal, 16)
         .padding(.bottom, isExpanded ? 32 : 0)
-        .background(Color("FilterCardBackground"))
-        .cornerRadius(16)
         .animation(.easeInOut, value: isExpanded)
         .onAppear(perform: fetchTagsAndCache)
   }

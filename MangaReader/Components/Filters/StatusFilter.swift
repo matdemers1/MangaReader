@@ -18,7 +18,6 @@ struct StatusFilter: View {
     VStack {
       HStack {
         Text("Status")
-            .font(.headline)
 
         Spacer()
         if !isExpanded && filterState.status?.count ?? 0 > 0 {
@@ -32,8 +31,8 @@ struct StatusFilter: View {
             .animation(.easeInOut, value: isExpanded) // Animate the rotation
       }
           .frame(maxWidth: .infinity, alignment: .leading)
-          .padding()
-          .cornerRadius(16)
+          .padding(.vertical, 8)
+          .padding(.trailing, 16)
           .onTapGesture {
             withAnimation { // Animate the expansion and collapse
               isExpanded.toggle()
@@ -57,9 +56,8 @@ struct StatusFilter: View {
                   .frame(maxWidth: .infinity)
                   .foregroundColor(filterState.status?.contains(status) ?? false ? .blue : .primary)
                   .background(filterState.status?.contains(status) ?? false ? Color.blue.opacity(0.05) : Color.clear)
-                  .cornerRadius(16)
                   .overlay(
-                      RoundedRectangle(cornerRadius: 16)
+                      RoundedRectangle(cornerRadius: 4)
                           .stroke(
                               filterState.status?.contains(status) ?? false ? .blue : .primary,
                               lineWidth: 1)
@@ -71,8 +69,6 @@ struct StatusFilter: View {
       }
     }
         .padding(.horizontal, 16)
-        .background(Color("FilterCardBackground"))
-        .cornerRadius(16)
         .animation(.easeInOut, value: isExpanded) // Apply animation to the expansion/collapse
   }
 }

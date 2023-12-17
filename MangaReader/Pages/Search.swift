@@ -35,6 +35,7 @@ struct SearchView: View {
                         })
                     Spacer()
                     Button(action: {
+                        dump(filterState)
                         showSheet.toggle()
                     }) {
                         Image(systemName: "slider.horizontal.3")
@@ -129,14 +130,10 @@ struct SearchView: View {
         queryItems.append(URLQueryItem(name: "limit", value: "20"))
         queryItems.append(URLQueryItem(name: "offset", value: String(page * 20)))
         queryItems.append(URLQueryItem(name: "includes[]", value: "cover_art"))
+        queryItems.append(URLQueryItem(name: "order", value: filterState.order.rawValue))
+        queryItems.append(URLQueryItem(name: "orderDirection", value: filterState.orderDirection.rawValue))
         if !filterState.title.isEmpty {
             queryItems.append(URLQueryItem(name: "title", value: filterState.title))
-        }
-        if let order = filterState.order {
-            queryItems.append(URLQueryItem(name: "order", value: order.rawValue))
-        }
-        if let orderDirection = filterState.orderDirection {
-            queryItems.append(URLQueryItem(name: "orderDirection", value: orderDirection.rawValue))
         }
         if let year = filterState.year {
             queryItems.append(URLQueryItem(name: "year", value: String(year)))

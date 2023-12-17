@@ -7,8 +7,8 @@ import Foundation
 
 
 struct FilterState{
-  var order: Order?
-  var orderDirection: OrderDirection?
+  var order: Order = .relevance
+  var orderDirection: OrderDirection = .desc
   var title: String = ""
   var year: Int?
   var includedTags: [Tag]? = []

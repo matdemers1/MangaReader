@@ -18,8 +18,6 @@ struct ContentRatingFilter: View{
     VStack {
       HStack {
         Text("Content Rating")
-            .font(.headline)
-
         Spacer()
         if !isExpanded && filterState.contentRating?.count ?? 0 > 0 {
           Text("\(filterState.contentRating?.count ?? 0) selected")
@@ -32,8 +30,8 @@ struct ContentRatingFilter: View{
             .animation(.easeInOut, value: isExpanded) // Animate the rotation
       }
           .frame(maxWidth: .infinity, alignment: .leading)
-          .padding()
-          .cornerRadius(16)
+          .padding(.vertical, 8)
+          .padding(.trailing, 16)
           .onTapGesture {
             withAnimation { // Animate the expansion and collapse
               isExpanded.toggle()
@@ -57,9 +55,8 @@ struct ContentRatingFilter: View{
                   .frame(maxWidth: .infinity)
                   .foregroundColor(filterState.contentRating?.contains(contentRating) ?? false ? .blue : .primary)
                   .background(filterState.contentRating?.contains(contentRating) ?? false ? Color.blue.opacity(0.05) : Color.clear)
-                  .cornerRadius(16)
                   .overlay(
-                      RoundedRectangle(cornerRadius: 16)
+                      RoundedRectangle(cornerRadius: 4)
                           .stroke(
                               filterState.contentRating?.contains(contentRating) ?? false ? .blue : .primary,
                               lineWidth: 1)
@@ -71,8 +68,6 @@ struct ContentRatingFilter: View{
       }
     }
         .padding(.horizontal, 16)
-        .background(Color("FilterCardBackground"))
-        .cornerRadius(16)
         .animation(.easeInOut, value: isExpanded) // Apply animation to the expansion/collapse
   }
 }

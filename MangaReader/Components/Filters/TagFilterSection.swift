@@ -48,12 +48,12 @@ struct TagFilterSection: View{
           }
               .foregroundColor(getTextColor(tag: tag))
               .background(
-                  RoundedRectangle(cornerRadius: 16)
+                  RoundedRectangle(cornerRadius: 4)
                       .fill(
                           isInIncludedOrExcluded(tag: tag) ?? false ? getTextColor(tag: tag).opacity(0.05) : Color.clear)
               )
               .overlay(
-                  RoundedRectangle(cornerRadius: 16)
+                  RoundedRectangle(cornerRadius: 4)
                       .stroke(
                           getTextColor(tag: tag),
                           lineWidth: 1)

@@ -17,6 +17,7 @@ struct FilterView: View {
           .font(.subheadline)
           .frame(maxWidth: .infinity, alignment: .leading)
       ScrollView {
+        SortFilter(filterState: $filterState)
         StatusFilter(filterState: $filterState)
         PublicationDemoFilter(filterState: $filterState)
         ContentRatingFilter(filterState: $filterState)
