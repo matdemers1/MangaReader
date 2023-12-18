@@ -61,7 +61,11 @@ struct TagFilter: View {
         .padding(.horizontal, 16)
         .padding(.bottom, isExpanded ? 32 : 0)
         .animation(.easeInOut, value: isExpanded)
-        .onAppear(perform: fetchTagsAndCache)
+        .onAppear {
+          if tags.isEmpty {
+            fetchTagsAndCache()
+          }
+        }
   }
 
   func fetchTagsAndCache() {
@@ -81,8 +85,6 @@ struct TagFilter: View {
               }
             }
           }
-
-          // if we're still here it means there was a problem
           print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
         }.resume()
   }
