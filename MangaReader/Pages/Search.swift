@@ -7,8 +7,10 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
 struct SearchView: View {
+    @Query private var accountSettings: [Account]
     @State var showSheet = false
     @State var filterState = FilterState()
     @State var mangaList: [Manga] = []
@@ -159,8 +161,14 @@ struct SearchView: View {
     }
 
     func urlBuilder() -> URL {
+        let language = accountSettings.first?.isTranslatedTo ?? Languages.english.rawValue
+
         var url = URLComponents(string: "https://api.mangadex.org/manga")!
         var queryItems: [URLQueryItem] = []
+        if language != Languages.all.description {
+            queryItems.append(URLQueryItem(name: "availableTranslatedLanguage[]", value: language))
+        }
+
         queryItems.append(URLQueryItem(name: "limit", value: "20"))
         queryItems.append(URLQueryItem(name: "offset", value: String(page * 20)))
         queryItems.append(URLQueryItem(name: "includes[]", value: "cover_art"))

@@ -11,6 +11,7 @@ import SwiftData
 
 struct HomeView: View {
   @Query private var accountSettings: [Account]
+  @Query private var historyItems: [History]
 
   @State private var mangas: [Manga] = []
   @State private var page: Int = 1
@@ -25,7 +26,28 @@ struct HomeView: View {
               .padding()
         }
             .frame(maxWidth: .infinity, alignment: .leading)
+        if historyItems.count > 0 {
+          VStack {
+            Text("Continue Reading")
+                .font(.headline)
+                .padding(.horizontal, 8)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            ScrollView(.horizontal, showsIndicators: false) {
+              HStack {
+                ForEach(historyItems) { historyItem in
+                  MangaHistoryCard(historyItem: historyItem)
+                }
+              }
+                  .padding(.horizontal, 8)
+            }
+          }
+        }
         if !mangas.isEmpty {
+          Text("Discover")
+              .font(.headline)
+              .padding(.top, 8)
+              .padding(.horizontal, 8)
+              .frame(maxWidth: .infinity, alignment: .leading)
           ScrollView {
             VStack {
               ForEach(mangas, id: \.id) { manga in
@@ -71,7 +93,6 @@ struct HomeView: View {
   func fetchHomePage(page: Int, completion: @escaping ([Manga]) -> Void) {
     let allowAdultContent = accountSettings.first?.showAdultContent ?? false
     let language = accountSettings.first?.isTranslatedTo ?? Languages.english.rawValue
-    print("language: \(language)")
 
     var url = URLComponents(string: "https://api.mangadex.org/manga")!
 
