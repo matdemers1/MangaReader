@@ -20,6 +20,7 @@
 		366E36865829B8839F31A1E3 /* TagFilterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3B3327BDFD5E8632C09D /* TagFilterSection.swift */; };
 		366E376EA0C60AFC8BD79C35 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E30143FF12D2B6115EC16 /* AccountView.swift */; };
 		366E38CCE6993E322612F99F /* FilterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3DB6C92D7399BFD57174 /* FilterState.swift */; };
+		366E3AEDE03E5C38E9433430 /* SchemaV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3011BDDCBF927A68D62B /* SchemaV3.swift */; };
 		366E3B39A1B744FE1801173F /* TagFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3157AEB040BF8411D9B5 /* TagFilter.swift */; };
 		366E3B61BC44131E4F5E2BC5 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3CAB64C3653E38ED4921 /* FilterView.swift */; };
 		366E3B86EA6C0F738D76CAC7 /* PublicationDemographicFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E301EE2B72FFE3C5C97C2 /* PublicationDemographicFilter.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		366E3011BDDCBF927A68D62B /* SchemaV3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaV3.swift; sourceTree = "<group>"; };
 		366E30143FF12D2B6115EC16 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		366E301EE2B72FFE3C5C97C2 /* PublicationDemographicFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationDemographicFilter.swift; sourceTree = "<group>"; };
 		366E30218538561EB63D4FDB /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				366E3DEBE5DCF005EE09D30D /* SchemaV1.swift */,
 				366E363B02F1A82012D258D0 /* SchemaV2.swift */,
 				366E3563F1BF07DB987B22E1 /* MigrationPlan.swift */,
+				366E3011BDDCBF927A68D62B /* SchemaV3.swift */,
 			);
 			path = VersionedSchemas;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				366E3BDB4D19CFCD9FEA5385 /* SchemaV2.swift in Sources */,
 				366E3CB2BB9F97FCFA512C76 /* MigrationPlan.swift in Sources */,
 				366E3224DC36AE3DA7B1E8F3 /* SortFilter.swift in Sources */,
+				366E3AEDE03E5C38E9433430 /* SchemaV3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

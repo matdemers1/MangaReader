@@ -80,7 +80,8 @@ struct MangaDetailView: View {
                     chapters: chapters,
                     chapterId: chapter.id.description ?? "N/A",
                     mangaId: manga.id.description,
-                    mangaName: manga.attributes.title["en"] ?? "N/A"
+                    mangaName: manga.attributes.title["en"] ?? "N/A",
+                    coverArtURL: manga.coverArt?.fullCoverURL ?? "N/A"
                 )) {
                   VStack {
                     HStack(alignment: .center) {

@@ -17,6 +17,7 @@ struct ChapterView: View {
     @State var chapterId: String = ""
     let mangaId: String
     let mangaName: String
+    let coverArtURL: String
 
     @StateObject var viewModel = ChapterViewModel()
     @State var atHomeResponse: AtHomeResponse?
@@ -158,9 +159,18 @@ struct ChapterView: View {
             }
             history.lastReadChapterId = chapterId
             history.lastRead = Date()
+            history.coverArtURL = coverArtURL
             return
         }
-        let history = History(mangaId: mangaId, mangaName: mangaName, totalChapters: totalChapters, chapterIds: [chapterId], lastRead: Date(), lastReadChapterId: chapterId)
+        let history = History(
+            mangaId: mangaId,
+            mangaName: mangaName,
+            totalChapters: totalChapters,
+            chapterIds: [chapterId],
+            lastRead: Date(),
+            lastReadChapterId: chapterId,
+            coverArtURL: coverArtURL
+        )
         try! modelContext.insert(history)
     }
 }

@@ -8,10 +8,10 @@
 import SwiftUI
 import SwiftData
 
-typealias Account = SchemaV2.Account
-typealias History = SchemaV2.History
-typealias ReadingListGroup = SchemaV2.ReadingListGroup
-typealias ReadingListItem = SchemaV2.ReadingListItem
+typealias Account = SchemaV3.Account
+typealias History = SchemaV3.History
+typealias ReadingListGroup = SchemaV3.ReadingListGroup
+typealias ReadingListItem = SchemaV3.ReadingListItem
 
 @main
 struct MangaReaderApp: App {
@@ -28,6 +28,7 @@ struct MangaReaderApp: App {
         do {
             return try ModelContainer(
                 for: schema,
+                migrationPlan: MangaReaderMigrationPlan.self,
                 configurations: [modelConfiguration]
             )
         } catch {
