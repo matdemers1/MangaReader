@@ -49,6 +49,9 @@ struct ContentView: View {
       }
     }
         .onAppear() {
+          let tabBarAppearance = UITabBarAppearance()
+          tabBarAppearance.configureWithDefaultBackground()
+          UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
           if readingListGroups.isEmpty {
             let defaultGroups = [
               ReadingListGroup(groupId: UUID(), groupName: "Plan to Read"),

@@ -26,29 +26,29 @@ struct HomeView: View {
               .padding()
         }
             .frame(maxWidth: .infinity, alignment: .leading)
-        if historyItems.count > 0 {
-          VStack {
-            Text("Continue Reading")
-                .font(.headline)
-                .padding(.horizontal, 8)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            ScrollView(.horizontal, showsIndicators: false) {
-              HStack {
-                ForEach(historyItems.prefix(10)) { historyItem in
-                  MangaHistoryCard(historyItem: historyItem)
-                }
-              }
+        ScrollView {
+          if historyItems.count > 0 {
+            VStack {
+              Text("Continue Reading")
+                  .font(.headline)
                   .padding(.horizontal, 8)
+                  .frame(maxWidth: .infinity, alignment: .leading)
+              ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                  ForEach(historyItems.prefix(10)) { historyItem in
+                    MangaHistoryCard(historyItem: historyItem)
+                  }
+                }
+                    .padding(.horizontal, 8)
+              }
             }
           }
-        }
-        if !mangas.isEmpty {
-          Text("Discover")
-              .font(.headline)
-              .padding(.top, 8)
-              .padding(.horizontal, 8)
-              .frame(maxWidth: .infinity, alignment: .leading)
-          ScrollView {
+          if !mangas.isEmpty {
+            Text("Discover")
+                .font(.headline)
+                .padding(.top, 8)
+                .padding(.horizontal, 8)
+                .frame(maxWidth: .infinity, alignment: .leading)
             VStack {
               ForEach(mangas, id: \.id) { manga in
                 MangaCardView(manga: manga, showTags: false)
@@ -56,6 +56,7 @@ struct HomeView: View {
               Button(action: loadMoreMangas) {
                 Text("Load more")
               }
+                  .padding(.bottom, 16)
             }
                 .padding(.horizontal, 8)
           }

@@ -20,6 +20,11 @@ class ChapterViewModel: ObservableObject {
   private var downloadStartTime: Date?
   private var totalDownloadSize: Int = 0
   private var totalDownloadTime: TimeInterval = 0
+  private var currentIndexLoading: Int = 0
+
+  //Setting up the threads for the image loading
+  private let imageLoadQueue = DispatchQueue(label: "imageLoadQueue", attributes: .concurrent)
+  private let downloadSemaphore = DispatchSemaphore(value: 8)  // Limit to 2 concurrent downloads
 
   func fetchChapterData(chapterId: String, completion: @escaping (AtHomeResponse?) -> Void) {
     guard let url = URL(string: "https://api.mangadex.org/at-home/server/\(chapterId.lowercased())") else {
@@ -54,20 +59,40 @@ class ChapterViewModel: ObservableObject {
 
   func loadImages(atHomeResponse: AtHomeResponse) {
     let totalImages = atHomeResponse.chapter.data.count
-    var loadedImages = 0
 
     // Start timer for download
     downloadStartTime = Date()
 
-    atHomeResponse.chapter.data.forEach { pageUrl in
-      let url = getChapterUrl(atHomeResponse: atHomeResponse, chapterId: pageUrl)
-      loadImage(from: url) { image in
+    // Reset current index before starting loading
+    currentIndexLoading = 0
+    loadNextImage(atHomeResponse: atHomeResponse, totalImages: totalImages)
+  }
+
+  private func loadNextImage(atHomeResponse: AtHomeResponse, totalImages: Int) {
+    self.downloadSemaphore.wait()  // Wait for a free slot
+
+    guard currentIndexLoading < atHomeResponse.chapter.data.count else {
+      self.downloadSemaphore.signal()  // Important to signal even if no download is happening
+      return
+    }
+
+    let pageUrl = atHomeResponse.chapter.data[currentIndexLoading]
+    let url = getChapterUrl(atHomeResponse: atHomeResponse, chapterId: pageUrl)
+
+    currentIndexLoading += 1  // Increment before the async call
+
+    imageLoadQueue.async { [weak self] in
+      self?.loadImage(from: url) { image in
         DispatchQueue.main.async {
-          self.images[url] = image
-          loadedImages += 1
-          self.loadingProgress = Float(loadedImages) / Float(totalImages)
-          self.totalPagesLoaded = loadedImages
-          self.updateDownloadStats()
+          self?.images[url] = image
+          self?.totalPagesLoaded += 1
+          self?.loadingProgress = Float(self?.totalPagesLoaded ?? 0) / Float(totalImages)
+          self?.updateDownloadStats()
+
+          self?.downloadSemaphore.signal()  // Signal completion
+
+          // Call the next image load on the main thread to avoid race conditions
+          self?.loadNextImage(atHomeResponse: atHomeResponse, totalImages: totalImages)
         }
       }
     }

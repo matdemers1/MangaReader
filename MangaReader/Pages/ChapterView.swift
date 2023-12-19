@@ -62,10 +62,13 @@ struct ChapterView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             } else {
                 ScrollView {
-                    ForEach(orderedImages(), id: \.self) { image in
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFit()
+                    VStack(spacing: 0) {
+                        ForEach(orderedImages(), id: \.self) { image in
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                                .padding(0)
+                        }
                     }
                     if !viewModel.isLoadingChapterData && viewModel.loadingProgress >= 1 {
                         HStack {
