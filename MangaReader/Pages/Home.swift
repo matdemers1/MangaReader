@@ -11,7 +11,7 @@ import SwiftData
 
 struct HomeView: View {
   @Query private var accountSettings: [Account]
-  @Query private var historyItems: [History]
+  @Query(sort: \History.lastRead, order: .reverse) private var historyItems: [History]
 
   @State private var mangas: [Manga] = []
   @State private var page: Int = 1
@@ -34,7 +34,7 @@ struct HomeView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             ScrollView(.horizontal, showsIndicators: false) {
               HStack {
-                ForEach(historyItems) { historyItem in
+                ForEach(historyItems.prefix(10)) { historyItem in
                   MangaHistoryCard(historyItem: historyItem)
                 }
               }
