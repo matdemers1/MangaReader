@@ -9,6 +9,7 @@ class ChapterViewModel: ObservableObject {
   @Published var images: [URL: UIImage?] = [:]
   @Published var loadingProgress: Float = 0
   @Published var isLoadingChapterData = true
+  @Published var errorMessage: String?
 
   // Additional variables
   @Published var totalPagesLoaded: Int = 0
@@ -21,11 +22,20 @@ class ChapterViewModel: ObservableObject {
   private var totalDownloadTime: TimeInterval = 0
 
   func fetchChapterData(chapterId: String, completion: @escaping (AtHomeResponse?) -> Void) {
-    guard let url = URL(string: "https://api.mangadex.org/at-home/server/\(chapterId.lowercased())") else { return }
+    guard let url = URL(string: "https://api.mangadex.org/at-home/server/\(chapterId.lowercased())") else {
+      errorMessage = "Invalid URL for chapter data"
+      return
+    }
 
-    print("Fetching chapter data from \(url)")
 
     URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+          if let error = error {
+            DispatchQueue.main.async {
+              self?.errorMessage = "Fetch Error: \(error.localizedDescription)"
+              completion(nil)
+            }
+            return
+          }
           guard let data = data, error == nil, let response = try? JSONDecoder().decode(AtHomeResponse.self, from: data) else {
             print("Error code \(error?._code): fetching chapter data: \(error?.localizedDescription ?? "Unknown error")")
             DispatchQueue.main.async {
@@ -74,11 +84,29 @@ class ChapterViewModel: ObservableObject {
     }
   }
 
-  private func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+  private func loadImage(from url: URL, retryCount: Int = 3, completion: @escaping (UIImage?) -> Void) {
     let startTime = Date()
-    URLSession.shared.dataTask(with: url) { data, response, error in
-          guard let data = data, error == nil else {
-            print("Error downloading image: \(error?.localizedDescription ?? "Unknown error")")
+
+    // Custom configuration with increased timeout
+    let configuration = URLSessionConfiguration.default
+    configuration.timeoutIntervalForRequest = 30  // 30 seconds timeout
+    let session = URLSession(configuration: configuration)
+
+    session.dataTask(with: url) { [weak self] data, response, error in
+          if let error = error {
+            if (retryCount > 0) && (error as NSError).code == NSURLErrorTimedOut {
+              print("Retrying image download: \(url)")
+              self?.loadImage(from: url, retryCount: retryCount - 1, completion: completion)
+            } else {
+              DispatchQueue.main.async {
+                self?.errorMessage = "Image Download Error: \(error.localizedDescription)"
+                completion(nil)
+              }
+            }
+            return
+          }
+
+          guard let data = data else {
             DispatchQueue.main.async {
               completion(nil)
             }
@@ -86,15 +114,22 @@ class ChapterViewModel: ObservableObject {
           }
 
           let downloadTime = Date().timeIntervalSince(startTime)
-          self.totalDownloadTime += downloadTime
-          self.totalDownloadSize += data.count
+          self?.totalDownloadTime += downloadTime
+          self?.totalDownloadSize += data.count
 
-          let image = UIImage(data: data)
-          DispatchQueue.main.async {
-            completion(image)
+          if let image = UIImage(data: data) {
+            DispatchQueue.main.async {
+              completion(image)
+            }
+          } else {
+            DispatchQueue.main.async {
+              self?.errorMessage = "Error: Could not decode image data"
+              completion(nil)
+            }
           }
         }.resume()
   }
+
 }
 
 func getChapterUrl(atHomeResponse: AtHomeResponse, chapterId: String) -> URL {

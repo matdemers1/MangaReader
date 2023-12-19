@@ -28,6 +28,20 @@ struct ChapterView: View {
         VStack {
             if viewModel.isLoadingChapterData {
                 Text("Fetching chapter data...")
+            } else if viewModel.errorMessage != nil {
+                VStack {
+                    Image(systemName: "exclamationmark.triangle")
+                        .font(.system(size: 50))
+                        .foregroundColor(.red)
+                    Text("Error fetching chapter data")
+                        .font(.headline)
+                        .foregroundColor(.red)
+                    Text(viewModel.errorMessage!)
+                        .font(.caption)
+                        .foregroundColor(.red)
+                }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+
             } else if viewModel.loadingProgress < 1 {
                 VStack {
                     Text("Loading images...")
