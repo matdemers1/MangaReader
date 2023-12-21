@@ -8,6 +8,11 @@ import Foundation
 import SwiftUI
 import SwiftData
 
+enum ViewType {
+    case singlePage
+    case longStrip
+}
+
 struct ChapterView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var history: [History]
@@ -18,11 +23,15 @@ struct ChapterView: View {
     let mangaId: String
     let mangaName: String
     let coverArtURL: String
+    let isLongStrip: Bool
 
     @StateObject var viewModel = ChapterViewModel()
     @State var atHomeResponse: AtHomeResponse?
     @State var nextChapterId: String?
     @State var lastChapterId: String?
+    @State var viewType: ViewType = .singlePage
+    @State private var currentPage = 0
+
 
     var body: some View {
         VStack {
@@ -62,40 +71,18 @@ struct ChapterView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             } else {
                 ScrollView {
-                    VStack(spacing: 0) {
-                        ForEach(orderedImages(), id: \.self) { image in
-                            Image(uiImage: image)
-                                .resizable()
-                                .scaledToFit()
-                                .padding(0)
-                        }
-                    }
-                    if !viewModel.isLoadingChapterData && viewModel.loadingProgress >= 1 {
-                        HStack {
-                            if lastChapterId != nil {
-                                Button(action: {
-                                    goToLastChapter()
-                                }, label: {
-                                    Text("Last Chapter")
-                                })
-                            }
-                            Spacer()
-                            if nextChapterId != nil {
-                                Button(action: {
-                                    goToNextChapter()
-                                }, label: {
-                                    Text("Next Chapter")
-                                })
-                            }
-                        }
+                    if viewType == .singlePage {
+                        singlePageView
+                    } else {
+                        longStripView
                     }
                 }
             }
         }
-            // This is covering the whole screen
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .onAppear {
                 addChapterToHistory()
+                viewType = isLongStrip ? .longStrip : .singlePage
                 viewModel.fetchChapterData(chapterId: chapterId) { response in
                     self.atHomeResponse = response
                 }
@@ -119,7 +106,118 @@ struct ChapterView: View {
                     Image(systemName: "chevron.right")
                 })
                     .disabled(nextChapterId == nil)
+                ChapterMenu(viewType: $viewType)
             })
+    }
+
+    // Single Page View
+    private var singlePageView: some View {
+        VStack {
+            let images = orderedImages()
+            if currentPage < images.count {
+                Image(uiImage: images[currentPage])
+                    .resizable()
+                    .scaledToFit()
+                    .padding(0)
+                    .onTapGesture(count: 2) {
+                        goToNextPageOrChapter()
+                    }
+            }
+
+            if !viewModel.isLoadingChapterData && viewModel.loadingProgress >= 1 {
+                HStack {
+                    Button(action: {
+                        goToPreviousPageOrChapter()
+                    }, label: {
+                        Image(systemName: "chevron.left")
+                        Text(currentPage <= 0 ? "Prev Chapter" : "Prev Page")
+                    })
+                        .buttonStyle(.bordered)
+                        .disabled(lastChapterId == nil && currentPage == 0)
+                    Spacer()
+                    Button(action: {
+                        goToNextPageOrChapter()
+                    }, label: {
+                        Text(currentPage >= images.count - 1 ? "Next Chapter" : "Next Page")
+                        Image(systemName: "chevron.right")
+                    })
+                        .buttonStyle(.bordered)
+                        .disabled(nextChapterId == nil && currentPage == images.count - 1)
+
+                }
+                    .padding()
+                    .padding(.bottom, 10)
+            }
+        }
+    }
+
+
+    private var longStripView: some View {
+        ScrollView {
+            VStack(spacing: 0) {
+                ForEach(orderedImages(), id: \.self) { image in
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .padding(0)
+                        .onTapGesture(count: 2) {
+                            goToNextChapter()
+                        }
+                }
+                if !viewModel.isLoadingChapterData && viewModel.loadingProgress >= 1 {
+                    HStack {
+                        Button(action: {
+                            goToPreviousPageOrChapter()
+                        }, label: {
+                            Image(systemName: "chevron.left")
+                            Text("Last Chapter")
+                        })
+                            .buttonStyle(.bordered)
+                            .disabled(lastChapterId == nil)
+                        Spacer()
+                        Button(action: {
+                            goToNextPageOrChapter()
+                        }, label: {
+                            Image(systemName: "chevron.right")
+                            Text("Next Chapter")
+                        })
+                            .buttonStyle(.bordered)
+                            .disabled(nextChapterId == nil)
+                    }
+                        .padding()
+                        .padding(.bottom, 10)
+                }
+            }
+        }
+    }
+
+
+    private func goToNextPageOrChapter() {
+        if viewType == .singlePage {
+            let totalPages = orderedImages().count ?? 0
+            if currentPage < totalPages - 1 {
+                currentPage += 1
+            } else {
+                goToNextChapter()
+                currentPage = 0
+            }
+        } else {
+            goToNextChapter()
+        }
+    }
+
+    private func goToPreviousPageOrChapter() {
+        if viewType == .singlePage {
+            let totalPages = orderedImages().count ?? 0
+            if currentPage > 0 {
+                currentPage -= 1
+            } else {
+                goToLastChapter()
+                currentPage = totalPages - 1
+            }
+        } else {
+            goToLastChapter()
+        }
     }
 
     private func orderedImages() -> [UIImage] {
@@ -136,6 +234,7 @@ struct ChapterView: View {
         if index == chapters.count - 1 { return nil }
         let nextChapter = chapters[index + 1]
         let nextChapterId = nextChapter.id.description
+        viewModel.clearImages()
         return nextChapterId
     }
 
@@ -144,6 +243,7 @@ struct ChapterView: View {
         if index == 0 { return nil }
         let lastChapter = chapters[index - 1]
         let lastChapterId = lastChapter.id.description
+        viewModel.clearImages()
         return lastChapterId
     }
 

@@ -26,7 +26,17 @@ class ChapterViewModel: ObservableObject {
   private let imageLoadQueue = DispatchQueue(label: "imageLoadQueue", attributes: .concurrent)
   private let downloadSemaphore = DispatchSemaphore(value: 8)  // Limit to 2 concurrent downloads
 
+  func clearImages() {
+    images.removeAll()
+    totalPagesLoaded = 0
+    loadingProgress = 0
+    averageDownloadSpeed = 0
+    elapsedTime = 0
+    estimatedTimeToCompletion = 0
+  }
+
   func fetchChapterData(chapterId: String, completion: @escaping (AtHomeResponse?) -> Void) {
+    print("Fetching chapter data for \(chapterId)")
     guard let url = URL(string: "https://api.mangadex.org/at-home/server/\(chapterId.lowercased())") else {
       errorMessage = "Invalid URL for chapter data"
       return

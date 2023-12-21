@@ -8,44 +8,48 @@
 import SwiftUI
 import SwiftData
 
+enum Tab {
+  case home, search, readingList, history, account
+}
+
 struct ContentView: View {
   @Environment(\.modelContext) private var modelContext
   @Query private var readingListGroups: [ReadingListGroup]
 
-  @State private var selection = "home"
+  @State private var selectedTab: Tab = .home
 
   var body: some View {
     NavigationView {
-      TabView(selection: $selection) {
+      TabView(selection: $selectedTab) {
         HomeView()
             .tabItem {
               Label("Home", systemImage: "house")
             }
-            .tag("home")
+            .tag(Tab.home)
 
         SearchView()
             .tabItem {
               Label("Search", systemImage: "magnifyingglass")
             }
-            .tag("search")
+            .tag(Tab.search)
 
         ReadingListView()
             .tabItem {
               Label("Reading List", systemImage: "book")
             }
-            .tag("readingList")
+            .tag(Tab.readingList)
 
         HistoryView()
             .tabItem {
               Label("History", systemImage: "clock")
             }
-            .tag("history")
+            .tag(Tab.history)
 
         AccountView()
             .tabItem {
               Label("Account", systemImage: "person")
             }
-            .tag("account")
+            .tag(Tab.account)
       }
     }
         .onAppear() {

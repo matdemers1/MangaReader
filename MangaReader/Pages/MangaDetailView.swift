@@ -81,7 +81,8 @@ struct MangaDetailView: View {
                     chapterId: chapter.id.description ?? "N/A",
                     mangaId: manga.id.description,
                     mangaName: manga.attributes.title["en"] ?? "N/A",
-                    coverArtURL: manga.coverArt?.fullCoverURL ?? "N/A"
+                    coverArtURL: manga.coverArt?.fullCoverURL ?? "N/A",
+                    isLongStrip: manga.attributes.tags?.contains(where: { $0.attributes.name["en"] == "Long Strip" }) ?? false
                 )) {
                   VStack {
                     HStack(alignment: .center) {
