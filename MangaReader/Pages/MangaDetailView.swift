@@ -101,13 +101,25 @@ struct MangaDetailView: View {
                                     ? Color.gray
                                     : Color.primary
                             )
-                        Text(getChapterScanlationGroupName(chapter: chapter))
-                            .font(.subheadline)
-                            .foregroundColor(
-                                historyForMangaId?.chapterIds.contains(chapter.id.description) ?? false
-                                    ? Color.gray
-                                    : Color.primary
-                            )
+                        if let group = getChapterScanlationGroup(chapter: chapter) {
+                          NavigationLink(destination: ScanlationGroupView(groupData: group)) {
+                            Text(group.name ?? "No Group")
+                                .font(.subheadline)
+                                .foregroundColor(
+                                    historyForMangaId?.chapterIds.contains(chapter.id.description) ?? false
+                                        ? Color.gray
+                                        : Color.accentColor
+                                )
+                          }
+                        } else {
+                          Text("No Group")
+                              .font(.subheadline)
+                              .foregroundColor(
+                                  historyForMangaId?.chapterIds.contains(chapter.id.description) ?? false
+                                      ? Color.gray
+                                      : Color.primary
+                              )
+                        }
                       }
                       Spacer()
                       Image(systemName: "chevron.right")
@@ -188,9 +200,9 @@ struct MangaDetailView: View {
         )
   }
 
-  func getChapterScanlationGroupName(chapter: Chapter) -> String {
+  func getChapterScanlationGroup(chapter: Chapter) -> RelationshipAttributes? {
     let chapterGroup = chapter.relationships.first(where: { $0.type == "scanlation_group" })
-    return chapterGroup?.attributes?.name ?? "Unknown"
+    return chapterGroup?.attributes ?? nil
   }
 
   func fetchManga(mangaId: String) {
