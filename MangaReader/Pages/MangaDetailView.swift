@@ -78,7 +78,7 @@ struct MangaDetailView: View {
                 NavigationLink(destination: ChapterView(
                     totalChapters: chaptersResponse?.total ?? 0,
                     chapters: chapters,
-                    chapterId: chapter.id.description ?? "N/A",
+                    chapterId: chapter.id.description ,
                     mangaId: manga.id.description,
                     mangaName: manga.attributes.title["en"] ?? "N/A",
                     coverArtURL: manga.coverArt?.fullCoverURL ?? "N/A",

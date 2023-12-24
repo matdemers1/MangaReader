@@ -144,7 +144,7 @@ struct SearchView: View {
                     let decodedResponse = try JSONDecoder().decode(MangaResponse.self, from: data)
                     DispatchQueue.main.async {
                         self.mangaList = decodedResponse.data
-                        var totalMangas = decodedResponse.total ?? 0
+                        let totalMangas = decodedResponse.total ?? 0
                         self.totalPages = totalMangas / (decodedResponse.limit ?? 0)
                         if totalMangas % (decodedResponse.limit ?? 0) != 0 {
                             self.totalPages += 1

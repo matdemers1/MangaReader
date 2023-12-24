@@ -52,7 +52,7 @@ class ChapterViewModel: ObservableObject {
             return
           }
           guard let data = data, error == nil, let response = try? JSONDecoder().decode(AtHomeResponse.self, from: data) else {
-            print("Error code \(error?._code): fetching chapter data: \(error?.localizedDescription ?? "Unknown error")")
+              print("Error code \(String(describing: error?._code)): fetching chapter data: \(error?.localizedDescription ?? "Unknown error")")
             DispatchQueue.main.async {
               completion(nil)
             }

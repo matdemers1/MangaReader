@@ -194,7 +194,7 @@ struct ChapterView: View {
 
     private func goToNextPageOrChapter() {
         if viewType == .singlePage {
-            let totalPages = orderedImages().count ?? 0
+            let totalPages = orderedImages().count 
             if currentPage < totalPages - 1 {
                 currentPage += 1
             } else {
@@ -208,7 +208,7 @@ struct ChapterView: View {
 
     private func goToPreviousPageOrChapter() {
         if viewType == .singlePage {
-            let totalPages = orderedImages().count ?? 0
+            let totalPages = orderedImages().count 
             if currentPage > 0 {
                 currentPage -= 1
             } else {

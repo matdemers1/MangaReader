@@ -50,7 +50,7 @@ struct TagFilterSection: View{
               .background(
                   RoundedRectangle(cornerRadius: 4)
                       .fill(
-                          isInIncludedOrExcluded(tag: tag) ?? false ? getTextColor(tag: tag).opacity(0.05) : Color.clear)
+                        isInIncludedOrExcluded(tag: tag) ? getTextColor(tag: tag).opacity(0.05) : Color.clear)
               )
               .overlay(
                   RoundedRectangle(cornerRadius: 4)
