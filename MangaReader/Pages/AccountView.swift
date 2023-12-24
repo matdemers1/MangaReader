@@ -33,37 +33,35 @@ struct AccountView: View {
   }
 
   var body: some View {
-    NavigationStack {
-      VStack {
-        HStack {
-          Text("Account")
-              .font(.largeTitle.bold())
-              .padding(.top)
-              .padding(.horizontal)
+    VStack {
+      HStack {
+        Text("Account")
+            .font(.largeTitle.bold())
+            .padding(.top)
+            .padding(.horizontal)
+      }
+          .frame(maxWidth: .infinity, alignment: .leading)
+      Toggle("Show Adult Content:", isOn: showAdultContentBinding)
+          .padding(.horizontal)
+          .padding(.vertical, 4)
+      HStack {
+        Text("Only Show Translated Manga In: ")
+            .font(.body)
+            .padding(.horizontal)
+        Spacer()
+        Picker("Language", selection: languageBinding) {
+          ForEach(Languages.allCases, id: \.self) { language in
+            Text(language.description).tag(language.rawValue)
+          }
         }
-            .frame(maxWidth: .infinity, alignment: .leading)
-        Toggle("Show Adult Content:", isOn: showAdultContentBinding)
             .padding(.horizontal)
             .padding(.vertical, 4)
-        HStack {
-          Text("Only Show Translated Manga In: ")
-              .font(.body)
-              .padding(.horizontal)
-          Spacer()
-          Picker("Language", selection: languageBinding) {
-            ForEach(Languages.allCases, id: \.self) { language in
-              Text(language.description).tag(language.rawValue)
-            }
-          }
-              .padding(.horizontal)
-              .padding(.vertical, 4)
-        }
       }
-          .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-          .onAppear() {
-            createAccountSettings()
-          }
     }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .onAppear() {
+          createAccountSettings()
+        }
   }
 
   func createAccountSettings() {

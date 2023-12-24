@@ -19,7 +19,6 @@ struct ContentView: View {
   @State private var selectedTab: Tab = .home
 
   var body: some View {
-    NavigationView {
       TabView(selection: $selectedTab) {
         HomeView()
             .tabItem {
@@ -50,7 +49,7 @@ struct ContentView: View {
               Label("Account", systemImage: "person")
             }
             .tag(Tab.account)
-      }
+
     }
         .onAppear() {
           let tabBarAppearance = UITabBarAppearance()
