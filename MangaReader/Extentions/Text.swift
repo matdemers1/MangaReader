@@ -20,5 +20,22 @@ extension Text {
                     .stroke(color, lineWidth: 1)
             )
     }
+
+    func withBodyStyle() -> some View {
+        self.font(.body)
+            .padding(.vertical, 4)
+            .padding(.horizontal, 6)
+            .multilineTextAlignment(.leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    func withBodyHeaderStyle() -> some View {
+        self.font(.body.bold())
+            .padding(.vertical, 4)
+            .padding(.horizontal, 6)
+            .multilineTextAlignment(.leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .foregroundColor(.accentColor)
+    }
 }
 
