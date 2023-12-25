@@ -12,6 +12,8 @@ import SwiftData
 import SwiftUI
 
 struct ReadingListView: View {
+  let titleFont: Font
+
   @Environment(\.modelContext) private var modelContext
   @Query private var readingListGroups: [ReadingListGroup]
   @State private var showAddGroup = false
@@ -23,7 +25,7 @@ struct ReadingListView: View {
       VStack {
         HStack {
           Text("Reading List")
-              .font(.largeTitle.bold())
+              .font(titleFont ?? .largeTitle.bold())
               .padding()
           Spacer()
           Button(action: {

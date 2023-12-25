@@ -15,16 +15,25 @@ enum Tab {
 struct ContentView: View {
   @Environment(\.modelContext) private var modelContext
   @Query private var readingListGroups: [ReadingListGroup]
+  private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
 
   @State private var selectedTab: Tab = .home
 
   var body: some View {
       TabView(selection: $selectedTab) {
-        HomeView()
-            .tabItem {
-              Label("Home", systemImage: "house")
-            }
-            .tag(Tab.home)
+        if idiom == .pad {
+          iPadHomeView()
+              .tabItem {
+                Label("Home", systemImage: "house")
+              }
+              .tag(Tab.home)
+        } else {
+          HomeView()
+              .tabItem {
+                Label("Home", systemImage: "house")
+              }
+              .tag(Tab.home)
+        }
 
         SearchView()
             .tabItem {
@@ -32,7 +41,7 @@ struct ContentView: View {
             }
             .tag(Tab.search)
 
-        ReadingListView()
+        ReadingListView(titleFont: .largeTitle.bold())
             .tabItem {
               Label("Reading List", systemImage: "book")
             }
