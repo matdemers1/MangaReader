@@ -34,6 +34,7 @@
 		366E3C0FBBBA6160B3551628 /* ChapterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3897390D6ED7A91EA598 /* ChapterMenu.swift */; };
 		366E3C1BB699C931DD12F6C3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3B4BA5CCA89355112257 /* AboutView.swift */; };
 		366E3CB2BB9F97FCFA512C76 /* MigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3563F1BF07DB987B22E1 /* MigrationPlan.swift */; };
+		366E3CE5E1C43D0D0CFE7EB5 /* SchemaV4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E32C3D1179DA8CD3EA89C /* SchemaV4.swift */; };
 		366E3D119DB685FDA03F3A99 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E388453DB44787BD2D89D /* HistoryView.swift */; };
 		366E3D63E31BDA158CFB8051 /* MangaHistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E365AD923D38A0BA4FC76 /* MangaHistoryCard.swift */; };
 		366E3DCE85A29602E9B950AF /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3CAC9805DE1027AAEA75 /* UserAuth.swift */; };
@@ -75,6 +76,7 @@
 		366E302436DA76076F16AE0B /* Tags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
 		366E3153C3ED4D91CBDD2382 /* ContentRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentRating.swift; sourceTree = "<group>"; };
 		366E3157AEB040BF8411D9B5 /* TagFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilter.swift; sourceTree = "<group>"; };
+		366E32C3D1179DA8CD3EA89C /* SchemaV4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaV4.swift; sourceTree = "<group>"; };
 		366E32F112B3834B68CAE831 /* ChapterVeiwModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterVeiwModel.swift; sourceTree = "<group>"; };
 		366E33649CC56DF1748D845E /* SkeletonBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonBox.swift; sourceTree = "<group>"; };
 		366E34132392FC3463F872DE /* ContentRatingFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentRatingFilter.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				366E363B02F1A82012D258D0 /* SchemaV2.swift */,
 				366E3563F1BF07DB987B22E1 /* MigrationPlan.swift */,
 				366E3011BDDCBF927A68D62B /* SchemaV3.swift */,
+				366E32C3D1179DA8CD3EA89C /* SchemaV4.swift */,
 			);
 			path = VersionedSchemas;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				366E3826214D8D0DE9B5DBE9 /* iPadHomeView.swift in Sources */,
 				366E30A1F0D5841CDC2B6E9F /* Discover.swift in Sources */,
 				366E3C1BB699C931DD12F6C3 /* AboutView.swift in Sources */,
+				366E3CE5E1C43D0D0CFE7EB5 /* SchemaV4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

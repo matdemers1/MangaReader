@@ -7,6 +7,8 @@ import SwiftUI
 
 struct ChapterMenu: View{
   @Binding var viewType: ViewType
+  @Binding var dataType: DataTypes
+  var clearAndRefetchData: () -> Void
 
   var body: some View {
     Menu {
@@ -20,6 +22,20 @@ struct ChapterMenu: View{
         viewType = .singlePage
       }) {
         Label("Single Page", systemImage: "square.grid.2x2")
+      }
+
+      Button(action: {
+        dataType = .data
+        clearAndRefetchData()
+      }) {
+        Label("Full Quality", systemImage: "photo")
+      }
+
+      Button(action: {
+        dataType = .dataSaver
+        clearAndRefetchData()
+      }) {
+        Label("Data Saver", systemImage: "photo")
       }
     } label: {
         Image(systemName: "ellipsis.circle")

@@ -1,17 +1,11 @@
 //
 //  ChapterView.swift
-//  MangaReader
-//
 //  Created by Matthew Demers on 12/1/23.
 //
+
 import Foundation
 import SwiftUI
 import SwiftData
-
-enum ViewType {
-    case singlePage
-    case longStrip
-}
 
 struct ChapterView: View {
     @Environment(\.modelContext) private var modelContext
@@ -31,6 +25,7 @@ struct ChapterView: View {
     @State var lastChapterId: String?
     @State var viewType: ViewType = .singlePage
     @State private var currentPage = 0
+    @State private var dataType: DataTypes = .dataSaver
 
 
     var body: some View {
@@ -83,7 +78,7 @@ struct ChapterView: View {
             .onAppear {
                 addChapterToHistory()
                 viewType = isLongStrip ? .longStrip : .singlePage
-                viewModel.fetchChapterData(chapterId: chapterId) { response in
+                viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
                     self.atHomeResponse = response
                 }
                 if let nextChapterId = getNextChapter() {
@@ -106,7 +101,7 @@ struct ChapterView: View {
                     Image(systemName: "chevron.right")
                 })
                     .disabled(nextChapterId == nil)
-                ChapterMenu(viewType: $viewType)
+                ChapterMenu(viewType: $viewType, dataType: $dataType, clearAndRefetchData: clearAndRefetchChapterData)
             })
     }
 
@@ -121,6 +116,9 @@ struct ChapterView: View {
                     .padding(0)
                     .onTapGesture(count: 2) {
                         goToNextPageOrChapter()
+                    }
+                    .onAppear(){
+                        print("Total size of images: \(images.reduce(0, { $0 + ($1.jpegData(compressionQuality: 1)?.count ?? 0) ?? 0 }))")
                     }
             }
 
@@ -191,10 +189,17 @@ struct ChapterView: View {
         }
     }
 
+    private func clearAndRefetchChapterData() {
+        viewModel.clearImages()
+        viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
+            self.atHomeResponse = response
+        }
+    }
+
 
     private func goToNextPageOrChapter() {
         if viewType == .singlePage {
-            let totalPages = orderedImages().count 
+            let totalPages = orderedImages().count
             if currentPage < totalPages - 1 {
                 currentPage += 1
             } else {
@@ -208,7 +213,7 @@ struct ChapterView: View {
 
     private func goToPreviousPageOrChapter() {
         if viewType == .singlePage {
-            let totalPages = orderedImages().count 
+            let totalPages = orderedImages().count
             if currentPage > 0 {
                 currentPage -= 1
             } else {
@@ -223,9 +228,16 @@ struct ChapterView: View {
     private func orderedImages() -> [UIImage] {
         guard let atHomeResponse = self.atHomeResponse else { return [] }
 
-        return atHomeResponse.chapter.data.compactMap { pageUrl -> UIImage? in
-            let url = getChapterUrl(atHomeResponse: atHomeResponse, chapterId: pageUrl)
-            return viewModel.images[url] ?? nil
+        if dataType == .data {
+            return atHomeResponse.chapter.data.compactMap { pageUrl -> UIImage? in
+                let url = viewModel.getChapterUrl(atHomeResponse: atHomeResponse, pageUrl: pageUrl, dataType: dataType)
+                return viewModel.images[url] ?? nil
+            }
+        } else {
+            return atHomeResponse.chapter.dataSaver.compactMap { pageUrl -> UIImage? in
+                let url = viewModel.getChapterUrl(atHomeResponse: atHomeResponse, pageUrl: pageUrl, dataType: dataType)
+                return viewModel.images[url] ?? nil
+            }
         }
     }
 
@@ -253,7 +265,7 @@ struct ChapterView: View {
         self.nextChapterId = getNextChapter()
         self.lastChapterId = getLastChapter()
         addChapterToHistory()
-        viewModel.fetchChapterData(chapterId: chapterId) { response in
+        viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
             self.atHomeResponse = response
         }
     }
@@ -264,7 +276,7 @@ struct ChapterView: View {
         self.nextChapterId = getNextChapter()
         self.lastChapterId = getLastChapter()
         addChapterToHistory()
-        viewModel.fetchChapterData(chapterId: chapterId) { response in
+        viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
             self.atHomeResponse = response
         }
     }

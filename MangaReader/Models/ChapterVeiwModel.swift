@@ -5,6 +5,16 @@
 import Foundation
 import SwiftUI
 
+enum ViewType {
+  case singlePage
+  case longStrip
+}
+
+enum DataTypes {
+  case data
+  case dataSaver
+}
+
 class ChapterViewModel: ObservableObject {
   @Published var images: [URL: UIImage?] = [:]
   @Published var loadingProgress: Float = 0
@@ -22,9 +32,9 @@ class ChapterViewModel: ObservableObject {
   private var totalDownloadTime: TimeInterval = 0
   private var currentIndexLoading: Int = 0
 
-  //Setting up the threads for the image loading
+  // Setting up the threads for the image loading
   private let imageLoadQueue = DispatchQueue(label: "imageLoadQueue", attributes: .concurrent)
-  private let downloadSemaphore = DispatchSemaphore(value: 8)  // Limit to 2 concurrent downloads
+  private let downloadSemaphore = DispatchSemaphore(value: 8)  // Limit to 8 concurrent downloads
 
   func clearImages() {
     images.removeAll()
@@ -35,13 +45,12 @@ class ChapterViewModel: ObservableObject {
     estimatedTimeToCompletion = 0
   }
 
-  func fetchChapterData(chapterId: String, completion: @escaping (AtHomeResponse?) -> Void) {
+  func fetchChapterData(chapterId: String, dataType: DataTypes, completion: @escaping (AtHomeResponse?) -> Void) {
     print("Fetching chapter data for \(chapterId)")
     guard let url = URL(string: "https://api.mangadex.org/at-home/server/\(chapterId.lowercased())") else {
       errorMessage = "Invalid URL for chapter data"
       return
     }
-
 
     URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
           if let error = error {
@@ -52,7 +61,7 @@ class ChapterViewModel: ObservableObject {
             return
           }
           guard let data = data, error == nil, let response = try? JSONDecoder().decode(AtHomeResponse.self, from: data) else {
-              print("Error code \(String(describing: error?._code)): fetching chapter data: \(error?.localizedDescription ?? "Unknown error")")
+            print("Error code \(String(describing: error?._code)): fetching chapter data: \(error?.localizedDescription ?? "Unknown error")")
             DispatchQueue.main.async {
               completion(nil)
             }
@@ -60,14 +69,14 @@ class ChapterViewModel: ObservableObject {
           }
 
           DispatchQueue.main.async {
-            self?.loadImages(atHomeResponse: response)
+            self?.loadImages(atHomeResponse: response, dataType: dataType)
             self?.isLoadingChapterData = false
             completion(response)
           }
         }.resume()
   }
 
-  func loadImages(atHomeResponse: AtHomeResponse) {
+  func loadImages(atHomeResponse: AtHomeResponse, dataType: DataTypes) {
     let totalImages = atHomeResponse.chapter.data.count
 
     // Start timer for download
@@ -75,10 +84,10 @@ class ChapterViewModel: ObservableObject {
 
     // Reset current index before starting loading
     currentIndexLoading = 0
-    loadNextImage(atHomeResponse: atHomeResponse, totalImages: totalImages)
+    loadNextImage(atHomeResponse: atHomeResponse, dataType: dataType, totalImages: totalImages)
   }
 
-  private func loadNextImage(atHomeResponse: AtHomeResponse, totalImages: Int) {
+  private func loadNextImage(atHomeResponse: AtHomeResponse, dataType: DataTypes, totalImages: Int) {
     self.downloadSemaphore.wait()  // Wait for a free slot
 
     guard currentIndexLoading < atHomeResponse.chapter.data.count else {
@@ -86,8 +95,9 @@ class ChapterViewModel: ObservableObject {
       return
     }
 
-    let pageUrl = atHomeResponse.chapter.data[currentIndexLoading]
-    let url = getChapterUrl(atHomeResponse: atHomeResponse, chapterId: pageUrl)
+    let pageUrl = dataType == .data ? atHomeResponse.chapter.data[currentIndexLoading] :
+        atHomeResponse.chapter.dataSaver[currentIndexLoading]
+    let url = getChapterUrl(atHomeResponse: atHomeResponse, pageUrl: pageUrl, dataType: dataType)
 
     currentIndexLoading += 1  // Increment before the async call
 
@@ -102,7 +112,7 @@ class ChapterViewModel: ObservableObject {
           self?.downloadSemaphore.signal()  // Signal completion
 
           // Call the next image load on the main thread to avoid race conditions
-          self?.loadNextImage(atHomeResponse: atHomeResponse, totalImages: totalImages)
+          self?.loadNextImage(atHomeResponse: atHomeResponse, dataType: dataType, totalImages: totalImages)
         }
       }
     }
@@ -165,9 +175,8 @@ class ChapterViewModel: ObservableObject {
         }.resume()
   }
 
-}
-
-func getChapterUrl(atHomeResponse: AtHomeResponse, chapterId: String) -> URL {
-  let url = "\(atHomeResponse.baseUrl)/data/\(atHomeResponse.chapter.hash)/\(chapterId)"
-  return URL(string: url)!
+  func getChapterUrl(atHomeResponse: AtHomeResponse, pageUrl: String, dataType: DataTypes) -> URL {
+    let url = "\(atHomeResponse.baseUrl)/\(dataType == .dataSaver ? "data-saver" : "data")/\(atHomeResponse.chapter.hash)/\(pageUrl)"
+    return URL(string: url)!
+  }
 }
