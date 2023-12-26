@@ -21,19 +21,11 @@ struct ContentView: View {
 
   var body: some View {
       TabView(selection: $selectedTab) {
-        if idiom == .pad {
-          iPadHomeView()
-              .tabItem {
-                Label("Home", systemImage: "house")
-              }
-              .tag(Tab.home)
-        } else {
-          HomeView()
-              .tabItem {
-                Label("Home", systemImage: "house")
-              }
-              .tag(Tab.home)
-        }
+        HomeView()
+            .tabItem {
+              Label("Home", systemImage: "house")
+            }
+            .tag(Tab.home)
 
         SearchView()
             .tabItem {

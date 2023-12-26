@@ -19,66 +19,51 @@ struct HomeView: View {
 
   var body: some View {
     NavigationStack {
-      VStack {
-        HStack {
-          Text("Home")
-              .font(.largeTitle.bold())
-              .padding()
-        }
-            .frame(maxWidth: .infinity, alignment: .leading)
-        ScrollView {
-          LazyVStack(alignment: .leading, spacing: 8, pinnedViews: [.sectionHeaders]) {
-            if historyItems.count > 0 {
-              Section {
-                ScrollView(.horizontal, showsIndicators: false) {
-                  HStack {
-                    ForEach(historyItems.prefix(10)) { historyItem in
-                      MangaHistoryCard(historyItem: historyItem)
+      GeometryReader { geometry in
+        VStack {
+          HStack {
+            Text("Home")
+                .font(.largeTitle.bold())
+                .padding()
+          }
+              .frame(maxWidth: .infinity, alignment: .leading)
+          ScrollView {
+            LazyVStack(alignment: .leading, spacing: 8, pinnedViews: [.sectionHeaders]) {
+              if historyItems.count > 0 {
+                Section {
+                  ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                      ForEach(historyItems.prefix(10)) { historyItem in
+                        MangaHistoryCard(historyItem: historyItem)
+                      }
                     }
+                        .padding(.horizontal, 8)
                   }
+                } header: {
+                  Text("Continue Reading")
+                      .font(.headline)
+                      .padding(.top, 8)
                       .padding(.horizontal, 8)
+                      .frame(maxWidth: .infinity, alignment: .leading)
+                      .background(Color(.systemBackground))
                 }
-              } header: {
-                Text("Continue Reading")
-                    .font(.headline)
-                    .padding(.top, 8)
-                    .padding(.horizontal, 8)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color(.systemBackground))
               }
-            }
-            if !mangas.isEmpty {
-              Section {
-                ForEach(mangas, id: \.id) { manga in
-                  MangaCardView(manga: manga, showTags: false)
-                }
-                Button(action: loadMoreMangas) {
-                  Text("Load more")
-                }
-                    .padding(.bottom, 16)
-              } header: {
-                Text("Discover")
-                    .font(.headline)
-                    .padding(.top, 8)
-                    .padding(.horizontal, 8)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color(.systemBackground))
-              }
+              DiscoverSection(mangas: mangas, loadMoreMangas: loadMoreMangas, geometry: geometry)
             }
           }
-        }
 
-        if isLoading {
-          ProgressView()
-              .scaleEffect(1.5, anchor: .center)
-              .progressViewStyle(CircularProgressViewStyle(tint: .primary))
-        }
-      }
-          .onAppear() {
-            if mangas.isEmpty {
-              loadInitialMangas()
-            }
+          if isLoading {
+            ProgressView()
+                .scaleEffect(1.5, anchor: .center)
+                .progressViewStyle(CircularProgressViewStyle(tint: .primary))
           }
+        }
+            .onAppear() {
+              if mangas.isEmpty {
+                loadInitialMangas()
+              }
+            }
+      }
     }
   }
 
