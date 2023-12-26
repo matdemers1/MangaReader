@@ -27,38 +27,44 @@ struct HomeView: View {
         }
             .frame(maxWidth: .infinity, alignment: .leading)
         ScrollView {
-          if historyItems.count > 0 {
-            VStack {
-              Text("Continue Reading")
-                  .font(.headline)
-                  .padding(.horizontal, 8)
-                  .frame(maxWidth: .infinity, alignment: .leading)
-              ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                  ForEach(historyItems.prefix(10)) { historyItem in
-                    MangaHistoryCard(historyItem: historyItem)
+          LazyVStack(alignment: .leading, spacing: 8, pinnedViews: [.sectionHeaders]) {
+            if historyItems.count > 0 {
+              Section {
+                ScrollView(.horizontal, showsIndicators: false) {
+                  HStack {
+                    ForEach(historyItems.prefix(10)) { historyItem in
+                      MangaHistoryCard(historyItem: historyItem)
+                    }
                   }
+                      .padding(.horizontal, 8)
                 }
+              } header: {
+                Text("Continue Reading")
+                    .font(.headline)
+                    .padding(.top, 8)
                     .padding(.horizontal, 8)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color(.systemBackground))
               }
             }
-          }
-          if !mangas.isEmpty {
-            Text("Discover")
-                .font(.headline)
-                .padding(.top, 8)
-                .padding(.horizontal, 8)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            VStack {
-              ForEach(mangas, id: \.id) { manga in
-                MangaCardView(manga: manga, showTags: false)
+            if !mangas.isEmpty {
+              Section {
+                ForEach(mangas, id: \.id) { manga in
+                  MangaCardView(manga: manga, showTags: false)
+                }
+                Button(action: loadMoreMangas) {
+                  Text("Load more")
+                }
+                    .padding(.bottom, 16)
+              } header: {
+                Text("Discover")
+                    .font(.headline)
+                    .padding(.top, 8)
+                    .padding(.horizontal, 8)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color(.systemBackground))
               }
-              Button(action: loadMoreMangas) {
-                Text("Load more")
-              }
-                  .padding(.bottom, 16)
             }
-                .padding(.horizontal, 8)
           }
         }
 
