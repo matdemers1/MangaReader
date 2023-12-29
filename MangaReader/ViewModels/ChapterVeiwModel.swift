@@ -179,4 +179,93 @@ class ChapterViewModel: ObservableObject {
     let url = "\(atHomeResponse.baseUrl)/\(dataType == .dataSaver ? "data-saver" : "data")/\(atHomeResponse.chapter.hash)/\(pageUrl)"
     return URL(string: url)!
   }
+
+  func loadImagesSequentially(atHomeResponse: AtHomeResponse?, dataType: DataTypes) {
+    // Clear existing images
+    images.removeAll()
+
+    guard let atHomeResponse = atHomeResponse else {
+      return
+    }
+
+    let totalImages = atHomeResponse.chapter.data.count
+    let initialLoadCount = min(5, totalImages)
+
+    // Load the initial set of images
+    for index in 0..<initialLoadCount {
+      loadImageForIndex(atHomeResponse: atHomeResponse, dataType: dataType, index: index, totalImages: totalImages)
+    }
+  }
+
+  private func loadImageForIndex(atHomeResponse: AtHomeResponse, dataType: DataTypes, index: Int, totalImages: Int) {
+    guard index < totalImages else {
+      return // Exit if index is out of range
+    }
+
+    let pageUrl = dataType == .data ? atHomeResponse.chapter.data[index] :
+        atHomeResponse.chapter.dataSaver[index]
+    let url = getChapterUrl(atHomeResponse: atHomeResponse, pageUrl: pageUrl, dataType: dataType)
+
+    // Load the image
+    loadImage(from: url) { [weak self] image in
+      DispatchQueue.main.async {
+        self?.images[url] = image
+        self?.totalPagesLoaded += 1
+        self?.loadingProgress = Float(self?.totalPagesLoaded ?? 0) / Float(totalImages)
+        self?.updateDownloadStats()
+      }
+    }
+  }
+
+  func loadCurrentNextLastImages(currentIndex: Int, atHomeResponse: AtHomeResponse?, dataType: DataTypes) {
+    guard let atHomeResponse = atHomeResponse else {
+      return
+    }
+
+    // Clear images that are not within the range of currentIndex - 1, currentIndex, currentIndex + 1
+    images = images.filter { url, _ in
+      guard let index = atHomeResponse.chapter.data.firstIndex(of: url.absoluteString) else {
+        return false
+      }
+      return index >= currentIndex - 1 && index <= currentIndex + 1
+    }
+
+    // Load images for current, next, and last pages
+    let totalImages = atHomeResponse.chapter.data.count
+    [currentIndex - 1, currentIndex, currentIndex + 1].forEach { index in
+      if shouldLoadImageForIndex(index: index, totalImages: totalImages, atHomeResponse: atHomeResponse, dataType: dataType) {
+        loadSingleImageForIndex(atHomeResponse: atHomeResponse, dataType: dataType, index: index, totalImages: totalImages)
+      }
+    }
+  }
+
+  private func shouldLoadImageForIndex(index: Int, totalImages: Int, atHomeResponse: AtHomeResponse, dataType: DataTypes) -> Bool {
+    guard index >= 0 && index < totalImages else {
+      return false // Index is out of range
+    }
+
+    let pageUrl = atHomeResponse.chapter.data[index]
+    let url = getChapterUrl(atHomeResponse: atHomeResponse, pageUrl: pageUrl, dataType: dataType)
+
+    return images[url] == nil // Return true if the image is not already loaded
+  }
+
+  private func loadSingleImageForIndex(atHomeResponse: AtHomeResponse, dataType: DataTypes, index: Int, totalImages: Int) {
+    guard index >= 0 && index < totalImages else {
+      return // Exit if index is out of range
+    }
+
+    let pageUrl = dataType == .data ? atHomeResponse.chapter.data[index] :
+        atHomeResponse.chapter.dataSaver[index]
+    let url = getChapterUrl(atHomeResponse: atHomeResponse, pageUrl: pageUrl, dataType: dataType)
+
+    // Load the image
+    loadImage(from: url) { [weak self] image in
+      DispatchQueue.main.async {
+        self?.images[url] = image
+        self?.loadingProgress = Float(self?.totalPagesLoaded ?? 0) / Float(totalImages)
+        self?.updateDownloadStats()
+      }
+    }
+  }
 }
