@@ -65,12 +65,12 @@ struct ChapterView: View {
                 }
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             } else {
-                ScrollView {
-                    if viewType == .singlePage {
-                        singlePageView
-                    } else {
-                        longStripView
-                    }
+                if viewType == .singlePage {
+                    SinglePageView(
+                        orderedImages: orderedImages
+                    )
+                } else {
+                    longStripView
                 }
             }
         }
@@ -105,50 +105,6 @@ struct ChapterView: View {
             })
     }
 
-    // Single Page View
-    private var singlePageView: some View {
-        VStack {
-            let images = orderedImages()
-            if currentPage < images.count {
-                Image(uiImage: images[currentPage])
-                    .resizable()
-                    .scaledToFit()
-                    .padding(0)
-                    .onTapGesture(count: 2) {
-                        goToNextPageOrChapter()
-                    }
-                    .onAppear(){
-                        print("Total size of images: \(images.reduce(0, { $0 + ($1.jpegData(compressionQuality: 1)?.count ?? 0) ?? 0 }))")
-                    }
-            }
-
-            if !viewModel.isLoadingChapterData && viewModel.loadingProgress >= 1 {
-                HStack {
-                    Button(action: {
-                        goToPreviousPageOrChapter()
-                    }, label: {
-                        Image(systemName: "chevron.left")
-                        Text(currentPage <= 0 ? "Prev Chapter" : "Prev Page")
-                    })
-                        .buttonStyle(.bordered)
-                        .disabled(lastChapterId == nil && currentPage == 0)
-                    Spacer()
-                    Button(action: {
-                        goToNextPageOrChapter()
-                    }, label: {
-                        Text(currentPage >= images.count - 1 ? "Next Chapter" : "Next Page")
-                        Image(systemName: "chevron.right")
-                    })
-                        .buttonStyle(.bordered)
-                        .disabled(nextChapterId == nil && currentPage == images.count - 1)
-
-                }
-                    .padding()
-                    .padding(.bottom, 10)
-            }
-        }
-    }
-
 
     private var longStripView: some View {
         ScrollView {
@@ -165,7 +121,7 @@ struct ChapterView: View {
                 if !viewModel.isLoadingChapterData && viewModel.loadingProgress >= 1 {
                     HStack {
                         Button(action: {
-                            goToPreviousPageOrChapter()
+                            goToLastChapter()
                         }, label: {
                             Image(systemName: "chevron.left")
                             Text("Last Chapter")
@@ -174,7 +130,7 @@ struct ChapterView: View {
                             .disabled(lastChapterId == nil)
                         Spacer()
                         Button(action: {
-                            goToNextPageOrChapter()
+                            goToNextChapter()
                         }, label: {
                             Image(systemName: "chevron.right")
                             Text("Next Chapter")
@@ -193,35 +149,6 @@ struct ChapterView: View {
         viewModel.clearImages()
         viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
             self.atHomeResponse = response
-        }
-    }
-
-
-    private func goToNextPageOrChapter() {
-        if viewType == .singlePage {
-            let totalPages = orderedImages().count
-            if currentPage < totalPages - 1 {
-                currentPage += 1
-            } else {
-                goToNextChapter()
-                currentPage = 0
-            }
-        } else {
-            goToNextChapter()
-        }
-    }
-
-    private func goToPreviousPageOrChapter() {
-        if viewType == .singlePage {
-            let totalPages = orderedImages().count
-            if currentPage > 0 {
-                currentPage -= 1
-            } else {
-                goToLastChapter()
-                currentPage = totalPages - 1
-            }
-        } else {
-            goToLastChapter()
         }
     }
 

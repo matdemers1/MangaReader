@@ -34,6 +34,7 @@
 		366E3BA96DC0305D8683BA21 /* SkeletonBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E33649CC56DF1748D845E /* SkeletonBox.swift */; };
 		366E3BB7A69D5F8480B190FE /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E30218538561EB63D4FDB /* Status.swift */; };
 		366E3BDB4D19CFCD9FEA5385 /* SchemaV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E363B02F1A82012D258D0 /* SchemaV2.swift */; };
+		366E3BDE5A668F048966BF7F /* SinglePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E325DE4235608FD425198 /* SinglePageView.swift */; };
 		366E3C0FBBBA6160B3551628 /* ChapterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3897390D6ED7A91EA598 /* ChapterMenu.swift */; };
 		366E3C1BB699C931DD12F6C3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3B4BA5CCA89355112257 /* AboutView.swift */; };
 		366E3CB2BB9F97FCFA512C76 /* MigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E3563F1BF07DB987B22E1 /* MigrationPlan.swift */; };
@@ -80,6 +81,7 @@
 		366E314C527FFD7875598D9F /* ChapterViewUpdatedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterViewUpdatedModel.swift; sourceTree = "<group>"; };
 		366E3153C3ED4D91CBDD2382 /* ContentRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentRating.swift; sourceTree = "<group>"; };
 		366E3157AEB040BF8411D9B5 /* TagFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFilter.swift; sourceTree = "<group>"; };
+		366E325DE4235608FD425198 /* SinglePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinglePageView.swift; sourceTree = "<group>"; };
 		366E32C3D1179DA8CD3EA89C /* SchemaV4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaV4.swift; sourceTree = "<group>"; };
 		366E33649CC56DF1748D845E /* SkeletonBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonBox.swift; sourceTree = "<group>"; };
 		366E33914557D8FFC3A36814 /* ChapterViewUpdated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterViewUpdated.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 		9C5944A62B3C78A200AC4DBE /* ChapterView */ = {
 			isa = PBXGroup;
 			children = (
+				366E325DE4235608FD425198 /* SinglePageView.swift */,
 			);
 			path = ChapterView;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				366E3039A62B82343878B096 /* MangaDetailSection.swift in Sources */,
 				366E34B967E712EBEB12A8E6 /* ChapterViewUpdated.swift in Sources */,
 				366E30091058575C49B2FE2F /* ChapterViewUpdatedModel.swift in Sources */,
+				366E3BDE5A668F048966BF7F /* SinglePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
