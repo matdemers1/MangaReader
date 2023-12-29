@@ -18,7 +18,7 @@ struct ChapterViewUpdated: View {
   let coverArtURL: String
   let isLongStrip: Bool
 
-  @StateObject var viewModel = ChapterViewModel()
+  @StateObject var viewModel = ChapterViewUpdatedModel()
   @State var atHomeResponse: AtHomeResponse?
   @State var nextChapterId: String?
   @State var lastChapterId: String?
@@ -35,6 +35,14 @@ struct ChapterViewUpdated: View {
         singlePageView
       }
     }
+        .onAppear {
+          viewModel.fetchChapterData(
+              chapterId: chapterId,
+              dataType: dataType
+          ) { atHomeResponse in
+            self.atHomeResponse = atHomeResponse
+          }
+        }
   }
 
   var longStripView: some View {
@@ -78,6 +86,15 @@ struct ChapterViewUpdated: View {
       }
       // Add controls for next and previous page
     }
+        .gesture(DragGesture()
+            .onEnded({ self.handleSwipe(translation: $0.translation.width) }))
+        .onAppear {
+          viewModel.loadCurrentNextLastImages(
+              currentIndex: currentPage,
+              atHomeResponse: atHomeResponse,
+              dataType: dataType
+          )
+        }
         .onChange(of: currentPage) { _ in
           viewModel.loadCurrentNextLastImages(
               currentIndex: currentPage,
@@ -86,6 +103,13 @@ struct ChapterViewUpdated: View {
           )
         }
   }
-
-
+  //UI functions
+  private func handleSwipe(translation: CGFloat) {
+    let swipeThreshold: CGFloat = 50
+    if translation > swipeThreshold {
+      currentPage = max(currentPage - 1, 0)
+    } else if translation < -swipeThreshold {
+      currentPage = min(currentPage + 1, viewModel.images.count - 1)
+    }
+  }
 }

@@ -41,7 +41,7 @@ struct MangaDetailView: View {
                   .padding(.bottom, 4)
               if let chapters = chapters {
                 ForEach(chapters, id: \.id) { chapter in
-                  NavigationLink(destination: ChapterViewUpdated(
+                  NavigationLink(destination: ChapterView(
                       totalChapters: chaptersResponse?.total ?? 0,
                       chapters: chapters,
                       chapterId: chapter.id.description,
