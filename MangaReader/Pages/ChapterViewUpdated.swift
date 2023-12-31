@@ -95,7 +95,7 @@ struct ChapterViewUpdated: View {
               dataType: dataType
           )
         }
-        .onChange(of: currentPage) { _ in
+        .onChange(of: currentPage) {
           viewModel.loadCurrentNextLastImages(
               currentIndex: currentPage,
               atHomeResponse: atHomeResponse,

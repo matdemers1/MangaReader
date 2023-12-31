@@ -78,7 +78,7 @@ struct AccountView: View {
   func createAccountSettings() {
     if accountSettings.isEmpty {
       let account = Account()
-      try! modelContext.insert(account)
+      modelContext.insert(account)
     }
   }
 }

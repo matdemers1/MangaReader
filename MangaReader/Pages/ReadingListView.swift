@@ -25,7 +25,7 @@ struct ReadingListView: View {
       VStack {
         HStack {
           Text("Reading List")
-              .font(titleFont ?? .largeTitle.bold())
+               .font(titleFont )
               .padding()
           Spacer()
           Button(action: {
@@ -105,7 +105,7 @@ struct ReadingListView: View {
 
   func createNewGroup() {
     let newGroup = ReadingListGroup(groupId: UUID(), groupName: name)
-    try! modelContext.insert(newGroup)
+    modelContext.insert(newGroup)
     name = ""
   }
 }

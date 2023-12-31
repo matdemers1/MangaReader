@@ -62,7 +62,7 @@ struct ContentView: View {
               ReadingListGroup(groupId: UUID(), groupName: "Reading"),
             ]
             defaultGroups.forEach { group in
-              try! modelContext.insert(group)
+              modelContext.insert(group)
             }
           }
         }

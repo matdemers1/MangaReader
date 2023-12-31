@@ -39,18 +39,13 @@ class MangaDetailViewModel: ObservableObject {
     let url = URL(string: "https://api.mangadex.org/manga/\(mangaId)/feed?translatedLanguage[]=en&order[chapter]=desc&limit=100&offset=\(offset*100)&contentRating[]=safe&contentRating[]=suggestive&contentRating[]=erotica&contentRating[]=pornographic&includes[]=scanlation_group")!
     let request = URLRequest(url: url)
 
-    if chapters == nil {
-      print("Error: chapters is nil")
-      return
-    }
-
     URLSession.shared.dataTask(with: request) { data, response, error in
           if let data = data {
             do {
               let chapterResponse = try JSONDecoder().decode(ChapterResponse.self, from: data)
               DispatchQueue.main.async {
-                chapters.wrappedValue?.append(contentsOf: chapterResponse.data ?? [])
-                print("Chapters: \(chapters.wrappedValue?.count) / \(chapterResponse.total ?? 0)")
+                  chapters.wrappedValue?.append(contentsOf: chapterResponse.data )
+                  print("Chapters: \(chapters.wrappedValue?.count ?? 0) / \(chapterResponse.total )")
                 if chapters.wrappedValue?.count == chapterResponse.total {
                   showMoreButton.wrappedValue = false
                 }

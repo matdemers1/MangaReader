@@ -227,6 +227,6 @@ struct ChapterView: View {
             lastReadChapterId: chapterId,
             coverArtURL: coverArtURL
         )
-        try! modelContext.insert(history)
+        modelContext.insert(history)
     }
 }
