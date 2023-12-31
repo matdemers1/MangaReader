@@ -61,6 +61,7 @@
 		9C12B2632B16BD6E000FB71F /* MangaCoverArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B2622B16BD6E000FB71F /* MangaCoverArt.swift */; };
 		9C12B2662B16C4DA000FB71F /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 9C12B2652B16C4DA000FB71F /* WrappingHStack */; };
 		9C12B26B2B16CA98000FB71F /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B26A2B16CA98000FB71F /* Text.swift */; };
+		9C6247652B41EAAA00F93ACC /* raygun4apple in Frameworks */ = {isa = PBXBuildFile; productRef = 9C6247642B41EAAA00F93ACC /* raygun4apple */; };
 		9CC9E0552B1ACD3F00995321 /* MockAtHomeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CC9E0542B1ACD3F00995321 /* MockAtHomeResponse.json */; };
 		9CC9E0572B1ACD8E00995321 /* AtHomeReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9E0562B1ACD8E00995321 /* AtHomeReponse.swift */; };
 		9CC9E0592B1ACE5D00995321 /* ChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9E0582B1ACE5D00995321 /* ChapterView.swift */; };
@@ -144,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6247652B41EAAA00F93ACC /* raygun4apple in Frameworks */,
 				9C12B2662B16C4DA000FB71F /* WrappingHStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +369,7 @@
 			name = MangaReader;
 			packageProductDependencies = (
 				9C12B2652B16C4DA000FB71F /* WrappingHStack */,
+				9C6247642B41EAAA00F93ACC /* raygun4apple */,
 			);
 			productName = MangaReader;
 			productReference = 9C12B23A2B16A15B000FB71F /* MangaReader.app */;
@@ -398,6 +401,7 @@
 			mainGroup = 9C12B2312B16A15B000FB71F;
 			packageReferences = (
 				9C12B2642B16C4DA000FB71F /* XCRemoteSwiftPackageReference "WrappingHStack" */,
+				9C6247632B41EAAA00F93ACC /* XCRemoteSwiftPackageReference "raygun4apple" */,
 			);
 			productRefGroup = 9C12B23B2B16A15B000FB71F /* Products */;
 			projectDirPath = "";
@@ -640,7 +644,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demersdev.mangareader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -686,7 +690,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demersdev.mangareader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -731,6 +735,14 @@
 				minimumVersion = 0.2.0;
 			};
 		};
+		9C6247632B41EAAA00F93ACC /* XCRemoteSwiftPackageReference "raygun4apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MindscapeHQ/raygun4apple";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -738,6 +750,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9C12B2642B16C4DA000FB71F /* XCRemoteSwiftPackageReference "WrappingHStack" */;
 			productName = WrappingHStack;
+		};
+		9C6247642B41EAAA00F93ACC /* raygun4apple */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C6247632B41EAAA00F93ACC /* XCRemoteSwiftPackageReference "raygun4apple" */;
+			productName = raygun4apple;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

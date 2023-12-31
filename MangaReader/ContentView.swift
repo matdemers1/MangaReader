@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import raygun4apple
 
 enum Tab {
   case home, search, readingList, history, account
@@ -18,6 +19,12 @@ struct ContentView: View {
   private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
 
   @State private var selectedTab: Tab = .home
+
+  init() {
+    let raygunClient = RaygunClient.sharedInstance(apiKey: "9OBxycvROBEY6n1NEXP0fw")
+    raygunClient.enableCrashReporting()
+    raygunClient.enableRealUserMonitoring()
+  }
 
   var body: some View {
       TabView(selection: $selectedTab) {

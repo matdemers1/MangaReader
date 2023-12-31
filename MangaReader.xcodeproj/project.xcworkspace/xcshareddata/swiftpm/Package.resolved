@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "raygun4apple",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MindscapeHQ/raygun4apple",
+      "state" : {
+        "revision" : "6f629551d81bebc5985b2529d649897511a58e42",
+        "version" : "2.0.0"
+      }
+    },
+    {
       "identity" : "wrappinghstack",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ksemianov/WrappingHStack",

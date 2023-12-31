@@ -67,7 +67,8 @@ struct ChapterView: View {
             } else {
                 if viewType == .singlePage {
                     SinglePageView(
-                        orderedImages: orderedImages
+                        orderedImages: orderedImages,
+                        navigateToNextPage: goToNextChapter
                     )
                 } else {
                     longStripView
