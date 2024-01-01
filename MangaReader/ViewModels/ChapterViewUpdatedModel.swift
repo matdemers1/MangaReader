@@ -213,8 +213,6 @@ class ChapterViewUpdatedModel: ObservableObject {
   }
 
   func loadCurrentNextLastImages(currentIndex: Int, atHomeResponse: AtHomeResponse?, dataType: DataTypes) {
-    print("Loading current, next, and last images")
-    dump(atHomeResponse)
     guard let atHomeResponse = atHomeResponse else {
       return
     }

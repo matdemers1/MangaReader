@@ -114,8 +114,5 @@ struct ScanlationGroupView: View {
         }
             .padding()
             .frame(width: .infinity, height: .infinity, alignment: .topLeading)
-            .onAppear() {
-                dump(self.groupData)
-            }
     }
 }

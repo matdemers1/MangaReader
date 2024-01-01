@@ -57,11 +57,6 @@ struct ChapterView: View {
                     Text("Pages loaded: \(viewModel.totalPagesLoaded)")
                         .font(.caption)
                         .foregroundColor(.gray)
-                    // Add average download speed in mb/s limit to 2 decimal places
-                    Text("Average download speed: \(String(format: "%.2f", viewModel.averageDownloadSpeed / 1000000)) mb/s")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-
                 }
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             } else {
@@ -147,7 +142,6 @@ struct ChapterView: View {
     }
 
     private func clearAndRefetchChapterData() {
-        viewModel.clearImages()
         viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
             self.atHomeResponse = response
         }
@@ -174,7 +168,6 @@ struct ChapterView: View {
         if index == chapters.count - 1 { return nil }
         let nextChapter = chapters[index + 1]
         let nextChapterId = nextChapter.id.description
-        viewModel.clearImages()
         return nextChapterId
     }
 
@@ -183,7 +176,6 @@ struct ChapterView: View {
         if index == 0 { return nil }
         let lastChapter = chapters[index - 1]
         let lastChapterId = lastChapter.id.description
-        viewModel.clearImages()
         return lastChapterId
     }
 
