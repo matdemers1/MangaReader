@@ -63,7 +63,8 @@ struct ChapterView: View {
                 if viewType == .singlePage {
                     SinglePageView(
                         orderedImages: orderedImages,
-                        navigateToNextPage: goToNextChapter
+                        navigateToNextPage: goToNextChapter,
+                        isIpad: false
                     )
                 } else {
                     LongStripView(

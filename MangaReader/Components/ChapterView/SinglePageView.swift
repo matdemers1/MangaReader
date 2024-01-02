@@ -4,6 +4,7 @@ import SwiftUI
 struct SinglePageView: View {
     var orderedImages: () -> [UIImage]
     var navigateToNextPage: () -> Void
+    var isIpad: Bool
 
     @State private var currentPage = 0
     @State private var isZoomed = false
@@ -42,9 +43,9 @@ struct SinglePageView: View {
                     }
                 }
             }
-            .tabViewStyle(PageTabViewStyle())
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .navigationBarHidden(isZoomed)
+                .tabViewStyle(PageTabViewStyle())
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .navigationBarHidden(isZoomed || isIpad)
 
             if isZoomed {
                 // Overlay Zoom View
@@ -104,11 +105,11 @@ struct SinglePageView: View {
                             .font(.largeTitle)
                             .foregroundColor(.white)
                     }
-                    .padding(.top, 44)
-                    .padding(.leading, 20)
-                    .position(x: 30, y: 30) // Adjust position as needed
+                        .padding(.top, 44)
+                        .padding(.leading, 20)
+                        .position(x: 30, y: 30) // Adjust position as needed
                 }
-                .background(Color.black.edgesIgnoringSafeArea(.all))
+                    .background(Color.black.edgesIgnoringSafeArea(.all))
             }
         }
     }

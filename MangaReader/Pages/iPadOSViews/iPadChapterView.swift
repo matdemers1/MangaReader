@@ -17,6 +17,7 @@ struct iPadChapterView: View {
   let mangaName: String
   let coverArtURL: String
   let isLongStrip: Bool
+  let isLandscape: Bool
 
   @StateObject var viewModel = ChapterViewModel()
   @State var atHomeResponse: AtHomeResponse?
@@ -25,15 +26,19 @@ struct iPadChapterView: View {
   @State var viewType: ViewType = .singlePage
   @State private var currentPage = 0
   @State private var dataType: DataTypes = .dataSaver
+  @State private var columnVisibility = NavigationSplitViewVisibility.detailOnly
 
   var body: some View {
-    NavigationView {
+    NavigationSplitView(columnVisibility: $columnVisibility) {
       iPadChapterSidebar(
           chapters: chapters,
           dataType: $dataType,
           chapterId: $chapterId,
+          viewType: $viewType,
           refetch: clearAndRefetchChapterData
       )
+          .toolbar(.hidden, for: .navigationBar)
+    } detail: {
       VStack {
         if viewModel.isLoadingChapterData {
           Text("Fetching chapter data...")
@@ -65,7 +70,7 @@ struct iPadChapterView: View {
           }
               .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         } else {
-          if isLongStrip {
+          if viewType == .longStrip {
             LongStripView(
                 orderedImages: orderedImages,
                 goToNextChapter: goToNextChapter,
@@ -76,12 +81,15 @@ struct iPadChapterView: View {
           } else {
             SinglePageView(
                 orderedImages: orderedImages,
-                navigateToNextPage: goToNextChapter
+                navigateToNextPage: goToNextChapter,
+                isIpad: true
             )
           }
         }
       }
           .onAppear {
+            viewType = isLongStrip ? .longStrip : .singlePage
+            columnVisibility = isLandscape ? .all : .detailOnly
             viewModel.fetchChapterData(
                 chapterId: chapterId,
                 dataType: dataType
@@ -91,12 +99,36 @@ struct iPadChapterView: View {
             addChapterToHistory()
           }
     }
+        .navigationTitle("Chapter \(getChapterNumber() ?? "Unknown")")
+        .toolbar {
+          ToolbarItem(placement: .automatic) {
+            Button(action: toggleSidebar, label: {
+              Image(systemName: "sidebar.leading")
+            })
+          }
+        }
+  }
+
+  private func toggleSidebar () {
+    switch columnVisibility {
+    case .detailOnly:
+      columnVisibility = .all
+    case .all:
+      columnVisibility = .detailOnly
+    default:
+      columnVisibility = .detailOnly
+    }
   }
 
   private func clearAndRefetchChapterData() {
     viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
       self.atHomeResponse = response
     }
+  }
+
+  private func getChapterNumber() -> String? {
+    guard let chapter = chapters.first(where: { $0.id.description == chapterId }) else { return nil }
+    return chapter.attributes.chapter
   }
 
   private func orderedImages() -> [UIImage] {

@@ -17,26 +17,32 @@ struct ChapterViewWrapper: View {
   var isLongStrip: Bool
 
   var body: some View {
-    if idiom == .pad {
-      iPadChapterView(
-          totalChapters: totalChapters,
-          chapters: chapters,
-          chapterId: chapterId,
-          mangaId: mangaId,
-          mangaName: mangaName,
-          coverArtURL: coverArtURL,
-          isLongStrip: isLongStrip
-      )
-    } else {
-      ChapterView(
-          totalChapters: totalChapters,
-          chapters: chapters,
-          chapterId: chapterId,
-          mangaId: mangaId,
-          mangaName: mangaName,
-          coverArtURL: coverArtURL,
-          isLongStrip: isLongStrip
-      )
+    GeometryReader { geometry in
+      let isLandscape = geometry.size.width > geometry.size.height
+      let isiPad = idiom == .pad
+
+      if isiPad {
+        iPadChapterView(
+            totalChapters: totalChapters,
+            chapters: chapters,
+            chapterId: chapterId,
+            mangaId: mangaId,
+            mangaName: mangaName,
+            coverArtURL: coverArtURL,
+            isLongStrip: isLongStrip,
+            isLandscape: isLandscape
+        )
+      } else {
+        ChapterView(
+            totalChapters: totalChapters,
+            chapters: chapters,
+            chapterId: chapterId,
+            mangaId: mangaId,
+            mangaName: mangaName,
+            coverArtURL: coverArtURL,
+            isLongStrip: isLongStrip
+        )
+      }
     }
   }
 }
