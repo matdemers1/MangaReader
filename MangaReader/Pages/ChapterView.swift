@@ -66,7 +66,13 @@ struct ChapterView: View {
                         navigateToNextPage: goToNextChapter
                     )
                 } else {
-                    longStripView
+                    LongStripView(
+                        orderedImages: orderedImages,
+                        goToNextChapter: goToNextChapter,
+                        goToLastChapter: goToLastChapter,
+                        nextChapterId: nextChapterId,
+                        lastChapterId: lastChapterId
+                    )
                 }
             }
         }
@@ -84,6 +90,8 @@ struct ChapterView: View {
                     self.lastChapterId = lastChapterId
                 }
             }
+            .navigationTitle("Chapter \(getChapterNumber() ?? "Unknown")")
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: HStack {
                 Button(action: {
                     goToLastChapter()
@@ -99,52 +107,18 @@ struct ChapterView: View {
                     .disabled(nextChapterId == nil)
                 ChapterMenu(viewType: $viewType, dataType: $dataType, clearAndRefetchData: clearAndRefetchChapterData)
             })
-    }
 
-
-    private var longStripView: some View {
-        ScrollView {
-            VStack(spacing: 0) {
-                ForEach(orderedImages(), id: \.self) { image in
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .padding(0)
-                        .onTapGesture(count: 2) {
-                            goToNextChapter()
-                        }
-                }
-                if !viewModel.isLoadingChapterData && viewModel.loadingProgress >= 1 {
-                    HStack {
-                        Button(action: {
-                            goToLastChapter()
-                        }, label: {
-                            Image(systemName: "chevron.left")
-                            Text("Last Chapter")
-                        })
-                            .buttonStyle(.bordered)
-                            .disabled(lastChapterId == nil)
-                        Spacer()
-                        Button(action: {
-                            goToNextChapter()
-                        }, label: {
-                            Image(systemName: "chevron.right")
-                            Text("Next Chapter")
-                        })
-                            .buttonStyle(.bordered)
-                            .disabled(nextChapterId == nil)
-                    }
-                        .padding()
-                        .padding(.bottom, 10)
-                }
-            }
-        }
     }
 
     private func clearAndRefetchChapterData() {
         viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
             self.atHomeResponse = response
         }
+    }
+
+    private func getChapterNumber() -> String? {
+        guard let chapter = chapters.first(where: { $0.id.description == chapterId }) else { return nil }
+        return chapter.attributes.chapter
     }
 
     private func orderedImages() -> [UIImage] {

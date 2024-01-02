@@ -17,7 +17,7 @@ struct MangaDetailSection: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width)
-                    .frame(height: geometry.size.height / 1)
+//                    .frame(height: geometry.size.height / 1)
               } placeholder: {
                 ProgressView()
               }
