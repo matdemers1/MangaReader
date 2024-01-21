@@ -146,7 +146,8 @@ struct MangaDetailView: View {
   }
 }
 
-
-
-
-
+#Preview {
+  MangaDetailView(
+    mangaId: "348966d0-c807-45cf-9260-8adf006a9da6"
+  )
+}

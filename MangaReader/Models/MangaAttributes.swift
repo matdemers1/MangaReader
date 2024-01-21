@@ -53,6 +53,39 @@ struct MangaAttributes: Codable {
         case availableTranslatedLanguages
         case latestUploadedChapter
     }
+  
+    init(
+      title: Title, altTitles: [Title]?, description: Description?,
+      isLocked: Bool?, links: [String: String]?,
+      originalLanguage: String?, lastVolume: String?,
+      lastChapter: String?, publicationDemographic: String?,
+      status: String?, year: Int?, contentRating: String?, tags: [Tag]?,
+      state: String?,chapterNumbersResetOnNewVolume: Bool?,
+      createdAt: String?, updatedAt: String?, version: Int?,
+      availableTranslatedLanguages: [String]?,
+      latestUploadedChapter:String?
+    ) {
+      self.title = title
+      self.altTitles = altTitles
+      self.description = description
+      self.isLocked = isLocked
+      self.links = links
+      self.originalLanguage = originalLanguage
+      self.lastVolume = lastVolume
+      self.lastChapter = lastChapter
+      self.publicationDemographic = publicationDemographic
+      self.status = status
+      self.year = year
+      self.contentRating = contentRating
+      self.tags = tags
+      self.state = state
+      self.chapterNumbersResetOnNewVolume = chapterNumbersResetOnNewVolume
+      self.createdAt = createdAt
+      self.updatedAt = updatedAt
+      self.version = version
+      self.availableTranslatedLanguages = availableTranslatedLanguages
+      self.latestUploadedChapter = latestUploadedChapter
+    }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

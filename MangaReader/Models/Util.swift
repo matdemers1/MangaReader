@@ -47,6 +47,10 @@ struct Title: Codable {
     subscript(key: String) -> String? {
         return localizedTitles[key]
     }
+  
+    init(title: String) {
+        self.localizedTitles = ["en": title]
+    }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -61,21 +65,25 @@ struct Title: Codable {
 
 
 struct Description: Codable {
-    var localizedDescriptions: [String: String]
+  var localizedDescriptions: [String: String]
 
-    subscript(key: String) -> String? {
-        return localizedDescriptions[key]
-    }
+  subscript(key: String) -> String? {
+      return localizedDescriptions[key]
+  }
+  
+  init (description: String) {
+    self.localizedDescriptions = ["en": description]
+  }
 
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        self.localizedDescriptions = try container.decode([String: String].self)
-    }
+  init(from decoder: Decoder) throws {
+      let container = try decoder.singleValueContainer()
+      self.localizedDescriptions = try container.decode([String: String].self)
+  }
 
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encode(localizedDescriptions)
-    }
+  func encode(to encoder: Encoder) throws {
+      var container = encoder.singleValueContainer()
+      try container.encode(localizedDescriptions)
+  }
 }
 
 struct LocalizedNames: Codable, Equatable, Hashable {

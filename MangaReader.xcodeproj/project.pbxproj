@@ -77,6 +77,8 @@
 		9CEA88E32B181117009017D0 /* ChapterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA88E22B181117009017D0 /* ChapterResponse.swift */; };
 		9CEA88E52B181140009017D0 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA88E42B181140009017D0 /* Chapter.swift */; };
 		9CEA88E72B181296009017D0 /* MockChapterResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CEA88E62B181296009017D0 /* MockChapterResponse.json */; };
+		9CF88A932B5CDC4600EDD193 /* MockMangaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF88A922B5CDC4600EDD193 /* MockMangaObject.swift */; };
+		9CF88A952B5CE0F100EDD193 /* MockTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF88A942B5CE0F100EDD193 /* MockTags.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +152,8 @@
 		9CEA88E22B181117009017D0 /* ChapterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterResponse.swift; sourceTree = "<group>"; };
 		9CEA88E42B181140009017D0 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		9CEA88E62B181296009017D0 /* MockChapterResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockChapterResponse.json; sourceTree = "<group>"; };
+		9CF88A922B5CDC4600EDD193 /* MockMangaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMangaObject.swift; sourceTree = "<group>"; };
+		9CF88A942B5CE0F100EDD193 /* MockTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTags.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +314,8 @@
 				9CE57ECF2B16EAFB00D4D4A6 /* MockSingleData.json */,
 				9CEA88E62B181296009017D0 /* MockChapterResponse.json */,
 				9CC9E0542B1ACD3F00995321 /* MockAtHomeResponse.json */,
+				9CF88A922B5CDC4600EDD193 /* MockMangaObject.swift */,
+				9CF88A942B5CE0F100EDD193 /* MockTags.swift */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 			files = (
 				9C12B2582B16A757000FB71F /* Manga.swift in Sources */,
 				9C12B25E2B16A8A3000FB71F /* Util.swift in Sources */,
+				9CF88A952B5CE0F100EDD193 /* MockTags.swift in Sources */,
 				9CC9E0592B1ACE5D00995321 /* ChapterView.swift in Sources */,
 				9CE57ED22B16F03B00D4D4A6 /* ExpandableText.swift in Sources */,
 				9CEA88E32B181117009017D0 /* ChapterResponse.swift in Sources */,
@@ -489,6 +496,7 @@
 				366E308E8CB9F4F1A9D09C2F /* ReadingListView.swift in Sources */,
 				366E305749B48D491657DA64 /* SplashScreen.swift in Sources */,
 				366E351F2EA87B97080F21A7 /* Languages.swift in Sources */,
+				9CF88A932B5CDC4600EDD193 /* MockMangaObject.swift in Sources */,
 				366E34B81809B72D07A4E1A9 /* SchemaV1.swift in Sources */,
 				366E3BDB4D19CFCD9FEA5385 /* SchemaV2.swift in Sources */,
 				366E3CB2BB9F97FCFA512C76 /* MigrationPlan.swift in Sources */,

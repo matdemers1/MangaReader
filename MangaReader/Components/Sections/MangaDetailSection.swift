@@ -17,7 +17,6 @@ struct MangaDetailSection: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width)
-//                    .frame(height: geometry.size.height / 1)
               } placeholder: {
                 ProgressView()
               }
@@ -32,13 +31,17 @@ struct MangaDetailSection: View {
                 .font(.title2)
                 .foregroundColor(.white)
                 .padding(.top, 20)
-
-            Text("Artist Placeholder")
-                .font(.subheadline)
-                .foregroundColor(.gray)
-            Text(manga.id)
-                .font(.caption)
+            HStack {
+              Text("Manga Id")
+                .font(.body)
                 .foregroundColor(.secondary)
+              // Add Copy button
+              Button {
+                UIPasteboard.general.string = manga.id
+              } label: {
+                Image(systemName: "doc.on.doc")
+              }
+            }
           }
               .padding()
 

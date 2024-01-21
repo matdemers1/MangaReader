@@ -18,6 +18,13 @@ struct Tag: Codable, Hashable {
   let type: String
   let attributes: TagAttributes
   let relationships: [Relationship]?
+  
+  init(id: String, type: String, attributes: TagAttributes, relationships: [Relationship]?) {
+    self.id = id
+    self.type = type
+    self.attributes = attributes
+    self.relationships = relationships
+  }
 }
 
 struct TagAttributes: Codable, Hashable {
