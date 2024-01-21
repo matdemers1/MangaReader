@@ -46,6 +46,24 @@ struct ChapterListItem: View {
                       : Color.primary
               )
         }
+        HStack {
+          Image(systemName: "clock")
+              .resizable()
+              .aspectRatio(contentMode: .fit)
+              .foregroundColor(
+                  historyForMangaId?.chapterIds.contains(chapter.id.description) ?? false
+                      ? Color.gray
+                      : Color.primary
+              )
+              .frame(width: 12, height: 12)
+            Text(getRelativeDate(dateString: chapter.attributes.createdAt) )
+              .font(.subheadline)
+              .foregroundColor(
+                  historyForMangaId?.chapterIds.contains(chapter.id.description) ?? false
+                      ? Color.gray
+                      : Color.primary
+              )
+        }
       }
       Spacer()
       Image(systemName: "chevron.right")
@@ -55,5 +73,15 @@ struct ChapterListItem: View {
                   : Color.primary
           )
     }
+  }
+
+  func getRelativeDate(dateString: String) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+    let date = dateFormatter.date(from: dateString) ?? Date()
+    let relativeDateFormatter = RelativeDateTimeFormatter()
+    relativeDateFormatter.unitsStyle = .full
+    return relativeDateFormatter.localizedString(for: date, relativeTo: Date())
   }
 }

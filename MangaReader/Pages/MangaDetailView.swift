@@ -19,6 +19,7 @@ struct MangaDetailView: View {
   @State var historyForMangaId: History? = nil
   @State var showAddToGroup = false
   @State var selectedGroup: UUID? = nil
+  @State private var sortDirection: OrderDirection = .desc
   @Query var history: [History]
   @Query var readingListGroups: [ReadingListGroup]
 
@@ -42,8 +43,10 @@ struct MangaDetailView: View {
                   offset: $offset,
                   showMoreButton: $showMoreButton,
                   chaptersResponse: $chaptersResponse,
+                  sortDirection: $sortDirection,
                   historyForMangaId: historyForMangaId,
-                  manga: manga
+                  manga: manga,
+                  reload: reload
               )
             }
           }
@@ -56,8 +59,10 @@ struct MangaDetailView: View {
                   offset: $offset,
                   showMoreButton: $showMoreButton,
                   chaptersResponse: $chaptersResponse,
+                  sortDirection: $sortDirection,
                   historyForMangaId: historyForMangaId,
-                  manga: manga
+                  manga: manga,
+                  reload: reload
               )
             }
           }
@@ -76,7 +81,8 @@ struct MangaDetailView: View {
                   mangaId: manga.id.description,
                   chapters: $chapters,
                   showMoreButton: $showMoreButton,
-                  chaptersResponse: $chaptersResponse
+                  chaptersResponse: $chaptersResponse,
+                  sort: sortDirection
               )
             } else {
               viewModel.fetchManga(mangaId: mangaId, manga: $manga)
@@ -84,7 +90,8 @@ struct MangaDetailView: View {
                   mangaId: mangaId,
                   chapters: $chapters,
                   showMoreButton: $showMoreButton,
-                  chaptersResponse: $chaptersResponse
+                  chaptersResponse: $chaptersResponse,
+                  sort: sortDirection
               )
             }
             historyForMangaId = history.first(where: { $0.mangaId == mangaId })
@@ -123,6 +130,19 @@ struct MangaDetailView: View {
                   .presentationDetents([.height(300)])
             }
         )
+  }
+  
+  func reload() {
+    chaptersResponse = nil
+    chapters = []
+    offset = 0
+    viewModel.fetchChapterResponse(
+      mangaId: mangaId,
+      chapters: $chapters,
+      showMoreButton: $showMoreButton,
+      chaptersResponse: $chaptersResponse,
+      sort: sortDirection
+    )
   }
 }
 

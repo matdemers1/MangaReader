@@ -35,8 +35,15 @@ class MangaDetailViewModel: ObservableObject {
         }.resume()
   }
 
-  func fetchChapterResponse(mangaId: String, offset: Int = 0, chapters: Binding<[Chapter]?>, showMoreButton: Binding<Bool>, chaptersResponse: Binding<ChapterResponse?>) {
-    let url = URL(string: "https://api.mangadex.org/manga/\(mangaId)/feed?translatedLanguage[]=en&order[chapter]=desc&limit=500&offset=\(offset*999)&contentRating[]=safe&contentRating[]=suggestive&contentRating[]=erotica&contentRating[]=pornographic&includes[]=scanlation_group")!
+  func fetchChapterResponse(
+    mangaId: String,
+    offset: Int = 0,
+    chapters: Binding<[Chapter]?>,
+    showMoreButton: Binding<Bool>,
+    chaptersResponse: Binding<ChapterResponse?>,
+    sort: OrderDirection
+  ) {
+    let url = URL(string: "https://api.mangadex.org/manga/\(mangaId)/feed?translatedLanguage[]=en&order[chapter]=\(sort)&limit=500&offset=\(offset*999)&contentRating[]=safe&contentRating[]=suggestive&contentRating[]=erotica&contentRating[]=pornographic&includes[]=scanlation_group")!
     let request = URLRequest(url: url)
 
     URLSession.shared.dataTask(with: request) { data, response, error in

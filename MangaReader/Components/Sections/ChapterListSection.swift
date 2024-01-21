@@ -10,15 +10,32 @@ struct ChapterListSection: View{
   @Binding var offset: Int
   @Binding var showMoreButton: Bool
   @Binding var chaptersResponse: ChapterResponse?
+  @Binding var sortDirection: OrderDirection
   let historyForMangaId: History?
   let manga: Manga
+  let reload: () -> Void
   @StateObject var viewModel = MangaDetailViewModel()
 
   var body: some View {
     VStack(alignment: .leading) {
-      Text("Chapters")
+      HStack{
+        Text("Chapters")
           .font(.subheadline)
           .padding(.bottom, 4)
+        Spacer()
+        Text ("Sorting:")
+          .font(.subheadline)
+          .padding(.bottom, 4)
+        Picker("", selection: $sortDirection) {
+          ForEach(OrderDirection.allCases, id: \.self) { direction in
+            Text(direction.description)
+              .font(.subheadline)
+              .padding(.bottom, 4)
+          }
+        }.onChange(of: sortDirection) {
+          reload()
+        }
+      }
       if let chapters = chapters {
         ForEach(chapters, id: \.id) { chapter in
           NavigationLink(destination: ChapterViewWrapper(
@@ -49,7 +66,8 @@ struct ChapterListSection: View{
                 offset: offset,
                 chapters: $chapters,
                 showMoreButton: $showMoreButton,
-                chaptersResponse: $chaptersResponse
+                chaptersResponse: $chaptersResponse,
+                sort: sortDirection
             )
           }) {
             Text("Load more chapters")
