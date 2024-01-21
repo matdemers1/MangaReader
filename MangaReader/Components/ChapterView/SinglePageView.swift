@@ -6,7 +6,7 @@ struct SinglePageView: View {
     var navigateToNextPage: () -> Void
     var isIpad: Bool
 
-    @State private var currentPage = 0
+  @Binding var currentPage: Int
     @State private var isZoomed = false
     @State private var startingScale: CGFloat = 1.0
     @State private var currentScale: CGFloat = 1.0

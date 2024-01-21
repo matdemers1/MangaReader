@@ -64,7 +64,8 @@ struct ChapterView: View {
                     SinglePageView(
                         orderedImages: orderedImages,
                         navigateToNextPage: goToNextChapter,
-                        isIpad: false
+                        isIpad: false,
+                        currentPage: $currentPage
                     )
                 } else {
                     LongStripView(
@@ -91,21 +92,9 @@ struct ChapterView: View {
                     self.lastChapterId = lastChapterId
                 }
             }
-            .navigationTitle("Chapter \(getChapterNumber() ?? "Unknown")")
+            .navigationTitle(getChapterTitle())
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: HStack {
-                Button(action: {
-                    goToLastChapter()
-                }, label: {
-                    Image(systemName: "chevron.left")
-                })
-                    .disabled(lastChapterId == nil)
-                Button(action: {
-                    goToNextChapter()
-                }, label: {
-                    Image(systemName: "chevron.right")
-                })
-                    .disabled(nextChapterId == nil)
                 ChapterMenu(viewType: $viewType, dataType: $dataType, clearAndRefetchData: clearAndRefetchChapterData)
             })
 
@@ -117,9 +106,12 @@ struct ChapterView: View {
         }
     }
 
-    private func getChapterNumber() -> String? {
-        guard let chapter = chapters.first(where: { $0.id.description == chapterId }) else { return nil }
-        return chapter.attributes.chapter
+    private func getChapterTitle() -> String {
+      guard let chapter = chapters.first(where: { $0.id.description == chapterId }) else { return "" }
+      if isLongStrip {
+        return "Chapter \(chapter.attributes.chapter ?? "Unknown")"
+      }
+      return "\(chapter.attributes.chapter ?? "Unknown") - \(currentPage+1)"
     }
 
     private func orderedImages() -> [UIImage] {

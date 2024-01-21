@@ -82,7 +82,8 @@ struct iPadChapterView: View {
             SinglePageView(
                 orderedImages: orderedImages,
                 navigateToNextPage: goToNextChapter,
-                isIpad: true
+                isIpad: true,
+                currentPage: $currentPage
             )
           }
         }
