@@ -13,7 +13,12 @@ struct UserHistory: View{
     ScrollView {
       LazyVStack {
         ForEach(historyItems) { historyItem in
-          MangaHistoryCard(historyItem: historyItem)
+          MangaHistoryCard(
+            mangaId: historyItem.mangaId,
+            coverArtUrl: historyItem.coverArtURL,
+            mangaName: historyItem.mangaName,
+            lastRead: historyItem.lastRead
+          )
         }
       }
     }

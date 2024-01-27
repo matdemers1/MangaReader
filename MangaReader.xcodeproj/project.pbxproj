@@ -68,6 +68,7 @@
 		9C12B2662B16C4DA000FB71F /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 9C12B2652B16C4DA000FB71F /* WrappingHStack */; };
 		9C12B26B2B16CA98000FB71F /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B26A2B16CA98000FB71F /* Text.swift */; };
 		9C6247652B41EAAA00F93ACC /* raygun4apple in Frameworks */ = {isa = PBXBuildFile; productRef = 9C6247642B41EAAA00F93ACC /* raygun4apple */; };
+		9C7D68A92B634C3F009759BD /* SuggestionsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7D68A82B634C3F009759BD /* SuggestionsContainer.swift */; };
 		9CC9E0552B1ACD3F00995321 /* MockAtHomeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CC9E0542B1ACD3F00995321 /* MockAtHomeResponse.json */; };
 		9CC9E0572B1ACD8E00995321 /* AtHomeReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9E0562B1ACD8E00995321 /* AtHomeReponse.swift */; };
 		9CC9E0592B1ACE5D00995321 /* ChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9E0582B1ACE5D00995321 /* ChapterView.swift */; };
@@ -143,6 +144,7 @@
 		9C12B2602B16A9FC000FB71F /* MangaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaCardView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		9C12B2622B16BD6E000FB71F /* MangaCoverArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaCoverArt.swift; sourceTree = "<group>"; };
 		9C12B26A2B16CA98000FB71F /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		9C7D68A82B634C3F009759BD /* SuggestionsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsContainer.swift; sourceTree = "<group>"; };
 		9CC9E0542B1ACD3F00995321 /* MockAtHomeResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockAtHomeResponse.json; sourceTree = "<group>"; };
 		9CC9E0562B1ACD8E00995321 /* AtHomeReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtHomeReponse.swift; sourceTree = "<group>"; };
 		9CC9E0582B1ACE5D00995321 /* ChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterView.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				366E3691364ABC6BE531E382 /* Sections */,
 				366E39FDC611AD72707C6D59 /* iPadChapterSidebar.swift */,
 				366E3A3D761437002D7ACF4C /* ChapterListItem.swift */,
+				9C7D68A82B634C3F009759BD /* SuggestionsContainer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				9CEA88E32B181117009017D0 /* ChapterResponse.swift in Sources */,
 				9C12B2402B16A15B000FB71F /* ContentView.swift in Sources */,
 				9C12B2612B16A9FC000FB71F /* MangaCardView.swift in Sources */,
+				9C7D68A92B634C3F009759BD /* SuggestionsContainer.swift in Sources */,
 				9C12B2632B16BD6E000FB71F /* MangaCoverArt.swift in Sources */,
 				9C12B25C2B16A870000FB71F /* MangaAttributes.swift in Sources */,
 				9CC9E0572B1ACD8E00995321 /* AtHomeReponse.swift in Sources */,
@@ -677,7 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demersdev.mangareader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -724,7 +728,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demersdev.mangareader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

@@ -54,6 +54,7 @@ struct MangaDetailView: View {
           ScrollView {
             VStack {
               MangaDetailSection(manga: manga)
+              SuggestionsContainer(manga: manga)
               ChapterListSection(
                   chapters: $chapters,
                   offset: $offset,

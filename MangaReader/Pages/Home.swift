@@ -34,7 +34,12 @@ struct HomeView: View {
                   ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                       ForEach(historyItems.prefix(10)) { historyItem in
-                        MangaHistoryCard(historyItem: historyItem)
+                        MangaHistoryCard(
+                          mangaId: historyItem.mangaId,
+                          coverArtUrl: historyItem.coverArtURL,
+                          mangaName: historyItem.mangaName,
+                          lastRead: historyItem.lastRead
+                        )
                       }
                     }
                         .padding(.horizontal, 8)
