@@ -180,7 +180,9 @@ struct SearchView: View {
             queryItems.append(URLQueryItem(name: "year", value: String(year)))
         }
         if let includedTags = filterState.includedTags, !includedTags.isEmpty {
-            queryItems.append(URLQueryItem(name: "includedTags[]", value: includedTags.map { $0.id }.joined(separator: ",")))
+          for tag in includedTags {
+            queryItems.append(URLQueryItem(name: "includedTags[]", value: tag.id))
+          }
         }
         if let excludeTags = filterState.excludeTags, !excludeTags.isEmpty {
             queryItems.append(URLQueryItem(name: "excludedTags[]", value: excludeTags.map { $0.id }.joined(separator: ",")))

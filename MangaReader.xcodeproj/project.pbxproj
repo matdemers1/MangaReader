@@ -69,6 +69,8 @@
 		9C12B26B2B16CA98000FB71F /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12B26A2B16CA98000FB71F /* Text.swift */; };
 		9C6247652B41EAAA00F93ACC /* raygun4apple in Frameworks */ = {isa = PBXBuildFile; productRef = 9C6247642B41EAAA00F93ACC /* raygun4apple */; };
 		9C7D68A92B634C3F009759BD /* SuggestionsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7D68A82B634C3F009759BD /* SuggestionsContainer.swift */; };
+		9C7D68AB2B64858B009759BD /* MockChapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7D68AA2B64858B009759BD /* MockChapters.swift */; };
+		9C7D68AD2B648B1B009759BD /* MockHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7D68AC2B648B1B009759BD /* MockHistory.swift */; };
 		9CC9E0552B1ACD3F00995321 /* MockAtHomeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CC9E0542B1ACD3F00995321 /* MockAtHomeResponse.json */; };
 		9CC9E0572B1ACD8E00995321 /* AtHomeReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9E0562B1ACD8E00995321 /* AtHomeReponse.swift */; };
 		9CC9E0592B1ACE5D00995321 /* ChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9E0582B1ACE5D00995321 /* ChapterView.swift */; };
@@ -145,6 +147,8 @@
 		9C12B2622B16BD6E000FB71F /* MangaCoverArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaCoverArt.swift; sourceTree = "<group>"; };
 		9C12B26A2B16CA98000FB71F /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		9C7D68A82B634C3F009759BD /* SuggestionsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsContainer.swift; sourceTree = "<group>"; };
+		9C7D68AA2B64858B009759BD /* MockChapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChapters.swift; sourceTree = "<group>"; };
+		9C7D68AC2B648B1B009759BD /* MockHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHistory.swift; sourceTree = "<group>"; };
 		9CC9E0542B1ACD3F00995321 /* MockAtHomeResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockAtHomeResponse.json; sourceTree = "<group>"; };
 		9CC9E0562B1ACD8E00995321 /* AtHomeReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtHomeReponse.swift; sourceTree = "<group>"; };
 		9CC9E0582B1ACE5D00995321 /* ChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterView.swift; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 				9CC9E0542B1ACD3F00995321 /* MockAtHomeResponse.json */,
 				9CF88A922B5CDC4600EDD193 /* MockMangaObject.swift */,
 				9CF88A942B5CE0F100EDD193 /* MockTags.swift */,
+				9C7D68AA2B64858B009759BD /* MockChapters.swift */,
+				9C7D68AC2B648B1B009759BD /* MockHistory.swift */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 				366E3B61BC44131E4F5E2BC5 /* FilterView.swift in Sources */,
 				366E33FB964C19F2EC4BF020 /* Order.swift in Sources */,
 				366E3BB7A69D5F8480B190FE /* Status.swift in Sources */,
+				9C7D68AD2B648B1B009759BD /* MockHistory.swift in Sources */,
 				366E3FAF9CA91C72579B0377 /* PublicationDemographic.swift in Sources */,
 				366E327E92DE73DBC9D87980 /* ContentRating.swift in Sources */,
 				366E38CCE6993E322612F99F /* FilterState.swift in Sources */,
@@ -491,6 +498,7 @@
 				366E3B39A1B744FE1801173F /* TagFilter.swift in Sources */,
 				366E3F0DF4C0EAA175772995 /* Tags.swift in Sources */,
 				366E36865829B8839F31A1E3 /* TagFilterSection.swift in Sources */,
+				9C7D68AB2B64858B009759BD /* MockChapters.swift in Sources */,
 				366E376EA0C60AFC8BD79C35 /* AccountView.swift in Sources */,
 				366E3D119DB685FDA03F3A99 /* HistoryView.swift in Sources */,
 				366E3DCE85A29602E9B950AF /* UserAuth.swift in Sources */,
@@ -681,7 +689,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demersdev.mangareader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -728,7 +736,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demersdev.mangareader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
