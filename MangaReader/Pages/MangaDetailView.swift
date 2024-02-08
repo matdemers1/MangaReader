@@ -35,9 +35,7 @@ struct MangaDetailView: View {
         if isiPad && isLandscape {
           HStack {
             MangaDetailSection(
-              manga: manga,
-              chapters: chapters ?? [],
-              history: historyForMangaId
+              manga: manga
             )
             .frame(height: geometry.size.height)
             Divider()
@@ -55,12 +53,10 @@ struct MangaDetailView: View {
             }
           }
         } else {
-          ScrollView {
-            VStack {
+          VStack{
+            ScrollView {
               MangaDetailSection(
-                manga: manga,
-                chapters: chapters ?? [],
-                history: historyForMangaId
+                manga: manga
               )
               SuggestionsContainer(manga: manga)
               ChapterListSection(
@@ -74,6 +70,11 @@ struct MangaDetailView: View {
                 reload: reload
               )
             }
+            UpNextButton(
+              manga: manga,
+              chapters: chapters ?? [],
+              history: historyForMangaId
+            )
           }
         }
       } else {
