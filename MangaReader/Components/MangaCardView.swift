@@ -12,6 +12,8 @@ import WrappingHStack
 struct MangaCardView: View {
   let manga: Manga
   let showTags: Bool
+  
+  @StateObject private var viewModel = MangaCardViewModel()
 
   var body: some View {
     NavigationLink(destination: MangaDetailView(manga: manga, mangaId: manga.id.description)) {
@@ -46,6 +48,25 @@ struct MangaCardView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .multilineTextAlignment(.leading)
                 .lineLimit(4)
+            if let chapterCount = viewModel.chapterCount {
+              Text("Chapters: \(chapterCount)")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.leading)
+                .foregroundColor(.primary)
+                .padding([.bottom], 8)
+                .padding([.top], 1)
+            } else {
+              Text("Loading chapter data...")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.leading)
+                .foregroundColor(.primary)
+                .padding([.bottom], 8)
+                .padding([.top], 1)
+            }
           }.padding([.top], 8)
         }
         WrappingHStack(alignment: .leading, fitContentWidth: true) {
@@ -72,8 +93,14 @@ struct MangaCardView: View {
           .shadow(radius: 5)
     }
         .padding([.bottom], 8)
+        .onAppear(){
+          viewModel.fetchAggregateData(forMangaId: manga.id.description)
+        }
   }
 }
 
+#Preview {
+  MangaCardView(manga: MOCK_MANGA_OBJECT, showTags: false)
+}
 
 

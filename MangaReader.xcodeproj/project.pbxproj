@@ -75,6 +75,8 @@
 		9CC9E0552B1ACD3F00995321 /* MockAtHomeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CC9E0542B1ACD3F00995321 /* MockAtHomeResponse.json */; };
 		9CC9E0572B1ACD8E00995321 /* AtHomeReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9E0562B1ACD8E00995321 /* AtHomeReponse.swift */; };
 		9CC9E0592B1ACE5D00995321 /* ChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9E0582B1ACE5D00995321 /* ChapterView.swift */; };
+		9CE182112B7F3C1400B86D3B /* Aggeragate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE182102B7F3C1400B86D3B /* Aggeragate.swift */; };
+		9CE182132B7F40A500B86D3B /* MangaCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE182122B7F40A500B86D3B /* MangaCardViewModel.swift */; };
 		9CE57ECE2B16E04100D4D4A6 /* MangaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE57ECD2B16E04100D4D4A6 /* MangaDetailView.swift */; };
 		9CE57ED02B16EAFB00D4D4A6 /* MockSingleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CE57ECF2B16EAFB00D4D4A6 /* MockSingleData.json */; };
 		9CE57ED22B16F03B00D4D4A6 /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE57ED12B16F03B00D4D4A6 /* ExpandableText.swift */; };
@@ -154,6 +156,8 @@
 		9CC9E0542B1ACD3F00995321 /* MockAtHomeResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockAtHomeResponse.json; sourceTree = "<group>"; };
 		9CC9E0562B1ACD8E00995321 /* AtHomeReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtHomeReponse.swift; sourceTree = "<group>"; };
 		9CC9E0582B1ACE5D00995321 /* ChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterView.swift; sourceTree = "<group>"; };
+		9CE182102B7F3C1400B86D3B /* Aggeragate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aggeragate.swift; sourceTree = "<group>"; };
+		9CE182122B7F40A500B86D3B /* MangaCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaCardViewModel.swift; sourceTree = "<group>"; };
 		9CE57ECD2B16E04100D4D4A6 /* MangaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaDetailView.swift; sourceTree = "<group>"; };
 		9CE57ECF2B16EAFB00D4D4A6 /* MockSingleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockSingleData.json; sourceTree = "<group>"; };
 		9CE57ED12B16F03B00D4D4A6 /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableText.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				366E3F7B8A136D9ED4F9B54D /* ChapterVeiwModel.swift */,
 				366E3A1C8F050A308A0B054A /* MangaDetailViewModel.swift */,
 				366E314C527FFD7875598D9F /* ChapterViewUpdatedModel.swift */,
+				9CE182122B7F40A500B86D3B /* MangaCardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 		9C12B2562B16A748000FB71F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9CE182102B7F3C1400B86D3B /* Aggeragate.swift */,
 				9C12B2572B16A757000FB71F /* Manga.swift */,
 				9C12B2592B16A84D000FB71F /* MangaResponse.swift */,
 				9C12B25B2B16A870000FB71F /* MangaAttributes.swift */,
@@ -490,6 +496,7 @@
 				9CEA88E52B181140009017D0 /* Chapter.swift in Sources */,
 				366E3B61BC44131E4F5E2BC5 /* FilterView.swift in Sources */,
 				366E33FB964C19F2EC4BF020 /* Order.swift in Sources */,
+				9CE182112B7F3C1400B86D3B /* Aggeragate.swift in Sources */,
 				366E3BB7A69D5F8480B190FE /* Status.swift in Sources */,
 				9C7D68AD2B648B1B009759BD /* MockHistory.swift in Sources */,
 				366E3FAF9CA91C72579B0377 /* PublicationDemographic.swift in Sources */,
@@ -511,6 +518,7 @@
 				366E308E8CB9F4F1A9D09C2F /* ReadingListView.swift in Sources */,
 				366E305749B48D491657DA64 /* SplashScreen.swift in Sources */,
 				9C7D68AF2B66216F009759BD /* UpNextButton.swift in Sources */,
+				9CE182132B7F40A500B86D3B /* MangaCardViewModel.swift in Sources */,
 				366E351F2EA87B97080F21A7 /* Languages.swift in Sources */,
 				9CF88A932B5CDC4600EDD193 /* MockMangaObject.swift in Sources */,
 				366E34B81809B72D07A4E1A9 /* SchemaV1.swift in Sources */,

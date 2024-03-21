@@ -147,25 +147,27 @@ struct ChapterView: View {
     }
 
     private func goToNextChapter() {
-        guard let nextChapterId = nextChapterId else { return }
-        self.chapterId = nextChapterId
-        self.nextChapterId = getNextChapter()
-        self.lastChapterId = getLastChapter()
-        addChapterToHistory()
-        viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
-            self.atHomeResponse = response
-        }
+      guard let nextChapterId = nextChapterId else { return }
+      self.chapterId = nextChapterId
+      self.nextChapterId = getNextChapter()
+      self.lastChapterId = getLastChapter()
+      currentPage = 0
+      addChapterToHistory()
+      viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
+          self.atHomeResponse = response
+      }
     }
 
     private func goToLastChapter() {
-        guard let lastChapterId = lastChapterId else { return }
-        self.chapterId = lastChapterId
-        self.nextChapterId = getNextChapter()
-        self.lastChapterId = getLastChapter()
-        addChapterToHistory()
-        viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
-            self.atHomeResponse = response
-        }
+      guard let lastChapterId = lastChapterId else { return }
+      self.chapterId = lastChapterId
+      self.nextChapterId = getNextChapter()
+      self.lastChapterId = getLastChapter()
+      currentPage = 0
+      addChapterToHistory()
+      viewModel.fetchChapterData(chapterId: chapterId, dataType: dataType) { response in
+          self.atHomeResponse = response
+      }
     }
 
     private func addChapterToHistory() {

@@ -9,7 +9,7 @@ import Foundation
 
 let MOCK_MANGA_OBJECT: Manga = {
   return Manga(
-    id: "1",
+    id: "18f42811-ce55-4143-ae30-b97e30e6cf82",
     type: "manga",
     attributes: MOCK_MANGA_ATTRIBUTES,
     relationships: []
