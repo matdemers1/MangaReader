@@ -15,27 +15,116 @@ struct ChapterListSection: View{
   let manga: Manga
   let reload: () -> Void
   @StateObject var viewModel = MangaDetailViewModel()
+  @State var chaptersString = ""
+  @State private var isLoading = true
+
+  
+  func getChapterString(chapters: [Chapter]) -> String {
+    // Sort the chapters by their chapter number in ascending order and remove duplicates
+    // create a list of all chapter ids
+    let chapterIds = chapters.map { $0.attributes.chapter }
+    let sortedUniqueChapters = chapters
+      .compactMap { chapter -> Int? in
+        guard let chapterStr = chapter.attributes.chapter, let chapterNum = Int(chapterStr) else { return nil }
+        return chapterNum
+      }
+      .sorted()
+      .reduce(into: [Int]()) { result, chapterNum in
+        if result.last != chapterNum {
+          result.append(chapterNum)
+        }
+      }
+    
+    var chapterString = ""
+    var startChapter = 0
+    var endChapter = 0
+    for (index, chapterNum) in sortedUniqueChapters.enumerated() {
+      if index == 0 {
+        startChapter = chapterNum
+        endChapter = chapterNum
+      } else {
+        if chapterNum == endChapter + 1 {
+          endChapter = chapterNum
+        } else {
+          if startChapter == endChapter {
+            chapterString += "\(startChapter), "
+          } else {
+            chapterString += "\(startChapter)-\(endChapter), "
+          }
+          startChapter = chapterNum
+          endChapter = chapterNum
+        }
+      }
+    }
+    // Handle the last range or single chapter
+    if startChapter == endChapter {
+      chapterString += "\(startChapter)"
+    } else {
+      chapterString += "\(startChapter)-\(endChapter)"
+    }
+    return chapterString.trimmingCharacters(in: .whitespacesAndNewlines)
+  }
+
 
   var body: some View {
     VStack(alignment: .leading) {
       HStack{
         Text("Chapters")
           .font(.subheadline)
-          .padding(.bottom, 4)
+          .padding(.bottom, 0)
         Spacer()
         Text ("Sorting:")
           .font(.subheadline)
-          .padding(.bottom, 4)
+          .padding(.bottom, 0)
         Picker("", selection: $sortDirection) {
           ForEach(OrderDirection.allCases, id: \.self) { direction in
             Text(direction.description)
               .font(.subheadline)
-              .padding(.bottom, 4)
+              .padding(.bottom, 0)
           }
         }.onChange(of: sortDirection) {
           reload()
         }
+        .padding(0)
       }
+      .padding(.bottom, 0)
+      HStack {
+        Text("Chapter List:")
+          .font(.subheadline)
+          .padding(.bottom, 4)
+        if isLoading {
+          Text("Loading...")
+            .font(.subheadline)
+            .padding(.bottom, 4)
+        } else if let chapters = chapters, !chapters.isEmpty {
+          Text(chaptersString)
+            .font(.subheadline)
+            .padding(.bottom, 4)
+        } else {
+          Text("No chapters available")
+            .font(.subheadline)
+            .padding(.bottom, 4)
+        }
+      }
+      .onAppear {
+        if chapters == nil || chapters!.isEmpty {
+          isLoading = true
+          // Simulate a data fetch
+          DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Simulate async load
+            // Assume chapters are now loaded
+            isLoading = false
+            if let loadedChapters = chapters, !loadedChapters.isEmpty {
+              chaptersString = getChapterString(chapters: loadedChapters)
+            }
+          }
+        } else {
+          isLoading = false
+          chaptersString = getChapterString(chapters: chapters!)
+        }
+      }
+      Divider()
+        .overlay(Color.gray)
+        .frame(height: 4)
       if let chapters = chapters {
         ForEach(chapters, id: \.id) { chapter in
           NavigationLink(destination: ChapterViewWrapper(
@@ -83,5 +172,28 @@ struct ChapterListSection: View{
         .frame(maxWidth: .infinity)
         .padding()
         .background(Color(.systemBackground))
+  }
+}
+
+var boolHander : () -> Void = {  }
+#Preview {
+  ScrollView{
+    ChapterListSection(
+      chapters: .constant(MOCK_CHAPTERS.reversed()),
+      offset: .constant(0),
+      showMoreButton: .constant(false),
+      chaptersResponse: .constant(ChapterResponse(
+        result: "200 OK",
+        response: "200 OK",
+        data: MOCK_CHAPTERS,
+        limit: 999,
+        offset: 0,
+        total: 10
+      )),
+      sortDirection: .constant(OrderDirection.desc),
+      historyForMangaId: nil,
+      manga: MOCK_MANGA_OBJECT,
+      reload: boolHander
+    )
   }
 }

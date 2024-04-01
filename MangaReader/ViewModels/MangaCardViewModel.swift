@@ -14,8 +14,11 @@ class MangaCardViewModel: ObservableObject {
       DispatchQueue.main.async {
         switch result {
           case .success(let response):
-            // Assuming you want to display the count for "none" volume
-            self?.chapterCount = response.volumes["none"]?.count
+            let totalCount = response.volumes.reduce(0) { (count, volumeEntry) -> Int in
+              let (_, volume) = volumeEntry
+              return count + volume.count
+            }
+            self?.chapterCount = totalCount
           case .failure(let error):
             print(error) // Handle the error appropriately
         }

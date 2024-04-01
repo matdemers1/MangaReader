@@ -7,7 +7,7 @@
 
 import Foundation
 
-let MOCK_CHAPTERS: [Chapter] = generateMockChapter(count: 10)
+let MOCK_CHAPTERS: [Chapter] = generateMockChapter(count: 100)
 
 func generateMockChapter(count: Int) -> [Chapter] {
   var chapters: [Chapter] = []
