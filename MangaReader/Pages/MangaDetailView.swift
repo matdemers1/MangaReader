@@ -106,6 +106,9 @@ struct MangaDetailView: View {
         }
         historyForMangaId = history.first(where: { $0.mangaId == mangaId })
       }
+      if let firstGroup = readingListGroups.first {
+        selectedGroup = firstGroup.groupId
+      }
     }
     .navigationBarTitleDisplayMode(.inline)
     .navigationBarItems(trailing: Button(action: {
@@ -126,16 +129,21 @@ struct MangaDetailView: View {
           }
           .pickerStyle(.wheel)
           Button("Add to Group") {
-            viewModel.addMangaToReadingList(
-              selectedGroup: selectedGroup ?? UUID(),
-              mangaId: mangaId,
-              manga: manga,
-              readingListGroups: readingListGroups
-            )
-            showAddToGroup.toggle()
+            guard let selectedGroup = selectedGroup else { return }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+              viewModel.addMangaToReadingList(
+                selectedGroup: selectedGroup,
+                mangaId: mangaId,
+                manga: manga,
+                readingListGroups: readingListGroups
+              )
+              showAddToGroup.toggle()
+            }
           }
           .padding([.bottom])
           .frame(maxWidth: .infinity)
+
         }
         .presentationDetents([.height(300)])
       }
